@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "35mm",
+    "description": "Standard 35mm roll film "
+  },
+  {
+    "id": 2,
+    "name": "120",
+    "description": "Standard 120/medium format/'2 1/4' roll film"
+  },
+  {
+    "id": 3,
+    "name": "4x5",
+    "description": "4x5 sheet film "
+  },
+  {
+    "id": 4,
+    "name": "8x10",
+    "description": "8x10 sheet film "
+  },
+  {
+    "id": 5,
+    "name": "5x7",
+    "description": "5x7 sheet film "
+  }
+]

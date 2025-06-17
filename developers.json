@@ -1,0 +1,296 @@
+[
+  {
+    "id": "83a344e1-239f-4899-b747-06390f42b7d1",
+    "name": "HC-110",
+    "manufacturer": "Kodak",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": null,
+    "stock_life_months": 6,
+    "discontinued": 0,
+    "notes": "Common dilutions: Dilution A (1:15), Dilution B (1:31), Dilution C (1:19), Dilution D (1:39), Dilution E (1:47), Dilution F (1:79), Dilution H (1:63)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/j24.pdf"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "Dilution A",
+        "dilution": "1:15"
+      },
+      {
+        "id": 2,
+        "name": "Dilution B",
+        "dilution": "1:31"
+      },
+      {
+        "id": 3,
+        "name": "Dilution C",
+        "dilution": "1:19"
+      },
+      {
+        "id": 4,
+        "name": "Dilution D",
+        "dilution": "1:39"
+      },
+      {
+        "id": 5,
+        "name": "Dilution E",
+        "dilution": "1:47"
+      },
+      {
+        "id": 6,
+        "name": "Dilution F",
+        "dilution": "1:79"
+      },
+      {
+        "id": 7,
+        "name": "Dilution H",
+        "dilution": "1:63"
+      }
+    ]
+  },
+  {
+    "id": "4b5fd524-b258-40cf-bec3-9d25c880d250",
+    "name": "D-76",
+    "manufacturer": "Kodak",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": null,
+    "stock_life_months": 6,
+    "discontinued": 0,
+    "notes": "Common dilutions: 1:1 (1:1), 1:2 (1:2), 1:3 (1:3)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://business.kodakmoments.com/sites/default/files/files/resources/j78.pdf"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+1",
+        "dilution": "1+1"
+      },
+      {
+        "id": 2,
+        "name": "1+2",
+        "dilution": "1+2"
+      },
+      {
+        "id": 3,
+        "name": "1+3",
+        "dilution": "1+3"
+      }
+    ]
+  },
+  {
+    "id": "0fdf0997-e8e6-48ab-a610-3ec29f45062c",
+    "name": "DD-X",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": 24,
+    "stock_life_months": 24,
+    "discontinued": 0,
+    "notes": "Common dilutions: Standard (1:4)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/wp/wp-content/uploads/2019/08/ILFOTEC-DDX-AUG19.pdf"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+4",
+        "dilution": "1+4"
+      },
+      {
+        "id": 2,
+        "name": "1+10",
+        "dilution": "1+10"
+      },
+      {
+        "id": 3,
+        "name": "1+19",
+        "dilution": "1+19"
+      }
+    ]
+  },
+  {
+    "id": "1b3057d8-d060-49a3-bc9f-277831e3c9bc",
+    "name": "Rodinal/Adonal",
+    "manufacturer": "Agfa",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": null,
+    "stock_life_months": null,
+    "discontinued": 0,
+    "notes": "Common dilutions: Standard (1+25), Economy (1+50), Stand (1+100)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.digitaltruth.com/products/adox_tech/Rodinal.pdf"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+25",
+        "dilution": "1+25"
+      },
+      {
+        "id": 2,
+        "name": "1+50",
+        "dilution": "1+50"
+      },
+      {
+        "id": 3,
+        "name": "1+100",
+        "dilution": "1+100"
+      }
+    ]
+  },
+  {
+    "id": "a763e8c6-78af-4c12-9e96-4c3d8bdefc89",
+    "name": "Multigrade Developer",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "paper",
+    "working_life_hours": null,
+    "stock_life_months": null,
+    "discontinued": 0,
+    "notes": "Common dilutions: Standard (1+9), Economy (1+14)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/amfile/file/download/file/1828/product/730/"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+9",
+        "dilution": "1+9"
+      },
+      {
+        "id": 2,
+        "name": "1+14",
+        "dilution": "1+14"
+      }
+    ]
+  },
+  {
+    "id": "c92a4db8-9d92-4ea8-a32b-f666d685d83d",
+    "name": "PQ Universal",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "paper",
+    "working_life_hours": null,
+    "stock_life_months": null,
+    "discontinued": 0,
+    "notes": "Common dilutions: Standard (1+9), Economy (1+19)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/amfile/file/download/file/1828/product/730/"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+9",
+        "dilution": "1+9"
+      },
+      {
+        "id": 2,
+        "name": "1+19",
+        "dilution": "1+19"
+      }
+    ]
+  },
+  {
+    "id": "dbe10c91-b5b0-450c-a080-685c6ecff485",
+    "name": "ID-11",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": null,
+    "stock_life_months": 6,
+    "discontinued": 0,
+    "notes": "Common dilutions: 1:1 (1:1), 1:2 (1:2), 1:3 (1:3)",
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/amfile/file/download/file/1829/product/2151/"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+1",
+        "dilution": "1+1"
+      },
+      {
+        "id": 2,
+        "name": "1+2",
+        "dilution": "1+2"
+      },
+      {
+        "id": 3,
+        "name": "1+3",
+        "dilution": "1+3"
+      }
+    ]
+  },
+  {
+    "id": "fd10aeaf-da08-4655-9402-0ed78015ad0b",
+    "name": "Ilfotec HC",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": 24,
+    "stock_life_months": 6,
+    "discontinued": 0,
+    "notes": null,
+    "mixing_instructions": null,
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "Dilution A",
+        "dilution": "1:15"
+      },
+      {
+        "id": 2,
+        "name": "Dilution B",
+        "dilution": "1:31"
+      },
+      {
+        "id": 3,
+        "name": "Dilution C",
+        "dilution": "1:19"
+      },
+      {
+        "id": 4,
+        "name": "Dilution D",
+        "dilution": "1:39"
+      },
+      {
+        "id": 5,
+        "name": "Dilution E",
+        "dilution": "1:47"
+      },
+      {
+        "id": 6,
+        "name": "Dilution F",
+        "dilution": "1:79"
+      },
+      {
+        "id": 7,
+        "name": "Dilution H",
+        "dilution": "1:63"
+      }
+    ]
+  }
+]
