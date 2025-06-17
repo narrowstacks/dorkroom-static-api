@@ -111,10 +111,6 @@ jobs:
             automated-pr
           reviewers: narrowstacks
           delete-branch: true
-          add-paths: |
-            *.json
-            !issue_body.txt
-            !processed_data.json
 
       - name: Comment on issue (success)
         if: steps.process-data.outputs.success == 'true'
