@@ -289,7 +289,7 @@ Advanced script for adding development combinations with fuzzy search capabiliti
 **Dependencies:**
 
 ```bash
-pip install fuzzywuzzy python-Levenshtein colorama
+pip install rapidfuzz colorama
 ```
 
 **Usage:**

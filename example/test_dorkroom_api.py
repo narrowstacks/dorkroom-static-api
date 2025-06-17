@@ -207,9 +207,7 @@ def run_sample_queries(api: DorkroomAPIWrapper):
     
     # Sample 4: Find development combinations for a specific film
     print(f"\n4. 🔍 Searching for Tri-X film for combination demo...")
-    tri_x_results = api.fuzzy_search_films("tri x", limit=1)
-    print(f"   Debug: Fuzzy search for 'tri x' returned {len(tri_x_results)} results")
-    
+    tri_x_results = api.fuzzy_search_films("tri x", limit=1)    
     # Debug: Let's test what the fuzzy search is actually comparing
     if hasattr(api.client, 'fuzzy_search') and len(api.film_stocks) > 0:
         # Find the Tri-X film manually to see what text is being compared
@@ -220,26 +218,13 @@ def run_sample_queries(api: DorkroomAPIWrapper):
                 break
         if trix_film:
             search_text = f"{trix_film.brand} {trix_film.name}".lower()
-            print(f"   Debug: Found Tri-X film text: '{search_text}'")
-            print(f"   Debug: Query text: 'tri x'")
             # Test fuzzy score manually
             try:
                 from rapidfuzz import fuzz
                 token_score = fuzz.token_sort_ratio("tri x", search_text)
                 partial_score = fuzz.partial_ratio("tri x", search_text)
-                print(f"   Debug: Token sort score: {token_score}")
-                print(f"   Debug: Partial ratio score: {partial_score}")
-                print(f"   Debug: Threshold: 60.0")
             except ImportError:
-                try:
-                    from fuzzywuzzy import fuzz
-                    token_score = fuzz.token_sort_ratio("tri x", search_text)
-                    partial_score = fuzz.partial_ratio("tri x", search_text)
-                    print(f"   Debug: Token sort score: {token_score}")
-                    print(f"   Debug: Partial ratio score: {partial_score}")
-                    print(f"   Debug: Threshold: 60.0")
-                except ImportError:
-                    print(f"   Debug: No fuzzy library available")
+                print(f"   Debug: rapidfuzz not available")
     
     # Fallback to regular search if fuzzy search fails
     if not tri_x_results:

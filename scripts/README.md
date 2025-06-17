@@ -110,7 +110,7 @@ python add_developer.py
 For fuzzy search and color output, install optional dependencies:
 
 ```bash
-pip install fuzzywuzzy python-Levenshtein colorama
+pip install rapidfuzz colorama
 ```
 
 ## Data Quality Guidelines

@@ -14,13 +14,13 @@ from datetime import datetime
 import argparse
 
 try:
-    from fuzzywuzzy import fuzz, process
+    from rapidfuzz import fuzz, process
     from tabulate import tabulate
     from colorama import init, Fore, Style
     init(autoreset=True)
 except ImportError:
     print("Missing required packages. Please install them with:")
-    print("pip install fuzzywuzzy python-Levenshtein tabulate colorama")
+    print("pip install rapidfuzz tabulate colorama")
     exit(1)
 
 

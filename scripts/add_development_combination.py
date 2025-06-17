@@ -19,13 +19,13 @@ def get_data_file_path(filename: str) -> str:
 
 # Add fuzzy search dependencies
 try:
-    from fuzzywuzzy import fuzz, process
+    from rapidfuzz import fuzz, process
     from colorama import init, Fore, Style
     init(autoreset=True)
     SEARCH_AVAILABLE = True
 except ImportError:
     print("Warning: fuzzy search packages not available. Install them with:")
-    print("pip install fuzzywuzzy python-Levenshtein colorama")
+    print("pip install rapidfuzz colorama")
     print("Falling back to basic list selection...")
     SEARCH_AVAILABLE = False
     # Define dummy color constants
