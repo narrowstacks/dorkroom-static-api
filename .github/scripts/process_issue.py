@@ -42,26 +42,44 @@ def parse_issue_body(issue_body: str) -> Dict[str, str]:
     """Parse GitHub issue body and extract form data"""
     data = {}
     
-    # Regex pattern to match form field data
-    # Updated pattern to better handle multiline content and avoid truncation
-    patterns = [
-        r'### ([^#\n]+)\n\n(.*?)(?=\n### [^#\n]+\n\n|\n<!-- |$)',  # Standard field - improved pattern
-        r'### ([^#\n]+)\n\n- \[x\] ([^#]*?)(?=\n### [^#\n]+\n\n|\n<!-- |$)',  # Checkbox field
-    ]
+    # Split the issue body into sections based on ### headers
+    sections = re.split(r'\n### ', issue_body)
     
-    for pattern in patterns:
-        matches = re.finditer(pattern, issue_body, re.MULTILINE | re.DOTALL)
-        for match in matches:
-            field_name = match.group(1).strip()
-            field_value = match.group(2).strip()
+    for section in sections:
+        section = section.strip()
+        if not section:
+            continue
             
-            # Clean up field name for consistent mapping
-            field_key = field_name.lower().replace(' ', '_').replace('(', '').replace(')', '').replace('/', '_')
-            field_key = re.sub(r'[^a-z0-9_]', '', field_key)
+        # Handle the first section which might not have ### stripped
+        if section.startswith('###'):
+            section = section[3:].strip()
+        
+        lines = section.split('\n', 1)  # Split into header and content
+        if len(lines) < 2:
+            continue
             
-            # Process different field types
-            if field_value:
-                data[field_key] = field_value
+        field_name = lines[0].strip()
+        field_content = lines[1].strip() if len(lines) > 1 else ""
+        
+        # Skip empty content
+        if not field_content:
+            continue
+            
+        # Clean up field name for consistent mapping
+        field_key = field_name.lower().replace(' ', '_').replace('(', '').replace(')', '').replace('/', '_')
+        field_key = re.sub(r'[^a-z0-9_]', '', field_key)
+        
+        # Handle checkbox fields (- [x] format)
+        if field_content.startswith('- [x]'):
+            field_content = field_content[5:].strip()
+        
+        # Stop at comment sections or end-of-form markers
+        if '<!-- ' in field_content:
+            field_content = field_content.split('<!-- ')[0].strip()
+            
+        # Store the field data
+        if field_content and field_key:
+            data[field_key] = field_content
     
     return data
 
@@ -85,8 +103,14 @@ def clean_no_response(text: str) -> Optional[str]:
     
     if cleaned in no_response_patterns:
         return None
-        
-    return cleaned
+    
+    # Normalize whitespace and newlines for better JSON output
+    # Replace multiple consecutive newlines with double newlines
+    cleaned = re.sub(r'\n\s*\n\s*\n+', '\n\n', cleaned)
+    # Clean up extra whitespace but preserve intentional line breaks
+    cleaned = re.sub(r'[ \t]+', ' ', cleaned)
+    
+    return cleaned.strip() if cleaned.strip() else None
 
 
 def process_film_stock_issue(issue_data: Dict[str, str]) -> Dict[str, Any]:
