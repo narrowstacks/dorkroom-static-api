@@ -1,0 +1,70 @@
+### Developer Name
+
+Ilfotec LC29
+
+### Manufacturer
+
+Ilford
+
+### Developer Type
+
+concentrate
+
+### Intended Use
+
+film
+
+### Working Life (hours)
+
+24
+
+### Stock Life (months)
+
+6
+
+### Current Production Status
+
+Currently in production
+
+### Notes
+
+ILFORD ILFOTEC LC29 is a high dilution liquid concentrate black and white film developer that is flexible and
+economic to use. It is based on the technology used in ILFORD ILFOTEC HC developer but is formulated to be
+an easy to pour liquid for small volume film processing
+
+### Mixing Instructions
+
+Determine first either the tank size being used or the number of films to be processed and measure out the
+appropriate quantity of concentrate. Always use the smallest measuring cylinder available; it is easier to
+measure 10ml accurately in a 50ml cylinder than in a 500ml cylinder.
+Add the concentrate to the mixing vessel. A large measuring jug is a good mixing vessel as it provides a
+check on the total quantity of solution mixed. Rinse out the measuring cylinder used for the concentrate
+into the mixing vessel. Finally add hot and cold water to make up the final volume at the desired temperature
+and stir thoroughly.
+As most water drawn from pressure mains is highly aerated, we advise that users draw off the water they
+need and leave it to stand for a few minutes before using it to make up developers.
+
+### Safety Notes
+
+_No response_
+
+### Datasheet URLs
+
+https://www.ilfordphoto.com/amfile/file/download/file/1951/product/547/
+
+### Common Dilutions
+
+1+29:1+29
+1+19:1+19
+1+9:1+9
+
+### Sources
+
+https://www.ilfordphoto.com/amfile/file/download/file/1951/product/547/
+https://www.ilfordphoto.com/1131811
+
+### Submission Guidelines
+
+- [x] I have verified this developer is not already in the database
+- [x] I have reliable sources for this information
+- [x] I understand this data will be publicly available under the project's license
