@@ -5,7 +5,7 @@ on:
 
 jobs:
   process-submission:
-    if: contains(github.event.label.name, 'approved') && contains(github.event.issue.labels.*.name, 'data-submission')
+    if: github.event.action == 'labeled' && github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'data-submission')
     runs-on: ubuntu-latest
 
     steps:

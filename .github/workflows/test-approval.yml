@@ -1,0 +1,15 @@
+name: Test Approval Trigger
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  test:
+    if: github.event.label.name == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test approval trigger
+        run: |
+          echo "✅ Approval trigger works!"
+          echo "Issue #${{ github.event.issue.number }} was approved"
+          echo "Issue has these labels: ${{ toJson(github.event.issue.labels.*.name) }}"
