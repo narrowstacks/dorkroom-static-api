@@ -5,7 +5,7 @@
     "manufacturer": "Kodak",
     "type": "concentrate",
     "film_or_paper": "film",
-    "working_life_hours": null,
+    "working_life_hours": 2190,
     "stock_life_months": 6,
     "discontinued": 0,
     "notes": "Common dilutions: Dilution A (1:15), Dilution B (1:31), Dilution C (1:19), Dilution D (1:39), Dilution E (1:47), Dilution F (1:79), Dilution H (1:63)",

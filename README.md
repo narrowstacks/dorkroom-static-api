@@ -2,11 +2,13 @@
 
 A comprehensive static API for analog film photography data, including film stocks, developers, development combinations, and formats.
 
-## 📁 Data Structure
+## Data Structure
 
 This repository contains four main JSON files that provide structured data for analog photography applications:
 
-### 🎞️ `film_stocks.json`
+> **Important:** The database uses UUID-based identifiers. All references between files (e.g., film_stock_id, developer_id) use UUIDs.
+
+### `film_stocks.json`
 
 Contains detailed information about film stocks from various manufacturers.
 
@@ -14,7 +16,7 @@ Contains detailed information about film stocks from various manufacturers.
 
 ```json
 {
-  "id": 39,
+  "id": "3141645e-5007-4be6-9327-c9fb5e4ad6f6",
   "brand": "Ilford",
   "name": "HP5 Plus",
   "iso_speed": 400.0,
@@ -36,7 +38,7 @@ Contains detailed information about film stocks from various manufacturers.
 
 **Fields:**
 
-- `id`: Unique identifier for the film stock
+- `id`: Unique UUID identifier for the film stock
 - `brand`: Manufacturer/brand name
 - `name`: Film stock name
 - `iso_speed`: Film's ISO/ASA rating
@@ -47,7 +49,7 @@ Contains detailed information about film stocks from various manufacturers.
 - `description`: Detailed description of the film
 - `manufacturer_notes`: Array of key characteristics from manufacturer
 
-### 🧪 `developers.json`
+### `developers.json`
 
 Contains information about film and paper developers, including dilution options.
 
@@ -55,23 +57,30 @@ Contains information about film and paper developers, including dilution options
 
 ```json
 {
-  "id": 1,
+  "id": "83a344e1-239f-4899-b747-06390f42b7d1",
   "name": "HC-110",
   "manufacturer": "Kodak",
   "type": "concentrate",
   "film_or_paper": "film",
-  "chemistry": null,
-  "working_life_hours": null,
-  "stock_life_months": null,
+  "working_life_hours": 2190,
+  "stock_life_months": 6,
   "discontinued": 0,
-  "notes": "Common dilutions: Dilution A (1:15), Dilution B (1:31)...",
+  "notes": "Common dilutions: Dilution A (1:15), Dilution B (1:31), Dilution C (1:19), Dilution D (1:39), Dilution E (1:47), Dilution F (1:79), Dilution H (1:63)",
   "mixing_instructions": null,
   "safety_notes": null,
+  "datasheet_url": [
+    "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/j24.pdf"
+  ],
   "dilutions": [
     {
       "id": 1,
       "name": "Dilution A",
       "dilution": "1:15"
+    },
+    {
+      "id": 2,
+      "name": "Dilution B",
+      "dilution": "1:31"
     }
   ]
 }
@@ -79,21 +88,21 @@ Contains information about film and paper developers, including dilution options
 
 **Fields:**
 
-- `id`: Unique identifier for the developer
+- `id`: Unique UUID identifier for the developer
 - `name`: Developer name
 - `manufacturer`: Manufacturer name
-- `type`: Developer type (e.g., "concentrate")
+- `type`: Developer type (e.g., "concentrate", "powder")
 - `film_or_paper`: Intended use (`"film"`, `"paper"`)
-- `chemistry`: Chemical composition (optional)
-- `working_life_hours`: Working solution lifespan (optional)
-- `stock_life_months`: Stock solution lifespan (optional)
+- `working_life_hours`: Working solution lifespan in hours (optional)
+- `stock_life_months`: Stock solution lifespan in months (optional)
 - `discontinued`: Boolean flag (0 = active, 1 = discontinued)
 - `notes`: General notes about the developer
 - `mixing_instructions`: How to mix the developer (optional)
 - `safety_notes`: Safety information (optional)
+- `datasheet_url`: Array of URLs to manufacturer datasheets (optional)
 - `dilutions`: Array of available dilutions with their ratios
 
-### 🎯 `development_combinations.json`
+### `development_combinations.json`
 
 Contains specific film and developer combinations with development times and procedures.
 
@@ -101,33 +110,37 @@ Contains specific film and developer combinations with development times and pro
 
 ```json
 {
-  "id": 1,
+  "id": "56776f0e-563e-4428-94a5-2110c9579612",
   "name": "Tri-X 400 @ 400 in HC-110 1:31",
-  "film_stock_id": 59,
-  "developer_name": "HC-110",
+  "film_stock_id": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
   "temperature_f": 68,
   "time_minutes": 11.0,
   "agitation_schedule": "30s initial, then 10s every 60s",
-  "dilution": "1:31",
   "push_pull": 0,
-  "notes": "Dilution B, agitate 30s every 60s"
+  "notes": "Dilution B, agitate 30s every 60s",
+  "developer_id": "83a344e1-239f-4899-b747-06390f42b7d1",
+  "dilution_id": 2,
+  "custom_dilution": null,
+  "shooting_iso": 400.0
 }
 ```
 
 **Fields:**
 
-- `id`: Unique identifier for the combination
+- `id`: Unique UUID identifier for the combination
 - `name`: Descriptive name of the combination
-- `film_stock_id`: Reference to film stock in `film_stocks.json`
-- `developer_name`: Name of the developer used
+- `film_stock_id`: UUID reference to film stock in `film_stocks.json`
+- `developer_id`: UUID reference to developer in `developers.json`
+- `dilution_id`: Reference to specific dilution in developer's dilutions array
+- `custom_dilution`: Custom dilution ratio if not using predefined dilution (optional)
 - `temperature_f`: Development temperature in Fahrenheit
 - `time_minutes`: Development time in minutes
 - `agitation_schedule`: Agitation pattern description
-- `dilution`: Developer dilution ratio
 - `push_pull`: Push/pull stops (0 = normal, positive = push, negative = pull)
+- `shooting_iso`: ISO rating the film was shot at
 - `notes`: Additional development notes
 
-### 📏 `formats.json`
+### `formats.json`
 
 Contains information about film formats.
 
@@ -137,21 +150,184 @@ Contains information about film formats.
 {
   "id": 1,
   "name": "35mm",
-  "description": null
+  "description": "Standard 35mm roll film"
 }
 ```
 
 **Fields:**
 
 - `id`: Unique identifier for the format
-- `name`: Format name (e.g., "35mm", "120")
-- `description`: Format description (optional)
+- `name`: Format name (e.g., "35mm", "120", "4x5")
+- `description`: Format description
 
-## 🤝 Contributing
+## Python Tools
+
+This repository includes several Python tools to help users interact with the database and contribute new data.
+
+### Data Addition Scripts
+
+These command-line tools make it easy for users to submit new data to the database:
+
+#### `add_film_stock.py`
+
+Interactive script for adding new film stocks to the database.
+
+**Features:**
+
+- User-friendly guided input with progress tracking
+- Data validation and back navigation
+- Automatic UUID generation
+- Comprehensive field collection including manufacturer notes
+
+**Usage:**
+
+```bash
+python add_film_stock.py
+```
+
+The script will guide you through entering:
+
+- Brand/manufacturer name
+- Film name and ISO speed
+- Color type (b&w, color, slide)
+- Grain structure and reciprocity characteristics
+- Discontinuation status
+- Description and manufacturer notes
+
+#### `add_developer.py`
+
+Interactive script for adding new developers to the database.
+
+**Features:**
+
+- Guided input with validation
+- Support for multiple dilutions
+- Option to copy dilutions from existing developers
+- Developer type selection (concentrate, powder)
+- Datasheet URL collection
+
+**Usage:**
+
+```bash
+python add_developer.py
+```
+
+The script collects:
+
+- Developer name and manufacturer
+- Type and intended use (film/paper)
+- Working and stock solution lifespans
+- Notes and safety information
+- Multiple dilution ratios
+- Manufacturer datasheet URLs
+
+#### `add_development_combination.py`
+
+Advanced script for adding development combinations with fuzzy search capabilities.
+
+**Features:**
+
+- Smart fuzzy search for films and developers
+- Automatic push/pull calculation based on shooting ISO
+- Support for custom dilutions
+- Temperature and time specification
+- Agitation schedule input
+
+**Dependencies:**
+
+```bash
+pip install fuzzywuzzy python-Levenshtein colorama
+```
+
+**Usage:**
+
+```bash
+python add_development_combination.py
+```
+
+The script helps you:
+
+- Search and select film stocks (filters out color/slide films automatically)
+- Choose developers and dilutions
+- Specify development parameters
+- Calculate push/pull processing automatically
+
+### Example Application
+
+#### `example/darkroom_search.py`
+
+A comprehensive command-line search tool demonstrating how to use the database.
+
+**Features:**
+
+- Advanced fuzzy search across all data types
+- Interactive menu system
+- Custom combination management
+- Multiple search algorithms with scoring
+- Tabular data display with color coding
+
+**Dependencies:**
+
+```bash
+cd example
+pip install -r requirements.txt
+```
+
+**Usage:**
+
+```bash
+cd example
+python darkroom_search.py
+```
+
+**Capabilities:**
+
+- Search films, developers, and combinations
+- Create and save custom development combinations
+- Interactive browsing of all database items
+- Command-line arguments for direct searches
+- Comprehensive help system
+
+**Command-line options:**
+
+```bash
+python darkroom_search.py --search "tri-x"      # Direct search
+python darkroom_search.py --films               # List all films
+python darkroom_search.py --developers          # List all developers
+python darkroom_search.py --combinations        # List all combinations
+```
+
+### Installation
+
+For the data addition scripts (no additional dependencies required):
+
+```bash
+python add_film_stock.py
+python add_developer.py
+python add_development_combination.py  # Basic functionality
+```
+
+Recommended: For enhanced features (fuzzy search, colors), install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Contributing
 
 We welcome contributions to improve and expand this analog photography database! Here's how you can help:
 
-### 🐛 Reporting Issues
+### Easy Data Contribution
+
+**Use the Python Scripts!** The fastest way to contribute new data is using our interactive Python tools:
+
+- **`add_film_stock.py`** - Add new film stocks with guided input
+- **`add_developer.py`** - Add new developers and dilutions
+- **`add_development_combination.py`** - Add development combinations with smart search
+
+These scripts handle data validation, UUID generation, and proper formatting automatically. Simply run them and follow the prompts!
+
+### Reporting Issues
 
 If you find errors in the data, missing information, or have suggestions for improvements:
 
@@ -168,25 +344,31 @@ If you find errors in the data, missing information, or have suggestions for imp
 - **Missing Data**: Request addition of new films, developers, or combinations
 - **Enhancement**: Suggest new features or improvements
 
-### 🔄 Pull Requests
+### Pull Requests
 
 To contribute data or improvements:
 
 1. **Fork** this repository
 2. **Create a branch** for your changes:
+
    ```bash
    git checkout -b add-new-film-stocks
    ```
+
 3. **Make your changes** following the existing data structure
 4. **Validate your JSON** to ensure it's properly formatted
 5. **Test your changes** by loading the JSON files
 6. **Commit** with clear, descriptive messages:
+
    ```bash
    git commit -m "Add Ilford Delta series film stocks"
    ```
+
 7. **Push** your changes and create a pull request
 
-### 📋 Contribution Guidelines
+It is recommended you use the provided add\_\* Python scripts to maintain the data standards of the database.
+
+### Contribution Guidelines
 
 **Data Quality:**
 
@@ -209,19 +391,24 @@ To contribute data or improvements:
 - Include sources for new data
 - Test that JSON files remain valid
 
-### 🔍 Data Sources
+### Data Sources
 
 When adding new data, please use reliable sources such as:
 
-- Official manufacturer specifications
+- Official manufacturer specifications, such as datasheets.
 - Reputable photography publications
 - Film photography community databases
 - Personal testing results (clearly marked as such)
 
-### 📞 Questions?
+**Please do NOT add data directly from the Massive Development Chart, as they specifically do not allow reproducing their data.**
 
-Feel free to open an issue for questions about:
+If your development time is identical or similar to one on their list, that's okay! Development data isn't inherently theirs. Just don't copy their data/notes/etc verbatim.
 
+### Issues or Bugs
+
+Feel free to open an issue regarding:
+
+- Bugs in the Python scripts
 - Data structure or formatting
 - Contribution process
 - Missing information
