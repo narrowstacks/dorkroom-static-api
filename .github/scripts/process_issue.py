@@ -43,10 +43,10 @@ def parse_issue_body(issue_body: str) -> Dict[str, str]:
     data = {}
     
     # Regex pattern to match form field data
-    # Looks for patterns like "### Field Name\n\nValue" or "### Field Name\n\n- [x] Option"
+    # Updated pattern to better handle multiline content and avoid truncation
     patterns = [
-        r'### ([^#\n]+)\n\n([^#]*?)(?=\n###|\n<!-- |$)',  # Standard field
-        r'### ([^#\n]+)\n\n- \[x\] ([^#]*?)(?=\n###|\n<!-- |$)',  # Checkbox field
+        r'### ([^#\n]+)\n\n(.*?)(?=\n### [^#\n]+\n\n|\n<!-- |$)',  # Standard field - improved pattern
+        r'### ([^#\n]+)\n\n- \[x\] ([^#]*?)(?=\n### [^#\n]+\n\n|\n<!-- |$)',  # Checkbox field
     ]
     
     for pattern in patterns:
@@ -66,6 +66,29 @@ def parse_issue_body(issue_body: str) -> Dict[str, str]:
     return data
 
 
+def clean_no_response(text: str) -> Optional[str]:
+    """Clean up 'No response' placeholders from GitHub forms"""
+    if not text or not text.strip():
+        return None
+    
+    cleaned = text.strip()
+    
+    # Handle various "No response" formats from GitHub forms
+    no_response_patterns = [
+        "_No response_",
+        "No response", 
+        "_no response_",
+        "no response",
+        "_No Response_",
+        "No Response"
+    ]
+    
+    if cleaned in no_response_patterns:
+        return None
+        
+    return cleaned
+
+
 def process_film_stock_issue(issue_data: Dict[str, str]) -> Dict[str, Any]:
     """Convert issue data to film stock JSON format"""
     
@@ -76,10 +99,10 @@ def process_film_stock_issue(issue_data: Dict[str, str]) -> Dict[str, Any]:
         "name": issue_data.get("film_name", "").strip(),
         "iso_speed": float(issue_data.get("iso_speed", "0")) if issue_data.get("iso_speed", "").replace(".", "").isdigit() else 0.0,
         "color_type": convert_color_type(issue_data.get("film_type", "")),
-        "grain_structure": issue_data.get("grain_structure", "").strip() if issue_data.get("grain_structure", "").strip() else None,
-        "reciprocity_failure": issue_data.get("reciprocity_failure_characteristics", "").strip() if issue_data.get("reciprocity_failure_characteristics", "").strip() else None,
+        "grain_structure": clean_no_response(issue_data.get("grain_structure", "")),
+        "reciprocity_failure": clean_no_response(issue_data.get("reciprocity_failure_characteristics", "")),
         "discontinued": 1 if "discontinued" in issue_data.get("current_production_status", "").lower() else 0,
-        "description": issue_data.get("description", "").strip() if issue_data.get("description", "").strip() else None,
+        "description": clean_no_response(issue_data.get("description", "")),
         "manufacturer_notes": parse_manufacturer_notes(issue_data.get("manufacturer_notes", ""))
     }
     
@@ -98,9 +121,9 @@ def process_developer_issue(issue_data: Dict[str, str]) -> Dict[str, Any]:
         "working_life_hours": parse_numeric_field(issue_data.get("working_life_hours", "")),
         "stock_life_months": parse_numeric_field(issue_data.get("stock_life_months", "")),
         "discontinued": 1 if "discontinued" in issue_data.get("current_production_status", "").lower() else 0,
-        "notes": issue_data.get("notes", "").strip() if issue_data.get("notes", "").strip() else None,
-        "mixing_instructions": issue_data.get("mixing_instructions", "").strip() if issue_data.get("mixing_instructions", "").strip() else None,
-        "safety_notes": issue_data.get("safety_notes", "").strip() if issue_data.get("safety_notes", "").strip() else None,
+        "notes": clean_no_response(issue_data.get("notes", "")),
+        "mixing_instructions": clean_no_response(issue_data.get("mixing_instructions", "")),
+        "safety_notes": clean_no_response(issue_data.get("safety_notes", "")),
         "datasheet_url": parse_urls(issue_data.get("datasheet_urls", "")),
         "dilutions": parse_dilutions(issue_data.get("common_dilutions", ""))
     }
@@ -145,7 +168,7 @@ def process_combination_issue(issue_data: Dict[str, str], film_stocks: List[Dict
         "shooting_iso": float(issue_data.get("shooting_iso", "0")),
         "push_pull": push_pull,
         "agitation_schedule": issue_data.get("agitation_schedule", "").strip(),
-        "notes": issue_data.get("notes", "").strip() if issue_data.get("notes", "").strip() else None
+        "notes": clean_no_response(issue_data.get("notes", ""))
     }
     
     return combination
@@ -164,11 +187,12 @@ def convert_color_type(film_type_text: str) -> str:
 
 def parse_manufacturer_notes(notes_text: str) -> List[str]:
     """Parse manufacturer notes into list"""
-    if not notes_text.strip():
+    cleaned_text = clean_no_response(notes_text)
+    if not cleaned_text:
         return []
     
     # Split by newlines and clean up
-    notes = [line.strip() for line in notes_text.split('\n') if line.strip()]
+    notes = [line.strip() for line in cleaned_text.split('\n') if line.strip()]
     return notes
 
 
