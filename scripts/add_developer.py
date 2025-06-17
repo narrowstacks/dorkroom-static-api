@@ -7,6 +7,13 @@ import json
 import os
 import uuid
 from typing import List, Dict, Any, Optional
+from github_issue_helper import handle_developer_submission
+
+def get_data_file_path(filename: str) -> str:
+    """Get the full path to a data file in the root directory"""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(script_dir)
+    return os.path.join(parent_dir, filename)
 
 def clear_screen():
     """Clear the terminal screen"""
@@ -21,11 +28,12 @@ def show_header():
 
 def load_developers() -> List[Dict[str, Any]]:
     """Load existing developers from JSON file"""
-    if not os.path.exists('developers.json'):
+    developers_path = get_data_file_path('developers.json')
+    if not os.path.exists(developers_path):
         return []
     
     try:
-        with open('developers.json', 'r', encoding='utf-8') as f:
+        with open(developers_path, 'r', encoding='utf-8') as f:
             return json.load(f)
     except (json.JSONDecodeError, FileNotFoundError):
         print("Error reading developers.json file. Starting with empty list.")
@@ -33,7 +41,8 @@ def load_developers() -> List[Dict[str, Any]]:
 
 def save_developers(developers: List[Dict[str, Any]]) -> None:
     """Save developers list to JSON file"""
-    with open('developers.json', 'w', encoding='utf-8') as f:
+    developers_path = get_data_file_path('developers.json')
+    with open(developers_path, 'w', encoding='utf-8') as f:
         json.dump(developers, f, indent=2, ensure_ascii=False)
 
 def generate_new_uuid() -> str:
@@ -134,9 +143,9 @@ def select_film_or_paper(allow_back: bool = True) -> str:
 def display_existing_developers(developers: List[Dict[str, Any]]) -> None:
     """Display list of existing developers for selection"""
     print("\nExisting developers:")
-    for dev in developers:
+    for i, dev in enumerate(developers, 1):
         dilution_count = len(dev.get('dilutions', []))
-        print(f"{dev['id']:2d}. {dev['name']} ({dev['manufacturer']}) - {dilution_count} dilutions")
+        print(f"{i:2d}. {dev['name']} ({dev['manufacturer']}) - {dilution_count} dilutions")
 
 def select_developer_to_copy(developers: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     """Let user select a developer to copy dilutions from"""
@@ -148,20 +157,20 @@ def select_developer_to_copy(developers: List[Dict[str, Any]]) -> Optional[Dict[
     
     while True:
         try:
-            choice = input("\nEnter developer ID to copy dilutions from (or press Enter to skip): ").strip()
+            choice = input("\nEnter developer number to copy dilutions from (or press Enter to skip): ").strip()
             if not choice:
                 return None
             
-            dev_id = int(choice)
-            selected_dev = next((dev for dev in developers if dev['id'] == dev_id), None)
+            dev_index = int(choice) - 1  # Convert to 0-based index
             
-            if selected_dev:
+            if 0 <= dev_index < len(developers):
+                selected_dev = developers[dev_index]
                 if not selected_dev.get('dilutions'):
                     print("Selected developer has no dilutions to copy.")
                     continue
                 return selected_dev
             else:
-                print("Developer not found. Please enter a valid ID.")
+                print(f"Invalid selection. Please enter a number between 1 and {len(developers)}.")
         except ValueError:
             print("Invalid input. Please enter a number.")
 
@@ -403,11 +412,12 @@ def main():
         display_developer(developer_data)
         
         if get_user_input("\nAdd this developer? (yes/no): ", input_type='bool', allow_back=False):
-            developers.append(developer_data)
-            save_developers(developers)
-            clear_screen()
-            show_header()
-            print(f"✅ Developer '{developer_data['name']}' added successfully!")
+            # Use the GitHub issue helper to handle submission
+            def save_locally():
+                developers.append(developer_data)
+                save_developers(developers)
+            
+            handle_developer_submission(developer_data, save_locally)
         else:
             clear_screen()
             show_header()
