@@ -72,6 +72,12 @@ jobs:
             --issue-type "${{ steps.issue-type.outputs.type }}" \
             --output-dir "."
 
+      - name: Clean up temporary files
+        if: steps.process-data.outputs.success == 'true'
+        run: |
+          # Remove temporary files before creating PR
+          rm -f issue_body.txt processed_data.json
+
       - name: Create Pull Request
         if: steps.process-data.outputs.success == 'true'
         uses: peter-evans/create-pull-request@v5
@@ -105,6 +111,10 @@ jobs:
             automated-pr
           reviewers: narrowstacks
           delete-branch: true
+          add-paths: |
+            *.json
+            !issue_body.txt
+            !processed_data.json
 
       - name: Comment on issue (success)
         if: steps.process-data.outputs.success == 'true'
@@ -149,8 +159,8 @@ jobs:
 
             A maintainer will also review and provide guidance if needed.
 
-      - name: Clean up
+      - name: Final cleanup
         if: always()
         run: |
-          # Clean up temporary files
+          # Final cleanup of any remaining temporary files
           rm -f issue_body.txt processed_data.json
