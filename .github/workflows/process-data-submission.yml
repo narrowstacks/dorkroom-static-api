@@ -127,7 +127,7 @@ jobs:
             data-addition
             automated-pr
           reviewers: |
-            # Add repository maintainers here
+            narrowstacks
 
       - name: Comment on issue (success)
         if: steps.process-data.outputs.success == 'true'
