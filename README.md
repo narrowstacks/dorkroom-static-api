@@ -317,7 +317,7 @@ pip install -r requirements.txt
 
 We welcome contributions to improve and expand this analog photography database! Here's how you can help:
 
-### 🌟 Easy Data Contribution (Recommended)
+### Easy Data Contribution (Recommended)
 
 **Use GitHub Issue Forms!** The easiest way to contribute data is through our automated submission system:
 
@@ -340,7 +340,7 @@ We welcome contributions to improve and expand this analog photography database!
 - ✅ Duplicate detection
 - ✅ Community review and discussion
 
-### 🛠️ Advanced Contribution (Python Scripts)
+### Advanced Contribution (Python Scripts)
 
 For users comfortable with command-line tools, our interactive Python scripts provide more control:
 
@@ -427,7 +427,7 @@ When adding new data, please use reliable sources such as:
 
 If your development time is identical or similar to one on their list, that's okay! Development data isn't inherently theirs. Just don't copy their data/notes/etc verbatim.
 
-### 🔧 For Maintainers: Automated Workflow
+### For Maintainers: Automated Workflow
 
 The repository includes an automated system for processing data submissions:
 
