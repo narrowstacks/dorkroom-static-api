@@ -2,6 +2,43 @@
 
 A comprehensive static API for analog film photography data, including film stocks, developers, development combinations, and formats.
 
+## Contributing
+
+We welcome contributions to improve and expand this analog photography database! Here's how you can help:
+
+### Easy Data Contribution (Recommended)
+
+**Use GitHub Issue Forms!** The easiest way to contribute data is through our automated submission system:
+
+1. **[Submit Film Stock](../../issues/new?template=add-film-stock.yml)** - Add new film stocks
+2. **[Submit Developer](../../issues/new?template=add-developer.yml)** - Add new developers and dilutions
+3. **[Submit Development Combination](../../issues/new?template=add-combination.yml)** - Add development combinations
+
+**How it works:**
+
+- Fill out the form with your data
+- A maintainer reviews and approves the submission
+- GitHub automatically creates a pull request with your data
+- Once merged, your contribution is live in the database!
+
+**Benefits:**
+
+- ✅ No technical knowledge required
+- ✅ Automatic data validation and formatting
+- ✅ UUID generation handled for you
+- ✅ Duplicate detection
+- ✅ Community review and discussion
+
+### Advanced Contribution (Python Scripts)
+
+For users comfortable with command-line tools, [our interactive Python scripts](https://github.com/narrowstacks/dorkroom-static-api?tab=readme-ov-file#python-tools) provide more control:
+
+- **`add_film_stock.py`** - Add new film stocks with guided input
+- **`add_developer.py`** - Add new developers and dilutions
+- **`add_development_combination.py`** - Add development combinations with smart search
+
+These scripts handle data validation, UUID generation, and proper formatting automatically. Simply run them and follow the prompts!
+
 ## Data Structure
 
 This repository contains four main JSON files that provide structured data for analog photography applications:
@@ -252,11 +289,145 @@ The script helps you:
 - Specify development parameters
 - Calculate push/pull processing automatically
 
-### Example Application
+### Remote API Access
+
+#### `example/test_dorkroom_api.py`
+
+A comprehensive API client that demonstrates how to remotely access the Dorkroom Static API data directly from GitHub. This script is an example for developers who want to integrate the database into their own applications or for users who want to explore the data without downloading the repository.
+
+**Features:**
+
+- **Remote Data Fetching**: Automatically downloads the latest data from the GitHub repository
+- **Search Functionality**: Built-in search methods for films and developers
+- **Interactive Python Shell**: Drop into an interactive session with the API pre-loaded
+- **Sample Demonstrations**: Includes comprehensive example queries
+- **Statistics and Analysis**: Shows database statistics and available brands
+- **Production-Ready Client**: Can be used as a base for your own applications
+
+**Dependencies:**
+
+```bash
+cd example
+pip install requests  # Only dependency needed
+```
+
+**Basic Usage:**
+
+```bash
+cd example
+python test_dorkroom_api.py
+```
+
+This will:
+
+1. Fetch all data from the GitHub repository
+2. Run sample queries demonstrating the API functionality
+3. Enter an interactive Python shell with the API client ready to use
+
+**Command-line Options:**
+
+```bash
+python test_dorkroom_api.py --no-demo          # Skip demo, go straight to interactive mode
+python test_dorkroom_api.py --no-interactive   # Run demo only, skip interactive mode
+python test_dorkroom_api.py --no-demo --no-interactive  # Load data only
+```
+
+**API Client Usage:**
+
+The script provides a `DorkroomAPI` class that can be used in your own projects:
+
+```python
+from test_dorkroom_api import DorkroomAPI
+
+# Initialize and load data
+api = DorkroomAPI()
+api.load_all_data()
+
+# Search for films
+trix_films = api.search_films("Tri-X")
+bw_films = api.search_films("HP", color_type="bw")
+
+# Search for developers
+hc110_devs = api.search_developers("HC-110")
+
+# Get specific items by ID
+film = api.get_film_by_id("film-uuid-here")
+developer = api.get_developer_by_id("developer-uuid-here")
+
+# Find development combinations
+combinations = api.get_combinations_for_film("film-uuid-here")
+```
+
+**Interactive Mode Commands:**
+
+When in interactive mode, you have access to helpful shortcuts:
+
+```python
+# Data access
+films           # List of all film stocks
+developers      # List of all developers
+combinations    # List of development combinations
+
+# Search functions
+search_films('kodak')                    # Search films by name/brand
+search_films('tri-x', color_type='bw')   # Search with color filter
+search_developers('hc-110')              # Search developers
+
+# Display functions
+show_film(films[0])                      # Show detailed film info
+show_developer(developers[0])            # Show detailed developer info
+show_combination(combinations[0])        # Show combination details
+
+# Help
+help_commands()                          # Show all available commands
+```
+
+**Integration Example:**
+
+Here's how to integrate the API client into your own project:
+
+```python
+#!/usr/bin/env python3
+import sys
+sys.path.append('path/to/dorkroom-static-api/example')
+
+from test_dorkroom_api import DorkroomAPI
+
+def find_combinations_for_film_name(film_name):
+    """Find all development combinations for a film by name"""
+    api = DorkroomAPI()
+    api.load_all_data()
+
+    # Search for the film
+    films = api.search_films(film_name)
+    if not films:
+        print(f"No films found matching '{film_name}'")
+        return []
+
+    # Get combinations for the first matching film
+    film = films[0]
+    combinations = api.get_combinations_for_film(film['id'])
+
+    print(f"Found {len(combinations)} combinations for {film['brand']} {film['name']}")
+    return combinations
+
+# Usage
+combinations = find_combinations_for_film_name("Tri-X")
+```
+
+**Why Use the Remote API?**
+
+- **Always Up-to-Date**: Fetches the latest data directly from the repository
+- **No Local Storage**: No need to clone or download the repository
+- **Lightweight**: Only requires the `requests` library
+- **Production Ready**: Includes error handling and timeout management
+- **Easy Integration**: Drop the script into any Python project
+
+### Local Database Application
 
 #### `example/darkroom_search.py`
 
-A comprehensive command-line search tool demonstrating how to use the database.
+A comprehensive command-line search tool for working with local copies of the database.
 
 **Features:**
 
@@ -313,42 +484,7 @@ Recommended: For enhanced features (fuzzy search, colors), install the required 
 pip install -r requirements.txt
 ```
 
-## Contributing
-
-We welcome contributions to improve and expand this analog photography database! Here's how you can help:
-
-### Easy Data Contribution (Recommended)
-
-**Use GitHub Issue Forms!** The easiest way to contribute data is through our automated submission system:
-
-1. **[Submit Film Stock](../../issues/new?template=add-film-stock.yml)** - Add new film stocks
-2. **[Submit Developer](../../issues/new?template=add-developer.yml)** - Add new developers and dilutions
-3. **[Submit Development Combination](../../issues/new?template=add-combination.yml)** - Add development combinations
-
-**How it works:**
-
-- Fill out the form with your data
-- A maintainer reviews and approves the submission
-- GitHub automatically creates a pull request with your data
-- Once merged, your contribution is live in the database!
-
-**Benefits:**
-
-- ✅ No technical knowledge required
-- ✅ Automatic data validation and formatting
-- ✅ UUID generation handled for you
-- ✅ Duplicate detection
-- ✅ Community review and discussion
-
-### Advanced Contribution (Python Scripts)
-
-For users comfortable with command-line tools, our interactive Python scripts provide more control:
-
-- **`add_film_stock.py`** - Add new film stocks with guided input
-- **`add_developer.py`** - Add new developers and dilutions
-- **`add_development_combination.py`** - Add development combinations with smart search
-
-These scripts handle data validation, UUID generation, and proper formatting automatically. Simply run them and follow the prompts!
+## Contributing Addendum
 
 ### Reporting Issues
 

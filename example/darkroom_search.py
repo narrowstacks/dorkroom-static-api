@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Darkroom Search Tool
-A command-line tool for searching film stocks, developers, and development combinations
-with fuzzy search capabilities and custom combination management.
+A command-line tool for locally searching film stocks, developers, and development combinations
+with fuzzy search capabilities and custom combination management. Does not access the Dorkroom Static API GitHub repository.
 """
 
 import json
