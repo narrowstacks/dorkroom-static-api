@@ -1,0 +1,155 @@
+name: Add Development Combination
+description: Submit a new film/developer combination to the database
+title: "[COMBO] Add: "
+labels:
+  - data-submission
+  - development-combination
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎬 Development Combination Submission
+
+        Please fill out all required fields below to submit a new development combination to the database.
+
+        **Before submitting:**
+        - Search existing issues to avoid duplicates
+        - Ensure you have reliable sources for the information
+        - Check if the combination is already in the database
+        - Verify that both the film and developer exist in our database
+
+  - type: input
+    id: combination_name
+    attributes:
+      label: Combination Name
+      description: Descriptive name for this combination
+      placeholder: e.g., "Tri-X 400 @ 400 in HC-110 1:31"
+    validations:
+      required: true
+
+  - type: input
+    id: film_brand
+    attributes:
+      label: Film Brand
+      description: Brand of the film stock
+      placeholder: e.g., Kodak, Ilford, Fuji
+    validations:
+      required: true
+
+  - type: input
+    id: film_name
+    attributes:
+      label: Film Name
+      description: Name of the film stock
+      placeholder: e.g., Tri-X 400, HP5 Plus
+    validations:
+      required: true
+
+  - type: input
+    id: developer_manufacturer
+    attributes:
+      label: Developer Manufacturer
+      description: Manufacturer of the developer
+      placeholder: e.g., Kodak, Ilford, Adox
+    validations:
+      required: true
+
+  - type: input
+    id: developer_name
+    attributes:
+      label: Developer Name
+      description: Name of the developer
+      placeholder: e.g., HC-110, D-76, DD-X
+    validations:
+      required: true
+
+  - type: input
+    id: dilution_name
+    attributes:
+      label: Dilution Name/Ratio
+      description: The dilution used (e.g., "Dilution B", "1:31", "1+4")
+      placeholder: e.g., Dilution B, 1:31, 1+4
+    validations:
+      required: true
+
+  - type: input
+    id: temperature_f
+    attributes:
+      label: Temperature (°F)
+      description: Development temperature in Fahrenheit (numbers only)
+      placeholder: e.g., 68, 70, 75
+    validations:
+      required: true
+
+  - type: input
+    id: time_minutes
+    attributes:
+      label: Time (minutes)
+      description: Development time in minutes (decimals allowed)
+      placeholder: e.g., 11.0, 8.5, 6.75
+    validations:
+      required: true
+
+  - type: input
+    id: shooting_iso
+    attributes:
+      label: Shooting ISO
+      description: The ISO the film was shot at (numbers only, decimals allowed)
+      placeholder: e.g., 400, 800, 1600
+    validations:
+      required: true
+
+  - type: input
+    id: push_pull_stops
+    attributes:
+      label: Push/Pull Stops
+      description: Number of stops pushed (+) or pulled (-), use 0 for normal
+      placeholder: e.g., 0, +1, -1, +2
+    validations:
+      required: true
+
+  - type: textarea
+    id: agitation_schedule
+    attributes:
+      label: Agitation Schedule
+      description: Describe the agitation pattern
+      placeholder: e.g., "30s initial, then 10s every 60s", "Continuous for first 30s, then 5s every 30s"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Additional development notes (optional)
+      placeholder: Any special considerations, results, or variations
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Please list your sources for this information
+      placeholder: |
+        - Personal testing results
+        - https://manufacturer-website.com/datasheet.pdf
+        - Photography forum/community source
+        - Book/magazine reference
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Guidelines
+      description: Please confirm you have read and agree to our submission guidelines
+      options:
+        - label: I have verified this combination is not already in the database
+          required: true
+        - label: I have confirmed both the film and developer exist in our database (or submitted them separately)
+          required: true
+        - label: I have reliable sources for this development data
+          required: true
+        - label: I understand this data will be publicly available under the project's license
+          required: true

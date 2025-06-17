@@ -1,0 +1,271 @@
+name: Validate Data
+on:
+  pull_request:
+    paths:
+      - "*.json"
+  push:
+    branches: [main]
+    paths:
+      - "*.json"
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema
+
+      - name: Validate JSON structure
+        run: |
+          # Check if JSON files are valid
+          echo "Validating JSON files..."
+
+          for file in *.json; do
+            if [ -f "$file" ]; then
+              echo "Validating $file..."
+              python -m json.tool "$file" > /dev/null
+              if [ $? -eq 0 ]; then
+                echo "✅ $file is valid JSON"
+              else
+                echo "❌ $file is invalid JSON"
+                exit 1
+              fi
+            fi
+          done
+
+      - name: Check required fields
+        run: |
+          python3 << 'EOF'
+          import json
+          import sys
+
+          def validate_film_stocks():
+              """Validate film stocks data"""
+              try:
+                  with open('film_stocks.json', 'r') as f:
+                      films = json.load(f)
+                  
+                  required_fields = ['id', 'brand', 'name', 'iso_speed', 'color_type', 'discontinued']
+                  valid_color_types = ['bw', 'color', 'slide']
+                  
+                  for i, film in enumerate(films):
+                      # Check required fields
+                      for field in required_fields:
+                          if field not in film:
+                              print(f"❌ Film {i}: Missing required field '{field}'")
+                              return False
+                      
+                      # Validate color type
+                      if film.get('color_type') not in valid_color_types:
+                          print(f"❌ Film {i}: Invalid color_type '{film.get('color_type')}'")
+                          return False
+                      
+                      # Check ISO speed is numeric
+                      if not isinstance(film.get('iso_speed'), (int, float)):
+                          print(f"❌ Film {i}: iso_speed must be numeric")
+                          return False
+                      
+                      # Check discontinued is 0 or 1
+                      if film.get('discontinued') not in [0, 1]:
+                          print(f"❌ Film {i}: discontinued must be 0 or 1")
+                          return False
+                  
+                  print(f"✅ All {len(films)} film stocks are valid")
+                  return True
+                  
+              except Exception as e:
+                  print(f"❌ Error validating film stocks: {e}")
+                  return False
+
+          def validate_developers():
+              """Validate developers data"""
+              try:
+                  with open('developers.json', 'r') as f:
+                      developers = json.load(f)
+                  
+                  required_fields = ['id', 'name', 'manufacturer', 'type', 'film_or_paper', 'discontinued']
+                  valid_types = ['concentrate', 'powder', 'liquid', 'one-shot']
+                  valid_use = ['film', 'paper', 'both']
+                  
+                  for i, dev in enumerate(developers):
+                      # Check required fields
+                      for field in required_fields:
+                          if field not in dev:
+                              print(f"❌ Developer {i}: Missing required field '{field}'")
+                              return False
+                      
+                      # Validate type
+                      if dev.get('type') not in valid_types:
+                          print(f"❌ Developer {i}: Invalid type '{dev.get('type')}'")
+                          return False
+                      
+                      # Validate film_or_paper
+                      if dev.get('film_or_paper') not in valid_use:
+                          print(f"❌ Developer {i}: Invalid film_or_paper '{dev.get('film_or_paper')}'" )
+                          return False
+                      
+                      # Check discontinued is 0 or 1
+                      if dev.get('discontinued') not in [0, 1]:
+                          print(f"❌ Developer {i}: discontinued must be 0 or 1")
+                          return False
+                      
+                      # Validate dilutions if present
+                      if 'dilutions' in dev and dev['dilutions']:
+                          for j, dilution in enumerate(dev['dilutions']):
+                              if not all(key in dilution for key in ['id', 'name', 'dilution']):
+                                  print(f"❌ Developer {i}, Dilution {j}: Missing required dilution fields")
+                                  return False
+                  
+                  print(f"✅ All {len(developers)} developers are valid")
+                  return True
+                  
+              except Exception as e:
+                  print(f"❌ Error validating developers: {e}")
+                  return False
+
+          def validate_combinations():
+              """Validate development combinations data"""
+              try:
+                  with open('development_combinations.json', 'r') as f:
+                      combinations = json.load(f)
+                  
+                  # Load reference data
+                  with open('film_stocks.json', 'r') as f:
+                      films = json.load(f)
+                  with open('developers.json', 'r') as f:
+                      developers = json.load(f)
+                  
+                  film_ids = {film['id'] for film in films}
+                  developer_ids = {dev['id'] for dev in developers}
+                  
+                  required_fields = ['id', 'name', 'film_stock_id', 'developer_id', 'temperature_f', 'time_minutes', 'shooting_iso', 'push_pull', 'agitation_schedule']
+                  
+                  for i, combo in enumerate(combinations):
+                      # Check required fields
+                      for field in required_fields:
+                          if field not in combo:
+                              print(f"❌ Combination {i}: Missing required field '{field}'")
+                              return False
+                      
+                      # Check film stock exists
+                      if combo.get('film_stock_id') not in film_ids:
+                          print(f"❌ Combination {i}: Invalid film_stock_id '{combo.get('film_stock_id')}'")
+                          return False
+                      
+                      # Check developer exists
+                      if combo.get('developer_id') not in developer_ids:
+                          print(f"❌ Combination {i}: Invalid developer_id '{combo.get('developer_id')}'")
+                          return False
+                      
+                      # Check numeric fields
+                      numeric_fields = ['temperature_f', 'time_minutes', 'shooting_iso', 'push_pull']
+                      for field in numeric_fields:
+                          if not isinstance(combo.get(field), (int, float)):
+                              print(f"❌ Combination {i}: {field} must be numeric")
+                              return False
+                  
+                  print(f"✅ All {len(combinations)} combinations are valid")
+                  return True
+                  
+              except Exception as e:
+                  print(f"❌ Error validating combinations: {e}")
+                  return False
+
+          def check_for_duplicates():
+              """Check for duplicate entries"""
+              try:
+                  # Check film stock duplicates
+                  with open('film_stocks.json', 'r') as f:
+                      films = json.load(f)
+                  
+                  film_keys = []
+                  for film in films:
+                      key = f"{film.get('brand', '').lower()}:{film.get('name', '').lower()}"
+                      if key in film_keys:
+                          print(f"❌ Duplicate film stock: {film.get('brand')} {film.get('name')}")
+                          return False
+                      film_keys.append(key)
+                  
+                  # Check developer duplicates
+                  with open('developers.json', 'r') as f:
+                      developers = json.load(f)
+                  
+                  dev_keys = []
+                  for dev in developers:
+                      key = f"{dev.get('manufacturer', '').lower()}:{dev.get('name', '').lower()}"
+                      if key in dev_keys:
+                          print(f"❌ Duplicate developer: {dev.get('manufacturer')} {dev.get('name')}")
+                          return False
+                      dev_keys.append(key)
+                  
+                  print("✅ No duplicates found")
+                  return True
+                  
+              except Exception as e:
+                  print(f"❌ Error checking duplicates: {e}")
+                  return False
+
+          # Run all validations
+          all_valid = True
+          all_valid &= validate_film_stocks()
+          all_valid &= validate_developers()
+          all_valid &= validate_combinations()
+          all_valid &= check_for_duplicates()
+
+          if not all_valid:
+              sys.exit(1)
+
+          print("\n🎉 All validations passed!")
+          EOF
+
+      - name: Check file sizes
+        run: |
+          # Check if files are getting too large
+          max_size_mb=50
+
+          for file in *.json; do
+            if [ -f "$file" ]; then
+              size_mb=$(du -m "$file" | cut -f1)
+              if [ "$size_mb" -gt "$max_size_mb" ]; then
+                echo "⚠️ Warning: $file is ${size_mb}MB (larger than ${max_size_mb}MB)"
+              else
+                echo "✅ $file size: ${size_mb}MB"
+              fi
+            fi
+          done
+
+      - name: Generate validation report
+        if: github.event_name == 'pull_request'
+        run: |
+          # Count entries in each file
+          echo "## 📊 Database Stats" > validation_report.md
+          echo "" >> validation_report.md
+
+          for file in *.json; do
+            if [ -f "$file" ]; then
+              count=$(python3 -c "import json; print(len(json.load(open('$file'))))")
+              echo "- **$file**: $count entries" >> validation_report.md
+            fi
+          done
+
+          echo "" >> validation_report.md
+          echo "All validations passed! ✅" >> validation_report.md
+
+      - name: Comment PR with validation results
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: validation_report.md

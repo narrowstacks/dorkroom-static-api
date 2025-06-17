@@ -1,0 +1,132 @@
+name: Add Film Stock
+description: Submit a new film stock to the database
+title: "[FILM] Add: "
+labels:
+  - data-submission
+  - film-stock
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎞️ Film Stock Submission
+
+        Please fill out all required fields below to submit a new film stock to the database.
+
+        **Before submitting:**
+        - Search existing issues to avoid duplicates
+        - Ensure you have reliable sources for the information
+        - Check if the film is already in the database
+
+  - type: input
+    id: brand
+    attributes:
+      label: Brand/Manufacturer
+      description: The manufacturer or brand name (e.g., Kodak, Ilford, Fuji)
+      placeholder: e.g., Kodak
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Film Name
+      description: The specific name of the film stock
+      placeholder: e.g., Tri-X 400
+    validations:
+      required: true
+
+  - type: input
+    id: iso_speed
+    attributes:
+      label: ISO Speed
+      description: The film's ISO/ASA rating (numbers only, decimals allowed)
+      placeholder: e.g., 400 or 400.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: color_type
+    attributes:
+      label: Film Type
+      description: Select the type of film
+      options:
+        - Black & White (bw)
+        - Color Negative (color)
+        - Color Slide/Transparency (slide)
+    validations:
+      required: true
+
+  - type: input
+    id: grain_structure
+    attributes:
+      label: Grain Structure
+      description: Description of the grain characteristics (optional)
+      placeholder: e.g., fine grain, medium grain
+    validations:
+      required: false
+
+  - type: textarea
+    id: reciprocity_failure
+    attributes:
+      label: Reciprocity Failure Characteristics
+      description: Information about reciprocity failure behavior (optional)
+      placeholder: e.g., "Minimal reciprocity failure up to 10 seconds"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: discontinued
+    attributes:
+      label: Current Production Status
+      description: Is this film still in production?
+      options:
+        - Currently in production
+        - Discontinued
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detailed description of the film (optional but recommended)
+      placeholder: Provide detailed information about the film's characteristics, intended use, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: manufacturer_notes
+    attributes:
+      label: Manufacturer Notes
+      description: Key characteristics from manufacturer (one per line, optional)
+      placeholder: |
+        panchromatic b&w negative film
+        fine grain and sharpness
+        iso 400/27° in standard process
+        responds well to push processing
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Please list your sources for this information (datasheets, manufacturer websites, etc.)
+      placeholder: |
+        - https://manufacturer-website.com/datasheet.pdf
+        - Official product page: https://...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Guidelines
+      description: Please confirm you have read and agree to our submission guidelines
+      options:
+        - label: I have verified this film is not already in the database
+          required: true
+        - label: I have reliable sources for this information
+          required: true
+        - label: I understand this data will be publicly available under the project's license
+          required: true

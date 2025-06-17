@@ -1,0 +1,165 @@
+name: Add Developer
+description: Submit a new developer to the database
+title: "[DEVELOPER] Add: "
+labels:
+  - data-submission
+  - developer
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📸 Developer Submission
+
+        Please fill out all required fields below to submit a new developer to the database.
+
+        **Before submitting:**
+        - Search existing issues to avoid duplicates
+        - Ensure you have reliable sources for the information
+        - Check if the developer is already in the database
+
+  - type: input
+    id: name
+    attributes:
+      label: Developer Name
+      description: The name of the developer
+      placeholder: e.g., HC-110, D-76, DD-X
+    validations:
+      required: true
+
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Manufacturer
+      description: The manufacturer of the developer
+      placeholder: e.g., Kodak, Ilford, Adox
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Developer Type
+      description: Select the type of developer
+      options:
+        - concentrate
+        - powder
+        - liquid
+        - one-shot
+    validations:
+      required: true
+
+  - type: dropdown
+    id: film_or_paper
+    attributes:
+      label: Intended Use
+      description: Is this developer for film or paper?
+      options:
+        - film
+        - paper
+        - both
+    validations:
+      required: true
+
+  - type: input
+    id: working_life_hours
+    attributes:
+      label: Working Life (hours)
+      description: How long the working solution lasts in hours (optional, numbers only)
+      placeholder: e.g., 24, 2190
+    validations:
+      required: false
+
+  - type: input
+    id: stock_life_months
+    attributes:
+      label: Stock Life (months)
+      description: How long the stock solution lasts in months (optional, numbers only)
+      placeholder: e.g., 6, 24
+    validations:
+      required: false
+
+  - type: dropdown
+    id: discontinued
+    attributes:
+      label: Current Production Status
+      description: Is this developer still in production?
+      options:
+        - Currently in production
+        - Discontinued
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: General notes about the developer (optional)
+      placeholder: e.g., Common dilutions, special characteristics, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: mixing_instructions
+    attributes:
+      label: Mixing Instructions
+      description: How to mix the developer (optional)
+      placeholder: Detailed mixing instructions if known
+    validations:
+      required: false
+
+  - type: textarea
+    id: safety_notes
+    attributes:
+      label: Safety Notes
+      description: Important safety information (optional)
+      placeholder: Any special safety precautions or warnings
+    validations:
+      required: false
+
+  - type: textarea
+    id: datasheet_urls
+    attributes:
+      label: Datasheet URLs
+      description: Links to manufacturer datasheets (one per line, optional)
+      placeholder: |
+        https://manufacturer.com/datasheet.pdf
+        https://another-source.com/info.pdf
+    validations:
+      required: false
+
+  - type: textarea
+    id: dilutions
+    attributes:
+      label: Common Dilutions
+      description: List common dilutions (format - Name:Ratio, one per line)
+      placeholder: |
+        Dilution A:1:15
+        Dilution B:1:31
+        Standard:1+4
+        Economy:1+9
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Please list your sources for this information (datasheets, manufacturer websites, etc.)
+      placeholder: |
+        - https://manufacturer-website.com/datasheet.pdf
+        - Official product page: https://...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Guidelines
+      description: Please confirm you have read and agree to our submission guidelines
+      options:
+        - label: I have verified this developer is not already in the database
+          required: true
+        - label: I have reliable sources for this information
+          required: true
+        - label: I understand this data will be publicly available under the project's license
+          required: true

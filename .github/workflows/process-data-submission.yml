@@ -1,0 +1,179 @@
+name: Process Data Submission
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  process-submission:
+    if: contains(github.event.label.name, 'approved') && contains(github.event.issue.labels.*.name, 'data-submission')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+      - name: Determine issue type
+        id: issue-type
+        run: |
+          if [[ "${{ github.event.issue.title }}" == *"[FILM]"* ]]; then
+            echo "type=film-stock" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.issue.title }}" == *"[DEVELOPER]"* ]]; then
+            echo "type=developer" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.issue.title }}" == *"[COMBO]"* ]]; then
+            echo "type=combination" >> $GITHUB_OUTPUT
+          else
+            echo "type=unknown" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Process issue data
+        id: process-data
+        run: |
+          # Create a temporary file with the issue body
+          cat > issue_body.txt << 'EOF'
+          ${{ github.event.issue.body }}
+          EOF
+
+          # Process the issue
+          python .github/scripts/process_issue.py \
+            --issue-body "$(cat issue_body.txt)" \
+            --issue-type "${{ steps.issue-type.outputs.type }}" \
+            --output-dir "." \
+            --dry-run > processed_data.json
+
+          # Check if processing was successful
+          if [ $? -eq 0 ]; then
+            echo "success=true" >> $GITHUB_OUTPUT
+          else
+            echo "success=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request Branch
+        if: steps.process-data.outputs.success == 'true'
+        run: |
+          # Create branch name from issue
+          BRANCH_NAME="data-submission-issue-${{ github.event.issue.number }}"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Create and switch to new branch
+          git checkout -b "$BRANCH_NAME"
+
+      - name: Apply data changes
+        if: steps.process-data.outputs.success == 'true'
+        run: |
+          # Process the issue data for real (not dry-run)
+          python .github/scripts/process_issue.py \
+            --issue-body "$(cat issue_body.txt)" \
+            --issue-type "${{ steps.issue-type.outputs.type }}" \
+            --output-dir "."
+
+      - name: Commit and push changes
+        if: steps.process-data.outputs.success == 'true'
+        run: |
+          # Add the modified JSON files
+          git add *.json
+
+          # Create commit message
+          COMMIT_MSG="Add ${{ steps.issue-type.outputs.type }} from issue #${{ github.event.issue.number }}"
+
+          # Commit changes
+          git commit -m "$COMMIT_MSG"
+
+          # Push to new branch
+          git push origin "$BRANCH_NAME"
+
+      - name: Create Pull Request
+        if: steps.process-data.outputs.success == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.BRANCH_NAME }}
+          title: "Add ${{ steps.issue-type.outputs.type }} from issue #${{ github.event.issue.number }}"
+          body: |
+            This PR adds a new ${{ steps.issue-type.outputs.type }} to the database based on the approved submission in issue #${{ github.event.issue.number }}.
+
+            ## Changes
+            - Added new ${{ steps.issue-type.outputs.type }} entry to the appropriate JSON file
+
+            ## Source Issue
+            Closes #${{ github.event.issue.number }}
+
+            ## Validation
+            - [x] Data format validated
+            - [x] No duplicates detected
+            - [x] Required fields present
+            - [x] UUIDs generated automatically
+
+            ## Review Checklist
+            - [ ] Data accuracy verified
+            - [ ] Sources are reliable
+            - [ ] JSON structure is correct
+            - [ ] No conflicts with existing data
+          labels: |
+            data-addition
+            automated-pr
+          reviewers: |
+            # Add repository maintainers here
+
+      - name: Comment on issue (success)
+        if: steps.process-data.outputs.success == 'true'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            🎉 **Submission processed successfully!**
+
+            A pull request has been created with your ${{ steps.issue-type.outputs.type }} data: 
+
+            **Next steps:**
+            1. The PR will undergo review by maintainers
+            2. Once approved and merged, your data will be live in the database
+            3. This issue will be closed automatically when the PR is merged
+
+            Thank you for your contribution! 🎞️
+
+      - name: Comment on issue (failure)
+        if: steps.process-data.outputs.success == 'false'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            ❌ **Processing failed**
+
+            There was an issue processing your submission. Common causes:
+
+            - Missing required fields
+            - Invalid data format
+            - Duplicate entry (item already exists in database)
+            - Referenced film/developer not found (for combinations)
+
+            Please check the [workflow logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.
+
+            **To fix:**
+            1. Review the error details in the logs
+            2. Update your submission if needed  
+            3. Remove the `approved` label and re-add it to retry processing
+
+            A maintainer will also review and provide guidance if needed.
+
+      - name: Clean up
+        if: always()
+        run: |
+          # Clean up temporary files
+          rm -f issue_body.txt processed_data.json

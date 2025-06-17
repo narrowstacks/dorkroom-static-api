@@ -1,0 +1,113 @@
+# GitHub Issue Management Configuration
+
+# Labels for data submission issues
+labels:
+  - name: "data-submission"
+    color: "0366d6"
+    description: "Data submission via issue form"
+  - name: "film-stock"
+    color: "d73a49"
+    description: "Film stock submission"
+  - name: "developer"
+    color: "28a745"
+    description: "Developer submission"
+  - name: "development-combination"
+    color: "6f42c1"
+    description: "Development combination submission"
+  - name: "approved"
+    color: "0e8a16"
+    description: "Approved for processing"
+  - name: "needs-review"
+    color: "fbca04"
+    description: "Needs maintainer review"
+  - name: "invalid-data"
+    color: "b60205"
+    description: "Invalid or incomplete data"
+  - name: "duplicate"
+    color: "cfd3d7"
+    description: "Duplicate submission"
+  - name: "automated-pr"
+    color: "1d76db"
+    description: "Auto-generated pull request"
+  - name: "data-addition"
+    color: "0366d6"
+    description: "Adding new data to database"
+
+# Workflow settings
+automation:
+  # Trigger label for processing submissions
+  trigger_label: "approved"
+
+  # Required labels for processing
+  required_labels:
+    - "data-submission"
+
+  # Auto-close issues after successful PR creation
+  auto_close_issues: false
+
+  # Maximum file size for JSON files (in MB)
+  max_json_size_mb: 50
+
+  # Branch naming pattern for auto-generated PRs
+  branch_pattern: "data-submission-issue-{issue_number}"
+
+# Validation settings
+validation:
+  # Required fields for each data type
+  film_stock_required:
+    - "id"
+    - "brand"
+    - "name"
+    - "iso_speed"
+    - "color_type"
+    - "discontinued"
+
+  developer_required:
+    - "id"
+    - "name"
+    - "manufacturer"
+    - "type"
+    - "film_or_paper"
+    - "discontinued"
+
+  combination_required:
+    - "id"
+    - "name"
+    - "film_stock_id"
+    - "developer_id"
+    - "temperature_f"
+    - "time_minutes"
+    - "shooting_iso"
+    - "push_pull"
+    - "agitation_schedule"
+
+  # Valid values for enum fields
+  valid_color_types:
+    - "bw"
+    - "color"
+    - "slide"
+
+  valid_developer_types:
+    - "concentrate"
+    - "powder"
+    - "liquid"
+    - "one-shot"
+
+  valid_film_or_paper:
+    - "film"
+    - "paper"
+    - "both"
+
+# Issue templates configuration
+issue_templates:
+  film_stock:
+    title_prefix: "[FILM]"
+    template_file: "add-film-stock.yml"
+
+  developer:
+    title_prefix: "[DEVELOPER]"
+    template_file: "add-developer.yml"
+
+  combination:
+    title_prefix: "[COMBO]"
+    template_file: "add-combination.yml"

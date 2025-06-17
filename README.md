@@ -317,9 +317,32 @@ pip install -r requirements.txt
 
 We welcome contributions to improve and expand this analog photography database! Here's how you can help:
 
-### Easy Data Contribution
+### 🌟 Easy Data Contribution (Recommended)
 
-**Use the Python Scripts!** The fastest way to contribute new data is using our interactive Python tools:
+**Use GitHub Issue Forms!** The easiest way to contribute data is through our automated submission system:
+
+1. **[Submit Film Stock](../../issues/new?template=add-film-stock.yml)** - Add new film stocks
+2. **[Submit Developer](../../issues/new?template=add-developer.yml)** - Add new developers and dilutions
+3. **[Submit Development Combination](../../issues/new?template=add-combination.yml)** - Add development combinations
+
+**How it works:**
+
+- Fill out the form with your data
+- A maintainer reviews and approves the submission
+- GitHub automatically creates a pull request with your data
+- Once merged, your contribution is live in the database!
+
+**Benefits:**
+
+- ✅ No technical knowledge required
+- ✅ Automatic data validation and formatting
+- ✅ UUID generation handled for you
+- ✅ Duplicate detection
+- ✅ Community review and discussion
+
+### 🛠️ Advanced Contribution (Python Scripts)
+
+For users comfortable with command-line tools, our interactive Python scripts provide more control:
 
 - **`add_film_stock.py`** - Add new film stocks with guided input
 - **`add_developer.py`** - Add new developers and dilutions
@@ -404,11 +427,41 @@ When adding new data, please use reliable sources such as:
 
 If your development time is identical or similar to one on their list, that's okay! Development data isn't inherently theirs. Just don't copy their data/notes/etc verbatim.
 
+### 🔧 For Maintainers: Automated Workflow
+
+The repository includes an automated system for processing data submissions:
+
+1. **Issue Submission**: Users submit data via GitHub issue forms
+2. **Review Process**: Maintainers review submissions for accuracy and sources
+3. **Approval**: Add the `approved` label to trigger automation
+4. **Automatic Processing**: GitHub Actions:
+   - Parses issue data
+   - Validates format and checks for duplicates
+   - Generates UUIDs and proper JSON structure
+   - Creates a pull request with the changes
+   - Comments on the original issue with status
+5. **Final Review**: Review the auto-generated PR and merge when ready
+
+**Key Files:**
+
+- `.github/ISSUE_TEMPLATE/` - Issue form templates
+- `.github/workflows/process-data-submission.yml` - Main automation workflow
+- `.github/workflows/validate-data.yml` - Data validation on PRs
+- `.github/scripts/process_issue.py` - Issue parsing and data generation script
+
+**Safety Features:**
+
+- Duplicate detection prevents overwriting existing data
+- Data validation ensures JSON integrity
+- Dry-run validation before creating PRs
+- All changes go through pull request review
+- Automatic linking between issues and PRs
+
 ### Issues or Bugs
 
 Feel free to open an issue regarding:
 
-- Bugs in the Python scripts
+- Bugs in the Python scripts or automation
 - Data structure or formatting
 - Contribution process
 - Missing information
@@ -416,4 +469,4 @@ Feel free to open an issue regarding:
 
 ---
 
-**Note:** This is a community-driven project. All contributions are appreciated and help make analog photography more accessible to everyone!
+**Note:** This is a community-driven project with automated workflows to make contributions easy and safe. All contributions are appreciated and help make analog photography more accessible to everyone!
