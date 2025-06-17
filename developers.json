@@ -292,5 +292,38 @@
         "dilution": "1:63"
       }
     ]
+  },
+  {
+    "id": "8c1c021f-ee34-4b72-9cb4-32b9048b1a37",
+    "name": "Ilfotec LC29",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": 24,
+    "stock_life_months": 4,
+    "discontinued": 0,
+    "notes": "The Ilford Ilfotec LC29 is a high-performance liquid concentrate developer formulated for black-and-white film processing. Designed as a low-volume solution, it is ideal for photographers who want high-quality negatives while maintaining efficiency and ease of use. This developer is suited for a range of processing methods, including spiral tanks, trays, and rotary processors and it produces fine-grain negatives with excellent sharpness, making it a reliable choice for both casual film users and professionals.",
+    "mixing_instructions": "Determine first either the tank size being used or the number of films to be processed and measure out the\nappropriate quantity of concentrate. Always use the smallest measuring cylinder available; it is easier to\nmeasure 10ml accurately in a 50ml cylinder than in a 500ml cylinder.\nAdd the concentrate to the mixing vessel. A large measuring jug is a good mixing vessel as it provides a\ncheck on the total quantity of solution mixed. Rinse out the measuring cylinder used for the concentrate\ninto the mixing vessel. Finally add hot and cold water to make up the final volume at the desired temperature\nand stir thoroughly.\nAs most water drawn from pressure mains is highly aerated, we advise that users draw off the water they\nneed and leave it to stand for a few minutes before using it to make up developers.",
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/amfile/file/download/file/1951/product/547/"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "1+9",
+        "dilution": "1+9"
+      },
+      {
+        "id": 2,
+        "name": "1+19",
+        "dilution": "1+19"
+      },
+      {
+        "id": 3,
+        "name": "1+29",
+        "dilution": "1+29"
+      }
+    ]
   }
 ]
