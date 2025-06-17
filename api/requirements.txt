@@ -1,0 +1,2 @@
+requests>=2.25.0
+rapidfuzz>=3.15.0

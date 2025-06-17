@@ -4,7 +4,11 @@ A comprehensive static API for analog film photography data, including film stoc
 
 ## Contributing
 
-We welcome contributions to improve and expand this analog photography database! Here's how you can help:
+We welcome contributions to improve and expand this analog photography database!
+
+**Important Warning: Please do NOT add data directly from the Massive Development Chart, as they specifically do not allow reproducing their data in bulk. Any submissions deemed being pulled straight from their chart will not be considered.**
+
+_If your development time is identical or similar to one on their list, that's okay! Film, developer, and development data isn't inherently theirs. Just don't copy their data/notes/etc verbatim._
 
 ### Easy Data Contribution (Recommended)
 
@@ -45,7 +49,7 @@ For more information and guidelines on contributing, [see the contributing adden
 
 This repository contains four main JSON files that provide structured data for analog photography applications:
 
-> **Important:** The database uses UUID-based identifiers. All references between files (e.g., film_stock_id, developer_id) use UUIDs.
+> **Important:** The database uses UUID-based identifiers. All references between files (e.g., film_stock_id, developer_id) use UUIDs. Make sure you generate a unique UUID before submitting any new data.
 
 ### `film_stocks.json`
 
@@ -199,6 +203,16 @@ Contains information about film formats.
 - `name`: Format name (e.g., "35mm", "120", "4x5")
 - `description`: Format description
 
+## API Client
+
+The repository includes a production-ready Python API client located in the `/api/` directory:
+
+- **`api/dorkroom_client.py`** - Main API client class
+- **`api/__init__.py`** - Package initialization and exports
+- **`api/requirements.txt`** - API client dependencies
+
+The API client can be imported and used in any Python project to access the Dorkroom Static API data.
+
 ## Python Tools
 
 This repository includes several Python tools to help users interact with the database and contribute new data.
@@ -293,53 +307,28 @@ The script helps you:
 
 ### Remote API Access
 
-#### `example/test_dorkroom_api.py`
+#### `api/dorkroom_client.py`
 
-A comprehensive API client that demonstrates how to remotely access the Dorkroom Static API data directly from GitHub. This script is an example for developers who want to integrate the database into their own applications or for users who want to explore the data without downloading the repository.
+A production-ready Python client for accessing the Dorkroom Static API data directly from GitHub. This module provides a clean, reusable API client that can be integrated into any Python application.
 
 **Features:**
 
 - **Remote Data Fetching**: Automatically downloads the latest data from the GitHub repository
 - **Search Functionality**: Built-in search methods for films and developers
-- **Interactive Python Shell**: Drop into an interactive session with the API pre-loaded
-- **Sample Demonstrations**: Includes comprehensive example queries
-- **Statistics and Analysis**: Shows database statistics and available brands
-- **Production-Ready Client**: Can be used as a base for your own applications
+- **Data Display Methods**: Formatted output for films, developers, and combinations
+- **Error Handling**: Robust error handling with timeout management
+- **Production Ready**: Clean, well-documented code suitable for production use
 
 **Dependencies:**
 
 ```bash
-cd example
 pip install requests  # Only dependency needed
 ```
 
 **Basic Usage:**
 
-```bash
-cd example
-python test_dorkroom_api.py
-```
-
-This will:
-
-1. Fetch all data from the GitHub repository
-2. Run sample queries demonstrating the API functionality
-3. Enter an interactive Python shell with the API client ready to use
-
-**Command-line Options:**
-
-```bash
-python test_dorkroom_api.py --no-demo          # Skip demo, go straight to interactive mode
-python test_dorkroom_api.py --no-interactive   # Run demo only, skip interactive mode
-python test_dorkroom_api.py --no-demo --no-interactive  # Load data only
-```
-
-**API Client Usage:**
-
-The script provides a `DorkroomAPI` class that can be used in your own projects:
-
 ```python
-from test_dorkroom_api import DorkroomAPI
+from api.dorkroom_client import DorkroomAPI
 
 # Initialize and load data
 api = DorkroomAPI()
@@ -358,6 +347,43 @@ developer = api.get_developer_by_id("developer-uuid-here")
 
 # Find development combinations
 combinations = api.get_combinations_for_film("film-uuid-here")
+
+# Display detailed information
+api.display_film_info(film)
+api.display_developer_info(developer)
+```
+
+#### `example/test_dorkroom_api.py`
+
+A comprehensive test and demonstration script that showcases the API client functionality. This script provides an interactive environment for exploring the database and serves as a usage example.
+
+**Features:**
+
+- **Interactive Python Shell**: Drop into an interactive session with the API pre-loaded
+- **Sample Demonstrations**: Includes comprehensive example queries
+- **Statistics and Analysis**: Shows database statistics and available brands
+- **Command-line Interface**: Flexible options for different use cases
+
+**Usage:**
+
+```bash
+cd example
+python test_dorkroom_api.py
+```
+
+This will:
+
+1. Load the API client from the `/api/` module
+2. Fetch all data from the GitHub repository
+3. Run sample queries demonstrating the API functionality
+4. Enter an interactive Python shell with the API client ready to use
+
+**Command-line Options:**
+
+```bash
+python test_dorkroom_api.py --no-demo          # Skip demo, go straight to interactive mode
+python test_dorkroom_api.py --no-interactive   # Run demo only, skip interactive mode
+python test_dorkroom_api.py --no-demo --no-interactive  # Load data only
 ```
 
 **Interactive Mode Commands:**
@@ -391,9 +417,12 @@ Here's how to integrate the API client into your own project:
 ```python
 #!/usr/bin/env python3
 import sys
-sys.path.append('path/to/dorkroom-static-api/example')
+from pathlib import Path
 
-from test_dorkroom_api import DorkroomAPI
+# Add the dorkroom-static-api directory to Python path
+sys.path.insert(0, str(Path('path/to/dorkroom-static-api')))
+
+from api.dorkroom_client import DorkroomAPI
 
 def find_combinations_for_film_name(film_name):
     """Find all development combinations for a film by name"""
@@ -423,7 +452,8 @@ combinations = find_combinations_for_film_name("Tri-X")
 - **No Local Storage**: No need to clone or download the repository
 - **Lightweight**: Only requires the `requests` library
 - **Production Ready**: Includes error handling and timeout management
-- **Easy Integration**: Drop the script into any Python project
+- **Easy Integration**: Import the client into any Python project
+- **Modular Design**: Separate API client from testing/demo code
 
 ### Local Database Application
 
@@ -527,7 +557,7 @@ To contribute data or improvements:
 
 7. **Push** your changes and create a pull request
 
-It is recommended you use the provided add\_\* Python scripts to maintain the data standards of the database.
+It is recommended you use the [provided add\_\*.py Python scripts](https://github.com/narrowstacks/dorkroom-static-api?tab=readme-ov-file#python-tools) to maintain the data standards of the database if manually entering data.
 
 ### Contribution Guidelines
 
@@ -561,9 +591,7 @@ When adding new data, please use reliable sources such as:
 - Film photography community databases
 - Personal testing results (clearly marked as such)
 
-**Please do NOT add data directly from the Massive Development Chart, as they specifically do not allow reproducing their data.**
-
-If your development time is identical or similar to one on their list, that's okay! Development data isn't inherently theirs. Just don't copy their data/notes/etc verbatim.
+**Again: Please do NOT add data directly from the Massive Development Chart!**
 
 ### For Maintainers: Automated Workflow
 

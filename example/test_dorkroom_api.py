@@ -4,182 +4,162 @@ Test script for pulling and working with data from the Dorkroom Static API
 Repository: https://github.com/narrowstacks/dorkroom-static-api
 """
 
-import json
-import requests
-from typing import Dict, List, Optional, Any
-from urllib.parse import urljoin
 import sys
 import code
 import argparse
+from pathlib import Path
+from typing import List, Optional, Dict, Any
+from dataclasses import dataclass
+
+# Add the parent directory to the Python path to import from api module
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from api.dorkroom_client import DorkroomClient, CLIFormatter, Film, Developer, Combination
 
 
-class DorkroomAPI:
-    """Client for accessing the Dorkroom Static API data from GitHub"""
-    
-    BASE_URL = "https://raw.githubusercontent.com/narrowstacks/dorkroom-static-api/main/"
+@dataclass
+class SearchResult:
+    """Container for fuzzy search results to maintain compatibility"""
+    score: float
+    item: Any
+
+
+class DorkroomAPIWrapper:
+    """Wrapper around DorkroomClient to maintain compatibility with existing test code"""
     
     def __init__(self):
-        self.film_stocks: List[Dict] = []
-        self.developers: List[Dict] = []
-        self.development_combinations: List[Dict] = []
-        self.formats: List[Dict] = []
+        self.client = DorkroomClient()
+        self.formatter = CLIFormatter()
         self._loaded = False
     
-    def fetch_json_data(self, filename: str) -> List[Dict]:
-        """Fetch JSON data from GitHub repository"""
-        url = urljoin(self.BASE_URL, filename)
-        try:
-            print(f"Fetching {filename} from {url}...")
-            response = requests.get(url, timeout=10)
-            response.raise_for_status()
-            data = response.json()
-            print(f"✓ Successfully loaded {len(data)} records from {filename}")
-            return data
-        except requests.RequestException as e:
-            print(f"✗ Error fetching {filename}: {e}")
-            return []
-        except json.JSONDecodeError as e:
-            print(f"✗ Error parsing JSON from {filename}: {e}")
-            return []
-    
     def load_all_data(self):
-        """Load all data from the repository"""
-        print("Loading Dorkroom Static API data...")
-        print("-" * 50)
-        
-        self.film_stocks = self.fetch_json_data("film_stocks.json")
-        self.developers = self.fetch_json_data("developers.json")
-        self.development_combinations = self.fetch_json_data("development_combinations.json")
-        self.formats = self.fetch_json_data("formats.json")
-        
+        """Load all data - wrapper around client.load_all()"""
+        self.client.load_all()
         self._loaded = True
-        print("-" * 50)
-        print(f"Data loading complete!")
-        print(f"Total records: {len(self.film_stocks) + len(self.developers) + len(self.development_combinations) + len(self.formats)}")
     
-    def get_film_by_id(self, film_id: str) -> Optional[Dict]:
-        """Get a film stock by its UUID"""
-        return next((film for film in self.film_stocks if film.get('id') == film_id), None)
+    @property
+    def film_stocks(self) -> List[Film]:
+        """Access to films data"""
+        return self.client._films
     
-    def get_developer_by_id(self, developer_id: str) -> Optional[Dict]:
-        """Get a developer by its UUID"""
-        return next((dev for dev in self.developers if dev.get('id') == developer_id), None)
+    @property
+    def developers(self) -> List[Developer]:
+        """Access to developers data"""
+        return self.client._devs
     
-    def search_films(self, query: str, color_type: Optional[str] = None) -> List[Dict]:
-        """Search film stocks by name/brand"""
-        results = []
-        query_lower = query.lower()
-        
-        for film in self.film_stocks:
-            if (query_lower in film.get('name', '').lower() or 
-                query_lower in film.get('brand', '').lower()):
-                if color_type is None or film.get('color_type') == color_type:
-                    results.append(film)
-        
-        return results
+    @property
+    def development_combinations(self) -> List[Combination]:
+        """Access to combinations data"""
+        return self.client._combinations
     
-    def search_developers(self, query: str) -> List[Dict]:
-        """Search developers by name/manufacturer"""
-        results = []
-        query_lower = query.lower()
-        
-        for dev in self.developers:
-            if (query_lower in dev.get('name', '').lower() or 
-                query_lower in dev.get('manufacturer', '').lower()):
-                results.append(dev)
-        
-        return results
+    @property
+    def formats(self) -> List[Dict]:
+        """Placeholder for formats - not implemented in new client"""
+        return []
     
-    def get_combinations_for_film(self, film_id: str) -> List[Dict]:
-        """Get all development combinations for a specific film"""
-        return [combo for combo in self.development_combinations 
-                if combo.get('film_stock_id') == film_id]
+    def search_films(self, query: str, color_type: Optional[str] = None) -> List[Film]:
+        """Search films using the new client"""
+        return self.client.search_films(query, color_type)
     
-    def get_combinations_for_developer(self, developer_id: str) -> List[Dict]:
-        """Get all development combinations for a specific developer"""
-        return [combo for combo in self.development_combinations 
-                if combo.get('developer_id') == developer_id]
+    def search_developers(self, query: str) -> List[Developer]:
+        """Search developers - implementing since it doesn't exist in new client"""
+        q = query.lower()
+        return [
+            d for d in self.client._devs
+            if (q in d.name.lower() or q in d.manufacturer.lower())
+        ]
     
-    def display_film_info(self, film: Dict):
-        """Display detailed information about a film stock"""
-        print(f"\n📷 {film.get('brand')} {film.get('name')}")
-        print(f"   ID: {film.get('id')}")
-        print(f"   ISO Speed: {film.get('iso_speed')}")
-        print(f"   Color Type: {film.get('color_type', 'N/A').upper()}")
-        print(f"   Discontinued: {'Yes' if film.get('discontinued') else 'No'}")
-        
-        if film.get('description'):
-            desc = film.get('description', '')
-            # Truncate long descriptions
-            if len(desc) > 200:
-                desc = desc[:200] + "..."
-            print(f"   Description: {desc}")
-        
-        if film.get('manufacturer_notes'):
-            print(f"   Key Features: {', '.join(film.get('manufacturer_notes', []))}")
+    def fuzzy_search_films(self, query: str, limit: int = 10, color_type: Optional[str] = None) -> List[SearchResult]:
+        """Fuzzy search films with compatibility wrapper"""
+        films = self.client.fuzzy_search_films(query, limit)
+        # Filter by color_type if specified
+        if color_type:
+            films = [f for f in films if f.color_type == color_type]
+        # Wrap in SearchResult for compatibility
+        return [SearchResult(score=100.0, item=film) for film in films]
     
-    def display_developer_info(self, developer: Dict):
-        """Display detailed information about a developer"""
-        print(f"\n🧪 {developer.get('manufacturer')} {developer.get('name')}")
-        print(f"   ID: {developer.get('id')}")
-        print(f"   Type: {developer.get('type', 'N/A').title()}")
-        print(f"   For: {developer.get('film_or_paper', 'N/A').title()}")
-        print(f"   Discontinued: {'Yes' if developer.get('discontinued') else 'No'}")
-        
-        if developer.get('working_life_hours'):
-            hours = developer.get('working_life_hours')
-            days = hours / 24
-            print(f"   Working Life: {hours} hours ({days:.1f} days)")
-        
-        if developer.get('stock_life_months'):
-            print(f"   Stock Life: {developer.get('stock_life_months')} months")
-        
-        dilutions = developer.get('dilutions', [])
-        if dilutions:
-            print(f"   Available Dilutions: {len(dilutions)}")
-            for dilution in dilutions[:3]:  # Show first 3
-                print(f"     • {dilution.get('name', 'Unnamed')}: {dilution.get('dilution', 'N/A')}")
-            if len(dilutions) > 3:
-                print(f"     ... and {len(dilutions) - 3} more")
+    def fuzzy_search_developers(self, query: str, limit: int = 10) -> List[SearchResult]:
+        """Fuzzy search developers with compatibility wrapper"""
+        devs = self.client.fuzzy_search_devs(query, limit)
+        # Wrap in SearchResult for compatibility  
+        return [SearchResult(score=100.0, item=dev) for dev in devs]
     
-    def display_combination_info(self, combo: Dict):
-        """Display detailed information about a development combination"""
-        film = self.get_film_by_id(combo.get('film_stock_id', ''))
-        developer = self.get_developer_by_id(combo.get('developer_id', ''))
+    def get_film_by_id(self, film_id: str) -> Optional[Film]:
+        """Get film by ID"""
+        return self.client.get_film(film_id)
+    
+    def get_developer_by_id(self, dev_id: str) -> Optional[Developer]:
+        """Get developer by ID"""
+        return self.client.get_developer(dev_id)
+    
+    def get_combinations_for_film(self, film_id: str) -> List[Combination]:
+        """Get combinations for a film"""
+        return self.client.list_combinations_for_film(film_id)
+    
+    def display_film_info(self, film: Film):
+        """Display film information using CLIFormatter"""
+        lines = self.formatter.format_film(film)
+        self.formatter.print_lines(lines)
+    
+    def display_developer_info(self, dev: Developer):
+        """Display developer information using CLIFormatter"""
+        lines = self.formatter.format_dev(dev)
+        self.formatter.print_lines(lines)
+    
+    def display_combination_info(self, combo: Combination):
+        """Display combination information"""
+        film = self.get_film_by_id(combo.film_stock_id)
+        dev = self.get_developer_by_id(combo.developer_id)
         
-        print(f"\n⚗️  {combo.get('name', 'Unnamed Combination')}")
-        print(f"   ID: {combo.get('id')}")
+        film_name = f"{film.brand} {film.name}" if film else f"Film ID: {combo.film_stock_id}"
+        dev_name = f"{dev.manufacturer} {dev.name}" if dev else f"Developer ID: {combo.developer_id}"
         
-        if film:
-            print(f"   Film: {film.get('brand')} {film.get('name')}")
+        lines = [
+            f"⚗️  {combo.name}",
+            f"   ID: {combo.id}",
+            f"   Film: {film_name}",
+            f"   Developer: {dev_name}",
+            f"   Temperature: {combo.temperature_f}°F",
+            f"   Time: {combo.time_minutes} minutes",
+            f"   Shooting ISO: {int(combo.shooting_iso)}",
+        ]
+        
+        if combo.push_pull != 0:
+            push_pull_str = f"+{combo.push_pull}" if combo.push_pull > 0 else str(combo.push_pull)
+            lines.append(f"   Push/Pull: {push_pull_str} stops")
+        
+        if combo.agitation_schedule:
+            lines.append(f"   Agitation: {combo.agitation_schedule}")
+        
+        if combo.notes:
+            lines.append(f"   Notes: {combo.notes}")
+        
+        self.formatter.print_lines(lines)
+    
+    def display_search_results(self, results: List[SearchResult]):
+        """Display fuzzy search results"""
+        for i, result in enumerate(results, 1):
+            print(f"\n{i}. Score: {result.score:.1f}")
+            if isinstance(result.item, Film):
+                self.display_film_info(result.item)
+            elif isinstance(result.item, Developer):
+                self.display_developer_info(result.item)
+            else:
+                print(f"   {result.item}")
+    
+    def _format_working_life(self, hours: int) -> str:
+        """Format working life hours into a readable string"""
+        if hours < 24:
+            return f"{hours}h"
         else:
-            print(f"   Film ID: {combo.get('film_stock_id', 'Unknown')}")
-        
-        if developer:
-            print(f"   Developer: {developer.get('manufacturer')} {developer.get('name')}")
-        else:
-            print(f"   Developer ID: {combo.get('developer_id', 'Unknown')}")
-        
-        print(f"   Temperature: {combo.get('temperature_f', 'N/A')}°F")
-        print(f"   Time: {combo.get('time_minutes', 'N/A')} minutes")
-        print(f"   Shooting ISO: {combo.get('shooting_iso', 'N/A')}")
-        
-        push_pull = combo.get('push_pull', 0)
-        if push_pull > 0:
-            print(f"   Push: +{push_pull} stops")
-        elif push_pull < 0:
-            print(f"   Pull: {push_pull} stops")
-        else:
-            print(f"   Processing: Normal")
-        
-        if combo.get('agitation_schedule'):
-            print(f"   Agitation: {combo.get('agitation_schedule')}")
-        
-        if combo.get('notes'):
-            print(f"   Notes: {combo.get('notes')}")
+            days, rem_hours = divmod(hours, 24)
+            if rem_hours == 0:
+                return f"{days}d"
+            else:
+                return f"{days}d {rem_hours}h"
 
 
-def run_sample_queries(api: DorkroomAPI):
+def run_sample_queries(api: DorkroomAPIWrapper):
     """Run sample queries to demonstrate the API functionality"""
     
     print("\n" + "="*60)
@@ -191,35 +171,113 @@ def run_sample_queries(api: DorkroomAPI):
     trix_films = api.search_films("Tri-X")
     for film in trix_films[:3]:  # Show first 3 results
         api.display_film_info(film)
+        print()
+    
+    # Sample 1b: Fuzzy search comparison
+    print(f"\n1b. 🎯 Fuzzy search for 'tri-x' (with improved matching):")
+    fuzzy_trix = api.fuzzy_search_films("tri-x", limit=3)
+    api.display_search_results(fuzzy_trix)
     
     # Sample 2: Search for black and white films only
     print(f"\n2. 🔍 Searching for black and white films containing 'HP':")
     bw_films = api.search_films("HP", color_type="bw")
     for film in bw_films[:2]:  # Show first 2 results
         api.display_film_info(film)
+        print()
+    
+    # Sample 2b: Fuzzy search with color filter
+    print(f"\n2b. 🎯 Fuzzy search for 'kodak' black & white films:")
+    fuzzy_bw = api.fuzzy_search_films("kodak", limit=3, color_type="bw")
+    api.display_search_results(fuzzy_bw)
     
     # Sample 3: Search for developers
     print(f"\n3. 🔍 Searching for 'HC-110' developer:")
     hc110_devs = api.search_developers("HC-110")
     for dev in hc110_devs[:1]:  # Show first result
         api.display_developer_info(dev)
+        print()
+    
+    # Sample 3b: Fuzzy developer search
+    print(f"\n3b. 🎯 Fuzzy search for 'd76' developers:")
+    fuzzy_devs = api.fuzzy_search_developers("d76", limit=3)
+    api.display_search_results(fuzzy_devs)
+    if fuzzy_devs:
+        print("\nDetailed info for first fuzzy result (showing improved working life display):")
+        api.display_developer_info(fuzzy_devs[0].item)
     
     # Sample 4: Find development combinations for a specific film
-    if api.film_stocks:
-        sample_film = api.film_stocks[0]  # Get first film
-        print(f"\n4. 🔍 Finding development combinations for {sample_film.get('brand')} {sample_film.get('name')}:")
-        combinations = api.get_combinations_for_film(sample_film.get('id'))
+    print(f"\n4. 🔍 Searching for Tri-X film for combination demo...")
+    tri_x_results = api.fuzzy_search_films("tri x", limit=1)
+    print(f"   Debug: Fuzzy search for 'tri x' returned {len(tri_x_results)} results")
+    
+    # Debug: Let's test what the fuzzy search is actually comparing
+    if hasattr(api.client, 'fuzzy_search') and len(api.film_stocks) > 0:
+        # Find the Tri-X film manually to see what text is being compared
+        trix_film = None
+        for film in api.film_stocks:
+            if "tri-x" in film.name.lower():
+                trix_film = film
+                break
+        if trix_film:
+            search_text = f"{trix_film.brand} {trix_film.name}".lower()
+            print(f"   Debug: Found Tri-X film text: '{search_text}'")
+            print(f"   Debug: Query text: 'tri x'")
+            # Test fuzzy score manually
+            try:
+                from rapidfuzz import fuzz
+                token_score = fuzz.token_sort_ratio("tri x", search_text)
+                partial_score = fuzz.partial_ratio("tri x", search_text)
+                print(f"   Debug: Token sort score: {token_score}")
+                print(f"   Debug: Partial ratio score: {partial_score}")
+                print(f"   Debug: Threshold: 60.0")
+            except ImportError:
+                try:
+                    from fuzzywuzzy import fuzz
+                    token_score = fuzz.token_sort_ratio("tri x", search_text)
+                    partial_score = fuzz.partial_ratio("tri x", search_text)
+                    print(f"   Debug: Token sort score: {token_score}")
+                    print(f"   Debug: Partial ratio score: {partial_score}")
+                    print(f"   Debug: Threshold: 60.0")
+                except ImportError:
+                    print(f"   Debug: No fuzzy library available")
+    
+    # Fallback to regular search if fuzzy search fails
+    if not tri_x_results:
+        print(f"   Debug: Trying regular search for 'Tri-X'...")
+        regular_results = api.search_films("Tri-X")
+        print(f"   Debug: Regular search for 'Tri-X' returned {len(regular_results)} results")
+        if regular_results:
+            sample_film = regular_results[0]
+            print(f"   Using regular search result: {sample_film.brand} {sample_film.name}")
+        else:
+            # Final fallback to any film
+            print(f"   Debug: No Tri-X found, using first available film...")
+            if api.film_stocks:
+                sample_film = api.film_stocks[0]
+                print(f"   Using fallback film: {sample_film.brand} {sample_film.name}")
+            else:
+                sample_film = None
+    else:
+        sample_film = tri_x_results[0].item
+        print(f"   Using fuzzy search result: {sample_film.brand} {sample_film.name}")
+    
+    if sample_film:
+        print(f"\n   Finding development combinations for {sample_film.brand} {sample_film.name}:")
+        combinations = api.get_combinations_for_film(sample_film.id)
         print(f"   Found {len(combinations)} combinations")
         for combo in combinations[:2]:  # Show first 2
             api.display_combination_info(combo)
+            print()
+    else:
+        print("   No films available for combination demo")
     
     # Sample 5: Show statistics
     print(f"\n5. 📊 Database Statistics:")
     total_films = len(api.film_stocks)
-    active_films = len([f for f in api.film_stocks if not f.get('discontinued')])
-    bw_films = len([f for f in api.film_stocks if f.get('color_type') == 'bw'])
-    color_films = len([f for f in api.film_stocks if f.get('color_type') == 'color'])
-    slide_films = len([f for f in api.film_stocks if f.get('color_type') == 'slide'])
+    active_films = len([f for f in api.film_stocks if f.discontinued == 0])
+    bw_films = len([f for f in api.film_stocks if f.color_type == 'bw'])
+    color_films = len([f for f in api.film_stocks if f.color_type == 'color'])
+    slide_films = len([f for f in api.film_stocks if f.color_type == 'slide'])
     
     print(f"   📷 Film Stocks: {total_films} total ({active_films} active)")
     print(f"      • Black & White: {bw_films}")
@@ -231,16 +289,23 @@ def run_sample_queries(api: DorkroomAPI):
     
     # Sample 6: Show film brands
     if api.film_stocks:
-        brands = set(film.get('brand', 'Unknown') for film in api.film_stocks)
+        brands = set(film.brand for film in api.film_stocks)
         print(f"\n6. 🏭 Available Film Brands ({len(brands)}):")
         for brand in sorted(brands)[:10]:  # Show first 10
-            brand_count = len([f for f in api.film_stocks if f.get('brand') == brand])
+            brand_count = len([f for f in api.film_stocks if f.brand == brand])
             print(f"   • {brand}: {brand_count} films")
         if len(brands) > 10:
             print(f"   ... and {len(brands) - 10} more brands")
+            
+    # Sample 7: Working life formatting demonstration
+    print(f"\n7. ⏰ Working Life Formatting Examples:")
+    test_hours = [6, 24, 25, 48, 72, 168]
+    for hours in test_hours:
+        formatted = api._format_working_life(hours)
+        print(f"   {hours:3d} hours → {formatted}")
 
 
-def start_interactive_mode(api: DorkroomAPI):
+def start_interactive_mode(api: DorkroomAPIWrapper):
     """Start interactive Python shell with API client available"""
     
     # Create helpful shortcuts
@@ -257,9 +322,21 @@ def start_interactive_mode(api: DorkroomAPI):
     def search_developers(query):
         """Shortcut for api.search_developers()"""
         return api.search_developers(query)
+        
+    def fuzzy_search_films(query, limit=10, color_type=None):
+        """Shortcut for api.fuzzy_search_films()"""
+        return api.fuzzy_search_films(query, limit, color_type)
+    
+    def fuzzy_search_developers(query, limit=10):
+        """Shortcut for api.fuzzy_search_developers()"""
+        return api.fuzzy_search_developers(query, limit)
+    
+    def show_search_results(results):
+        """Shortcut for api.display_search_results()"""
+        api.display_search_results(results)
     
     def show_film(film_or_id):
-        """Display film info - accepts film dict or ID"""
+        """Display film info - accepts film object or ID"""
         if isinstance(film_or_id, str):
             film = api.get_film_by_id(film_or_id)
             if not film:
@@ -270,7 +347,7 @@ def start_interactive_mode(api: DorkroomAPI):
         api.display_film_info(film)
     
     def show_developer(dev_or_id):
-        """Display developer info - accepts developer dict or ID"""
+        """Display developer info - accepts developer object or ID"""
         if isinstance(dev_or_id, str):
             dev = api.get_developer_by_id(dev_or_id)
             if not dev:
@@ -287,26 +364,31 @@ def start_interactive_mode(api: DorkroomAPI):
     def help_commands():
         """Show available commands"""
         print("\n🔧 Available Commands:")
-        print("  • api - The main DorkroomAPI instance")
+        print("  • api - The main DorkroomAPIWrapper instance")
         print("  • films - List of all film stocks")
         print("  • developers - List of all developers") 
         print("  • combinations - List of development combinations")
         print("  • formats - List of film formats")
         print("\n🔍 Search Functions:")
-        print("  • search_films('query', color_type='bw') - Search films")
-        print("  • search_developers('query') - Search developers")
+        print("  • search_films('query', color_type='bw') - Basic search films")
+        print("  • search_developers('query') - Basic search developers")
+        print("  • fuzzy_search_films('query', limit=10, color_type=None) - Fuzzy search films")
+        print("  • fuzzy_search_developers('query', limit=10) - Fuzzy search developers")
+        print("  • show_search_results(results) - Display fuzzy search results")
         print("\n📖 Display Functions:")
         print("  • show_film(film_or_id) - Display film details")
-        print("  • show_developer(dev_or_id) - Display developer details")
+        print("  • show_developer(dev_or_id) - Display developer details")  
         print("  • show_combination(combo) - Display combination details")
         print("\n📊 Quick Stats:")
         print(f"  • Total films: {len(films)}")
         print(f"  • Total developers: {len(developers)}")
         print(f"  • Total combinations: {len(combinations)}")
         print("\n💡 Examples:")
-        print("  • kodak_films = search_films('Kodak')")
-        print("  • show_film(films[0])")
-        print("  • bw_films = search_films('tri-x', 'bw')")
+        print("  • results = fuzzy_search_films('kodak')")
+        print("  • show_search_results(results)")
+        print("  • show_film(results[0].item)  # Show details of first result")
+        print("  • dev_results = fuzzy_search_developers('d76')")
+        print("  • bw_films = fuzzy_search_films('tri-x', color_type='bw')")
         print("  • help_commands() - Show this help again")
         print("\n🚪 Exit: Type 'exit()' or press Ctrl+D")
     
@@ -319,6 +401,9 @@ def start_interactive_mode(api: DorkroomAPI):
         'formats': formats,
         'search_films': search_films,
         'search_developers': search_developers,
+        'fuzzy_search_films': fuzzy_search_films,
+        'fuzzy_search_developers': fuzzy_search_developers,
+        'show_search_results': show_search_results,
         'show_film': show_film,
         'show_developer': show_developer,
         'show_combination': show_combination,
@@ -353,8 +438,8 @@ def main():
     print("Repository: https://github.com/narrowstacks/dorkroom-static-api")
     print("=" * 60)
     
-    # Initialize API client
-    api = DorkroomAPI()
+    # Initialize API client wrapper
+    api = DorkroomAPIWrapper()
     
     try:
         # Load all data

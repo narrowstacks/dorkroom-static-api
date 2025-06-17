@@ -4,3 +4,4 @@
 .vscode
 *.pyc
 venv
+api/__pycache__
