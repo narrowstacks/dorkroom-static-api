@@ -14,6 +14,66 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check if user is maintainer
+        id: check-maintainer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              // Check if the user who added the label has write permissions
+              const { data: permission } = await github.rest.repos.getCollaboratorPermissionLevel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                username: context.actor
+              });
+              
+              const hasWriteAccess = ['write', 'admin', 'maintain'].includes(permission.permission);
+              
+              if (!hasWriteAccess) {
+                console.log(`User ${context.actor} does not have write permissions. Permission level: ${permission.permission}`);
+                return false;
+              }
+              
+              console.log(`User ${context.actor} has ${permission.permission} permissions - proceeding with approval`);
+              return true;
+            } catch (error) {
+              console.log(`Error checking permissions for ${context.actor}: ${error.message}`);
+              return false;
+            }
+
+      - name: Comment on unauthorized approval attempt
+        if: steps.check-maintainer.outputs.result == 'false'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            ⚠️ **Unauthorized Approval Attempt**
+
+            @${{ github.actor }}, only repository maintainers can approve data submissions.
+
+            A maintainer will review this submission and add the `approved` label if the data meets our quality standards.
+
+            Thank you for your interest in contributing to the project! 🎞️
+
+      - name: Remove unauthorized approval
+        if: steps.check-maintainer.outputs.result == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              name: 'approved'
+            });
+
+      - name: Stop workflow for unauthorized users
+        if: steps.check-maintainer.outputs.result == 'false'
+        run: |
+          echo "Workflow stopped: User does not have maintainer permissions"
+          exit 1
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
