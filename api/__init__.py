@@ -1,10 +1,36 @@
+#!/usr/bin/env python3
 """
-Dorkroom Static API
+Dorkroom Static API Client
 
-A Python package for accessing the Dorkroom Static API data.
+A robust, typed, and configurable Python client for the
+Dorkroom Static API.
 """
 
-from .dorkroom_client import DorkroomClient, CLIFormatter, Film, Developer, Combination
+# Import main classes and types
+from .client import DorkroomClient
+from .types import Film, Developer, Combination
+from .exceptions import (
+    DorkroomAPIError,
+    DataFetchError,
+    DataParseError,
+    DataNotLoadedError,
+)
+from .formatters import CLIFormatter
+from .protocols import HTTPTransport
 
-__all__ = ['DorkroomClient', 'CLIFormatter', 'Film', 'Developer', 'Combination']
-__version__ = '1.0.0' 
+# Version info
+__version__ = "0.1.0"
+
+# Public API
+__all__ = [
+    "DorkroomClient",
+    "Film",
+    "Developer", 
+    "Combination",
+    "CLIFormatter",
+    "HTTPTransport",
+    "DorkroomAPIError",
+    "DataFetchError",
+    "DataParseError",
+    "DataNotLoadedError",
+] 
