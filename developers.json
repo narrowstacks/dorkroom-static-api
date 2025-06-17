@@ -292,5 +292,28 @@
         "dilution": "1:63"
       }
     ]
+  },
+  {
+    "id": "77182090-cd37-4e22-a393-aa6d999300a6",
+    "name": "Ilfotec LC29",
+    "manufacturer": "Ilford",
+    "type": "concentrate",
+    "film_or_paper": "film",
+    "working_life_hours": 24,
+    "stock_life_months": 6,
+    "discontinued": 0,
+    "notes": "ILFORD ILFOTEC LC29 is a high dilution liquid concentrate black and white film developer that is flexible and",
+    "mixing_instructions": "Determine first either the tank size being used or the number of films to be processed and measure out the",
+    "safety_notes": null,
+    "datasheet_url": [
+      "https://www.ilfordphoto.com/amfile/file/download/file/1951/product/547/"
+    ],
+    "dilutions": [
+      {
+        "id": 1,
+        "name": "- 1+29",
+        "dilution": "1+29"
+      }
+    ]
   }
 ]
