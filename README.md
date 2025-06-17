@@ -39,7 +39,7 @@ For users comfortable with command-line tools, [our interactive Python scripts](
 
 These scripts handle data validation, UUID generation, and proper formatting automatically. Simply run them and follow the prompts!
 
-For more information and guidelines on contributing, [see the contributing addendum](https://github.com/narrowstacks/dorkroom-static-api?tab=readme-ov-file#python-tools).
+For more information and guidelines on contributing, [see the contributing addendum](https://github.com/narrowstacks/dorkroom-static-api?tab=readme-ov-file#contributing-addendum).
 
 ## Data Structure
 
