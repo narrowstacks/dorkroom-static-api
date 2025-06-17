@@ -3,3 +3,4 @@
 .yoyo/
 .vscode
 *.pyc
+venv
