@@ -3,6 +3,11 @@ on:
   issues:
     types: [labeled]
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 jobs:
   process-submission:
     if: github.event.action == 'labeled' && github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'data-submission')
@@ -58,20 +63,6 @@ jobs:
             echo "success=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create Pull Request Branch
-        if: steps.process-data.outputs.success == 'true'
-        run: |
-          # Create branch name from issue
-          BRANCH_NAME="data-submission-issue-${{ github.event.issue.number }}"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
-
-          # Configure git
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Create and switch to new branch
-          git checkout -b "$BRANCH_NAME"
-
       - name: Apply data changes
         if: steps.process-data.outputs.success == 'true'
         run: |
@@ -81,27 +72,13 @@ jobs:
             --issue-type "${{ steps.issue-type.outputs.type }}" \
             --output-dir "."
 
-      - name: Commit and push changes
-        if: steps.process-data.outputs.success == 'true'
-        run: |
-          # Add the modified JSON files
-          git add *.json
-
-          # Create commit message
-          COMMIT_MSG="Add ${{ steps.issue-type.outputs.type }} from issue #${{ github.event.issue.number }}"
-
-          # Commit changes
-          git commit -m "$COMMIT_MSG"
-
-          # Push to new branch
-          git push origin "$BRANCH_NAME"
-
       - name: Create Pull Request
         if: steps.process-data.outputs.success == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BRANCH_NAME }}
+          branch: "data-submission-issue-${{ github.event.issue.number }}"
+          commit-message: "Add ${{ steps.issue-type.outputs.type }} from issue #${{ github.event.issue.number }}"
           title: "Add ${{ steps.issue-type.outputs.type }} from issue #${{ github.event.issue.number }}"
           body: |
             This PR adds a new ${{ steps.issue-type.outputs.type }} to the database based on the approved submission in issue #${{ github.event.issue.number }}.
@@ -126,8 +103,8 @@ jobs:
           labels: |
             data-addition
             automated-pr
-          reviewers: |
-            narrowstacks
+          reviewers: narrowstacks
+          delete-branch: true
 
       - name: Comment on issue (success)
         if: steps.process-data.outputs.success == 'true'
