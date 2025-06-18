@@ -2,6 +2,8 @@
 
 A comprehensive static API for analog film photography data, including film stocks, developers, development combinations, and formats.
 
+**Looking for a living RESTful API?** Use the [Dorkroom RESTful API!](https://api.dorkroom.art/) It sources its data from this static API and updates at the same time as this.
+
 ## Contributing
 
 We welcome contributions to improve and expand this analog photography database!
