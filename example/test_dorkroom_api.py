@@ -57,9 +57,9 @@ class DorkroomAPIWrapper:
         """Placeholder for formats - not implemented in new client"""
         return []
     
-    def search_films(self, query: str, color_type: Optional[str] = None) -> List[Film]:
+    def search_films(self, query: str, colorType: Optional[str] = None) -> List[Film]:
         """Search films using the new client"""
-        return self.client.search_films(query, color_type)
+        return self.client.search_films(query, colorType)
     
     def search_developers(self, query: str) -> List[Developer]:
         """Search developers - implementing since it doesn't exist in new client"""
@@ -69,12 +69,12 @@ class DorkroomAPIWrapper:
             if (q in d.name.lower() or q in d.manufacturer.lower())
         ]
     
-    def fuzzy_search_films(self, query: str, limit: int = 10, color_type: Optional[str] = None) -> List[SearchResult]:
+    def fuzzy_search_films(self, query: str, limit: int = 10, colorType: Optional[str] = None) -> List[SearchResult]:
         """Fuzzy search films with compatibility wrapper"""
         films = self.client.fuzzy_search_films(query, limit)
         # Filter by colorType if specified
-        if color_type:
-            films = [f for f in films if f.colorType == color_type]
+        if colorType:
+            films = [f for f in films if f.colorType == colorType]
         # Wrap in SearchResult for compatibility
         return [SearchResult(score=100.0, item=film) for film in films]
     
@@ -187,7 +187,7 @@ def run_sample_queries(api: DorkroomAPIWrapper):
     
     # Sample 2b: Fuzzy search with color filter
     print(f"\n2b. 🎯 Fuzzy search for 'kodak' black & white films:")
-    fuzzy_bw = api.fuzzy_search_films("kodak", limit=3, color_type="bw")
+    fuzzy_bw = api.fuzzy_search_films("kodak", limit=3, colorType="bw")
     api.display_search_results(fuzzy_bw)
     
     # Sample 3: Search for developers

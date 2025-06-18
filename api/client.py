@@ -47,7 +47,7 @@ class DorkroomClient:
     
     def __init__(
         self,
-        base_url: str = "https://raw.githubusercontent.com/narrowstacks/dorkroom-static-api/main/",
+        base_url: str = "https://raw.githubusercontent.com/narrowstacks/dorkroom-static-api/camelCase/",
         timeout: float = 10.0,
         max_retries: int = 3,
         transport: HTTPTransport = None,
@@ -228,12 +228,12 @@ class DorkroomClient:
         self._ensure_loaded()
         return [c for c in self._combinations if c.developerId == dev_id]
 
-    def search_films(self, query: str, color_type: Optional[str] = None) -> List[Film]:
+    def search_films(self, query: str, colorType: Optional[str] = None) -> List[Film]:
         """Search films by name or brand using substring matching.
         
         Args:
             query: Search term to match against film name and brand
-            color_type: Optional filter by color type (e.g., "Color", "B&W")
+            colorType: Optional filter by color type (e.g., "Color", "B&W")
             
         Returns:
             List[Film]: List of matching films
@@ -246,7 +246,7 @@ class DorkroomClient:
         return [
             f for f in self._films
             if (q in f.name.lower() or q in f.brand.lower())
-            and (color_type is None or f.colorType == color_type)
+            and (colorType is None or f.colorType == colorType)
         ]
 
     def fuzzy_search(
