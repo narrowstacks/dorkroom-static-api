@@ -47,7 +47,7 @@ class DorkroomClient:
     
     def __init__(
         self,
-        base_url: str = "https://raw.githubusercontent.com/narrowstacks/dorkroom-static-api/camelCase/",
+        base_url: str = "https://raw.githubusercontent.com/narrowstacks/dorkroom-static-api/main/",
         timeout: float = 10.0,
         max_retries: int = 3,
         transport: HTTPTransport = None,
