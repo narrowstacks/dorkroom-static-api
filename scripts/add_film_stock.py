@@ -3,6 +3,7 @@
 Script to add new film stocks to the film_stocks.json file
 """
 
+from datetime import datetime
 import json
 import os
 import uuid
@@ -133,13 +134,14 @@ def display_current_progress(film_stock_data: Dict[str, Any], current_step: int,
     all_fields = [
         ("brand", "Brand"),
         ("name", "Name"),
-        ("iso_speed", "ISO Speed"),
-        ("color_type", "Color Type"),
-        ("grain_structure", "Grain Structure"),
-        ("reciprocity_failure", "Reciprocity Failure"),
+        ("isoSpeed", "ISO Speed"),
+        ("colorType", "Color Type"),
+        ("grainStructure", "Grain Structure"),
+        ("reciprocityFailure", "Reciprocity Failure"),
         ("discontinued", "Discontinued"),
         ("description", "Description"),
-        ("manufacturer_notes", "Manufacturer Notes")
+        ("manufacturerNotes", "Manufacturer Notes"),
+        ("staticImageURL", "Static Image URL")
     ]
     
     for i, (field_key, field_name) in enumerate(all_fields, 1):
@@ -149,7 +151,7 @@ def display_current_progress(film_stock_data: Dict[str, Any], current_step: int,
             # Field has been filled
             if field_key == "discontinued":
                 display_value = "Yes" if value else "No"
-            elif field_key == "manufacturer_notes" and isinstance(value, list):
+            elif field_key == "manufacturerNotes" and isinstance(value, list):
                 display_value = f"{len(value)} note(s)" if value else "None"
             elif value == "":
                 display_value = "None"
@@ -176,13 +178,14 @@ def collect_film_stock_data(new_uuid: str) -> Optional[Dict[str, Any]]:
     fields = [
         ("brand", "Brand", True, lambda: get_user_input("Brand/Manufacturer: ")),
         ("name", "Name", True, lambda: get_user_input("Film name: ")),
-        ("iso_speed", "ISO Speed", True, lambda: get_user_input("ISO speed: ", input_type='float')),
-        ("color_type", "Color type", True, lambda: select_color_type()),
-        ("grain_structure", "Grain structure", False, lambda: get_user_input("Grain structure (or press Enter for none): ", required=False)),
-        ("reciprocity_failure", "Reciprocity failure", False, lambda: get_user_input("Reciprocity failure characteristics (or press Enter for none): ", required=False)),
+        ("isoSpeed", "ISO Speed", True, lambda: get_user_input("ISO speed: ", input_type='float')),
+        ("colorType", "Color type", True, lambda: select_color_type()),
+        ("grainStructure", "Grain structure", False, lambda: get_user_input("Grain structure (or press Enter for none): ", required=False)),
+        ("reciprocityFailure", "Reciprocity failure", False, lambda: get_user_input("Reciprocity failure characteristics (or press Enter for none): ", required=False)),
         ("discontinued", "Discontinued", True, lambda: 1 if get_user_input("Is discontinued? (yes/no): ", input_type='bool') else 0),
         ("description", "Description", False, lambda: get_user_input("Description (or press Enter for none): ", required=False)),
-        ("manufacturer_notes", "Manufacturer notes", False, lambda: get_user_input("Manufacturer notes (comma-separated, or press Enter for none): ", required=False, input_type='list'))
+        ("manufacturerNotes", "Manufacturer notes", False, lambda: get_user_input("Manufacturer notes (comma-separated, or press Enter for none): ", required=False, input_type='list')),
+        ("staticImageURL", "Static Image URL", False, lambda: get_user_input("Static image URL (or press Enter for none): ", required=False))
     ]
     
     current_field = 0
@@ -204,7 +207,7 @@ def collect_film_stock_data(new_uuid: str) -> Optional[Dict[str, Any]]:
             # First field, no back option
             if field_key == "brand":
                 result = get_user_input("Brand/Manufacturer: ", allow_back=False)
-            elif field_key == "color_type":
+            elif field_key == "colorType":
                 result = select_color_type(allow_back=False)
             else:
                 result = input_func()
@@ -238,16 +241,17 @@ def display_film_stock(film_stock: Dict[str, Any]) -> None:
     print(f"ID: {film_stock['id']}")
     print(f"Brand: {film_stock['brand']}")
     print(f"Name: {film_stock['name']}")
-    print(f"ISO Speed: {film_stock['iso_speed']}")
-    print(f"Color Type: {film_stock['color_type']}")
-    print(f"Grain Structure: {film_stock['grain_structure']}")
-    print(f"Reciprocity Failure: {film_stock['reciprocity_failure']}")
+    print(f"ISO Speed: {film_stock['isoSpeed']}")
+    print(f"Color Type: {film_stock['colorType']}")
+    print(f"Grain Structure: {film_stock['grainStructure']}")
+    print(f"Reciprocity Failure: {film_stock['reciprocityFailure']}")
     print(f"Discontinued: {'Yes' if film_stock['discontinued'] else 'No'}")
     print(f"Description: {film_stock['description']}")
+    print(f"Static Image URL: {film_stock.get('staticImageURL', 'None')}")
     
-    if film_stock['manufacturer_notes']:
+    if film_stock['manufacturerNotes']:
         print("Manufacturer Notes:")
-        for note in film_stock['manufacturer_notes']:
+        for note in film_stock['manufacturerNotes']:
             print(f"  - {note}")
     else:
         print("Manufacturer Notes: None")
@@ -285,6 +289,9 @@ def main():
         display_film_stock(film_stock_data)
         
         if get_user_input("\nAdd this film stock? (yes/no): ", input_type='bool', allow_back=False):
+            # Add auto-generated dateAdded field
+            film_stock_data["dateAdded"] = datetime.now().isoformat() + "Z"
+            
             # Use the GitHub issue helper to handle submission
             def save_locally():
                 film_stocks.append(film_stock_data)

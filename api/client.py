@@ -211,7 +211,7 @@ class DorkroomClient:
             DataNotLoadedError: If load_all() hasn't been called yet
         """
         self._ensure_loaded()
-        return [c for c in self._combinations if c.film_stock_id == film_id]
+        return [c for c in self._combinations if c.filmStockId == film_id]
 
     def list_combinations_for_developer(self, dev_id: str) -> List[Combination]:
         """Get all development combinations for a specific developer.
@@ -226,7 +226,7 @@ class DorkroomClient:
             DataNotLoadedError: If load_all() hasn't been called yet
         """
         self._ensure_loaded()
-        return [c for c in self._combinations if c.developer_id == dev_id]
+        return [c for c in self._combinations if c.developerId == dev_id]
 
     def search_films(self, query: str, color_type: Optional[str] = None) -> List[Film]:
         """Search films by name or brand using substring matching.
@@ -246,7 +246,7 @@ class DorkroomClient:
         return [
             f for f in self._films
             if (q in f.name.lower() or q in f.brand.lower())
-            and (color_type is None or f.color_type == color_type)
+            and (color_type is None or f.colorType == color_type)
         ]
 
     def fuzzy_search(

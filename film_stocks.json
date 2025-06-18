@@ -3,139 +3,153 @@
     "id": "c901c99d-d403-4bca-a311-4549ae6a6f5d",
     "brand": "AgfaPhoto",
     "name": "APX 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "AgfaPhoto's APX 400 Professional Black and White Negative Film is a high speed black and white film for producing prints using a traditional black and white printing process. The film exhibits a high nominal sensitivity of ISO 400/27° and can effectively be pushed to ISO 1600/33° for use in low-light conditions and with fast-moving subjects.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and sharpness",
       "iso 400/27° in standard process",
       "can be pushed to iso 1600/33°",
       "high resolving power and contrast"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/agfa_ap6a4360_apx_400_professional_135_36_1376586558_1000304.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "46a9241e-935f-462d-b2c6-711e03c74b8e",
     "brand": "Arista",
     "name": "Edu Ultra 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Arista's EDU Ultra 100 Black and White Negative Film is a traditional panchromatic film that is optimized for use in a range of shooting conditions. It has a fine grain with high sharpness as well as a wide exposure latitude that make is a useful film for most environments. It has a nominal sensitivity of ISO 100/21° when developed in standard black and white chemistry, and responds well to push processing. EDU Ultra is a flexible film type that is ideally suited for use in general photographic applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and sharpness",
       "iso 100/21° in standard process",
       "designed for general use",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/arista_190241_edu_ultra_100_black_1450802966_1190983.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "30c756e0-b62c-4fb1-a925-aacfbe7ae875",
     "brand": "Arista",
     "name": "Edu Ultra 200",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Arista's EDU Ultra 200 Black and White Negative Film is a traditional panchromatic film that is optimized for use in a range of shooting conditions. It has a fine grain with high sharpness as well as a wide exposure latitude that make is a useful film for most environments. It has a nominal sensitivity of ISO 200/24° when developed in standard black and white chemistry, and responds well to push processing. EDU Ultra is a flexible film type that is ideally suited for use in general photographic applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and sharpness",
       "iso 200/24° in standard process",
       "designed for general use",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/arista_190362_edu_ultra_200_black_1452857041_1190990.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "cd53fffa-508f-47d3-a9c2-7551d57ea644",
     "brand": "Arista",
     "name": "Edu Ultra 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Arista's EDU Ultra 400 Black and White Negative Film is a traditional panchromatic film that is optimized for use in a range of shooting conditions. It has a fine grain with high sharpness as well as a wide exposure latitude that make is a useful film for most environments. It has a nominal sensitivity of ISO 400/27° when developed in standard black and white chemistry, and responds well to push processing. EDU Ultra is a flexible film type that is ideally suited for use in general photographic applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and sharpness",
       "iso 400/27° in standard process",
       "designed for general use",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/arista_190364_edu_ultra_400_black_1451474717_1190995.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "c7857b8f-8a09-4137-8e55-117fb2f2ac31",
     "brand": "Bergger",
     "name": "Pancro 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Characterized by a unique dual emulsion design, Bergger Pancro 400 is a high-speed panchromatic black and white negative film featuring a nominal sensitivity of ISO 400/27° and a wide exposure latitude. By employing both silver bromide and silver iodide emulsion layers, an organic grain structure is provided that results in natural tonal gradations and an overall fine grain quality for high-resolution, well-detailed results in a variety of lighting conditions. It also responds well to over- and under-exposure, and can be rated from EI 100-1600 for acceptable results with adequate processing. The film is coated on an anti-curl 135 µm-thick acetate base and also incorporates an anti-halation layer, which clears during development, for improved overall sharpness and highlight clarity.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and wide exposure latitude",
       "iso 400/27° in standard process",
       "dual silver bromide and iodide emulsions",
       "anti-halation and anti-curling layers"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/bergger_pan4011_pancro_400_35mm_36_1495102847_1338614.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "97193b65-6301-4f5d-81a1-71236dbd40e9",
     "brand": "CatLABS",
     "name": "X Film 80",
-    "iso_speed": 80.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 80.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "CatLABS X Film 80 is a traditional, silver-rich slow-speed black and white negative film characterized by its classic appearance, very fine grain structure, and broad tonal range. Its high silver content lends a uniquely classic look with a moderate contrast profile to suit working in daylight conditions. Its versatility makes it especially suitable for overexposure at up to EI 50 as well as extreme underexposure to EI 800 by push development for working in low-light conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "high silver content and very fine grain",
       "iso 80/20° in standard process",
       "moderate contrast and deep tonal range"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/catlabs_catlabs_x_film_80_120_x_film_iso_1557492382_1477687.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "77a224f8-6003-41b5-9513-21295525e27e",
     "brand": "CatLABS",
     "name": "X Film 320",
-    "iso_speed": 320.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 320.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "CatLABS X Film 320 is a traditional, medium-speed black and white negative film characterized by its classic appearance, fine grain structure, and wide tonal range. An immensely versatile film, with a nominal sensitivity of ISO 320, this film responds well to push and pull processing from EI 200 to 1600 to suit working in a variety of lighting conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain structure",
       "iso 320/26° in standard process",
       "wide exposure latitude and tonal range",
       "loaded in plastic",
       "reusable cassettes"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/catlabs_catlabs_x_film_320_35mm_x_film_iso_1559144249_1477686.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "b1bf7eb3-f315-4eee-a6d9-2e852c935734",
     "brand": "CineStill",
     "name": "50D",
-    "iso_speed": 50.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 50.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Producing a cinematic image quality for still photographers, the Cinestill 50Daylight Xpro C-41 Color Negative Film is re-formatted movie stock that has been prepared and packaged for use in still cameras. Utilizing a unique 'Premoval' stage, the traditional anti-halation rem-jet layer has been removed from this film, enabling its development in C-41 chemistry as well as the motion picture standard ECN-2 process. Benefitting from the distinct qualities of a low-speed motion picture stock, this daylight/5500K-balanced film is well-suited for outdoor shooting in bright conditions and exhibits a nominal sensitivity of ISO 50/18°. If exposing under tungsten/3200K-balanced lighting conditions, an 80B filter is recommended along with exposing the film at ISO 12 for normal results. The slow speed of the film offers extensive control over the highlight regions of a scene, maintains accurate, yet dynamic, colors, and is ideal for portraiture and landscape photography. Its high degree of sharpness and fine grain structure is also particularly well-suited for scanning.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "'premoval' of rem-jet layer",
       "iso 50/18° in c-41 or ecn-2 process",
@@ -144,19 +158,21 @@
       "enhanced scanning performance",
       "non dx-coded 135 (35mm)",
       "unique halation effect (120)"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/cinestill_800235_50daylight_xpro_c_41_color_1420726836_1110318.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "935a7095-6380-44dd-82ca-ca60f79a1557",
     "brand": "CineStill",
     "name": "800T",
-    "iso_speed": 800.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 800.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "CineStill 800Tungsten Xpro C-41 Color Negative Film is re-formatted movie stock that has been prepared and packaged for use in still cameras. Utilizing a unique 'Premoval' stage, the traditional anti-halation rem-jet layer has been removed from this film, enabling its development in C-41 chemistry as well as the motion picture standard ECN-2 process. Benefitting from the distinct qualities of a high-speed motion picture stock, this color negative film is balanced for tungsten, incandescent, and fluorescent light and exhibits a nominal sensitivity of ISO 800/30°. If exposing under daylight conditions, an 85B filter is recommended along with exposing the film at ISO 500 for normal results. The high film speed is ideal for working in difficult, low-lighting conditions and is also well-suited to push processing by up to 3 stops.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "tungsten-balanced color negative film",
       "'premoval' of rem-jet layer",
       "iso 800/30° in c-41 or ecn-2 process",
@@ -166,19 +182,21 @@
       "ideal for low-light conditions",
       "unique halation effect",
       "dx encoded (35mm)"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/cinestill_800135_cinestill_800_tungsten_film_1398341110_1046360.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "cd9dbef5-0d35-478a-90af-ee6d109348c2",
     "brand": "CineStill",
     "name": "Bwxx Double-X",
-    "iso_speed": 250.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 250.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "BwXX Double-X is a high-speed classic black and white movie film that has been cut and re-spooled for still photography use by CineStill. Using virtually the same emulsion formula since 1959, this film is characterized by its subtle tonality, relatively low contrast, and high sharpness. Its nominal sensitivity is ISO 250/25° when used under daylight conditions or ISO 200/24° when used in tungsten-lit environments. The film has an acetate base with a scratch-resistant layer and is designed to be used in conjunction with D-96 developer, however can also be used with other standard black and white developers.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 250/25° in standard process",
@@ -186,19 +204,21 @@
       "subtle tonality",
       "scratch-resistant acetate film base",
       "non dx-coded 135 cartidge"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/cinestill_800335_double_x_black_white_1528796154_1415234.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "f8d400cf-ab77-400b-a8cf-774debf5c81d",
     "brand": "Fuji",
     "name": "Provia 100F",
-    "iso_speed": 100.0,
-    "color_type": "slide",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "slide",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fujichrome Provia 100F Professional RDP-III from Fujifilm is a daylight-balanced color transparency film that exhibits a super-fine grain structure with vivid and naturally appearing colors and rich tonal rendition. It has a medium-speed nominal sensitivity of ISO 100/21° when processed in E-6, CR-56, or C6R processes and can effectively be pulled one half stop or pushed two stops with minimal variations in color balance and gradation. Excellent reciprocity characteristics also make this film highly suitable for use during long exposures and ensures consistent film speeds and coloring across multiple and extended exposures. Medium overall contrast and saturation make this film ideal for use in a wide range of photographic applications and is especially well-suited for use in product, landscape, nature, portraiture, and fashion photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color transparency film",
       "super-fine grain structure",
       "iso 100/21° in e-6/cr-56/c6r process",
@@ -206,38 +226,42 @@
       "rich tone reproduction",
       "push/pull processing to -0.5/+2 stops",
       "excellent reciprocity characteristics"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Fujifilm_14883175_RDP_III_135_36_Fujichrome_Provia_1528720844_181489.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "718c63b5-6d9a-472a-a377-76427656fb00",
     "brand": "Fuji",
     "name": "Velvia 100",
-    "iso_speed": 100.0,
-    "color_type": "slide",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "slide",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fujichrome Velvia 100 Professional RVP 100 Color Reversal Film from FUJIFILM is a daylight-balanced color transparency film that exhibits incredibly high color saturation reproduction along with a super-fine grain structure to render imagery cleanly and clearly. It has a medium-speed nominal sensitivity of ISO 100/21° when processed in E-6 or CR-56 processes and can effectively be pulled one half stop or pushed one stop with Minimal variations in color balance and gradation. The introduction of new-generation cyan, magenta, and yellow couplers gives this film its uniquely saturated look and also offers anti-fading characteristics for ensured color image storage permanence. High overall contrast and vivid color reproduction make this film ideal for use in a wide range of photographic applications and is especially well-suited for use in scenic and nature photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color transparency film",
       "super-fine grain structure",
       "iso 100/21° in e-6/cr-56 process",
       "exceptionally high color saturation",
       "color image storage permanence",
       "push/pull processing to -0.5/+1 stops"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Fujifilm_15542481_RVP_135_36_Fujichrome_Velvia_1528717615_387535.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "60e89038-65d9-4cc1-a17c-e4ad214e43d8",
     "brand": "Fuji",
     "name": "Velvia 50",
-    "iso_speed": 50.0,
-    "color_type": "slide",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 50.0,
+    "colorType": "slide",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fujichrome Velvia 50 Professional RVP 50 from FUJIFILM is a daylight-balanced color transparency film characterized by exceptionally high color saturation and vibrancy, as well as a neutral gray balance and extended detail throughout the highlight and shadow regions. It has a slow-speed nominal sensitivity of ISO 50/18° when processed in E-6 or CR-56 processes and can effectively be pulled one half stop or pushed one stop with Minimal variation in color balance and tonal gradation. Additionally, Velvia 50 also exhibits a fine grain structure with high sharpness and resolving power, and is well-suited to a wide variety of shooting applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color transparency film",
       "fine grain and high sharpness",
       "iso 50/18° in e-6/cr-56 process",
@@ -245,37 +269,41 @@
       "neutral gray balance",
       "deep shadow detail",
       "push/pull processing to -0.5/+1 stops"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Fujifilm_15757464_RVP_135_36_Fujichrome_Velvia_1528717615_512063.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "178dc509-c51d-449b-b241-934f1c90bf31",
     "brand": "Fuji",
     "name": "Fujicolor 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fujicolor 200 from Fujifilm is a medium speed daylight-balanced color negative film offering a vivid color palette with accurate skin tones and color reproduction in a variety of lighting conditions. It features a nominal sensitivity of ISO 200/24° along with a wide exposure latitude for use in a variety of conditions, even under fluorescent lighting. The fine grain structure and high degree sharpness are well-suited to scanning and enlarging for printing purposes.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "fine grain and high sharpness",
       "iso 200/24° in c-41 process",
       "vivid and accurate color reproduction",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Fujifilm_CA_135_36_Fujicolor_200_1320163280_93088.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "9fac1fe6-e51e-417c-8829-221c744867a2",
     "brand": "Fuji",
     "name": "Fujicolor Pro 400H",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "FUJIFILM's Fujicolor PRO 400H Professional is a high-speed daylight-balanced color negative film with a nominal sensitivity of ISO 400/27° when processed in C-41 chemistry. Featuring fourth layer color and Interlayer effect technologies, this film exhibits a soft contrast profile with faithful, yet vivid, color reproduction. It produces smooth and natural skin tones and has a broad exposure latitude, making it suitable for general photographic applications and working in a wide variety of lighting conditions. Additionally, Fine Sigma Technology yields an unobtrusive, fine grain structure that helps to maintain effective film speeds and produce smoother surface textures to benefit scanning and printing applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "unobtrusive grain",
       "fine sigma technology",
@@ -284,374 +312,416 @@
       "fourth color layer and interlayer effect",
       "true color accuracy in various lighting",
       "smooth color gradations and skin tones"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Fujifilm_15473707_Pro_400H_135_36_Professional_1528720844_396053.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "cfa9a4cc-2bd7-4197-af9c-87928cb20358",
     "brand": "Fuji",
     "name": "Fujicolor Superia X-Tra 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fujicolor Superia X-TRA 400 is a high speed daylight-balanced color negative film featuring FUJIFILM's 4th Color Layer technology to produce vibrant, yet naturally appearing colors with smooth skin tones and repeatable results under mixed lighting conditions. A nominal sensitivity of ISO 400/27° is well-suited to use in a variety of conditions, and Super Fine-Sigma Grain Technology yields an unobtrusive, fine grain structure with high sharpness to benefit scanning and printing applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "super fine grain and high sharpness",
       "iso 400/27° in c-41 process",
       "wide exposure latitude",
       "fourth color layer for accurate colors"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Fujifilm_CH_135_36_Fujicolor_Press_Superia_1474906858_18443.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "8c9f565e-9c0d-4420-814e-966fdbb6a172",
     "brand": "Fuji",
     "name": "Neopan 100 Acros Ii",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "FUJIFILM Neopan 100 Acros II is an orthopanchromatic black and white negative film characterized by its extremely fine grain structure and wide tonal range. Super Fine-Σ Grain Technology is employed to deliver the distinct tight grain structure and alignment along with high acutance and smooth tonal rendering to suit both scanning and enlarging applications. Its medium-speed ISO 100 nominal sensitivity suits working in a variety of outdoor conditions and enhanced reciprocity characteristics also benefit working with longer exposure times. Additionally, Acros II incorporates P.I.D.C. Technology (Precision Iodine Distribution Control), which provides stable processing results when manually developing the film in small tanks or automatically in larger processors.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "orthopanchromatic b&w negative film",
       "super fine-Σ grain technology",
       "iso 100/21° in standard process",
       "broad tonal range and high sharpness",
       "enhanced reciprocity characteristics",
       "p.i.d.c. technology for stable process"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/fujifilm_16648282_neopan_acros_ii_100_1594820118_1558047.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "6dec1fe8-4988-43e1-8306-d98a7accd2a9",
     "brand": "FPP",
     "name": "Derev Pan 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Derev Pan 400 Black and White Negative Film from Film Photography Project is a panchromatic mylar-based film with wide exposure latitude and extremely sharp grain. This versatile film is designed for general use in a wide variety of shooting conditions and has a nominal sensitivity of ISO 400/27° when developed in standard black and white chemistry. Film is supplied in a DX-coded cassette. Additionally, Derev Pan 400 is an extremely thin and flat film stock and should be loaded in dim light and stored in a dark camera bag before and after shooting.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "extremely sharp grain",
       "iso 400/27° in standard process",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_derevpan400_fpp_derev_pan_iso_1606742420_1582646.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "e7e55760-cc79-454c-b155-1c15c68970dc",
     "brand": "FPP",
     "name": "Dracula 35",
-    "iso_speed": 64.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 64.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Dracula 35 Black and White Negative Film from Film Photography Project is a panchromatic film coated with a transparent polyester base, which provides excellent dimensional stability. Dracula 35 is near the infrared range of the energy spectrum, and its spectral sensitivity is expanded up to 750nm. The very fine grain and high sharpness of the film make it ideal for fine art photography and technical detailing applications. Film is supplied in a non-DX-coded cassette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain and high sharpness",
       "iso 64/19° in standard process"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fpp_dracula_35mm_64_iso_dracula35_black_and_white_1606743322_1517495.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "ec1c60cc-c9c6-4540-839c-f9c350398841",
     "brand": "FPP",
     "name": "Low Iso B&W",
-    "iso_speed": 6.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 6.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Low ISO Black and White Negative Film from Film Photography Project is a blue-sensitive black and white film with a low nominal sensitivity of ISO 6. This high resolution film features a very fine grain and incorporates a yellow die, which is removed during processing to provide very high sharpness. Film is supplied in a non-DX-coded cassette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "high resolution film",
       "blue-sensitive film",
       "iso 6 in standard process"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fpp1081_low_iso_b_w_negative_1606746936_1582649.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "b9f2f7ee-d6a9-4ba4-badc-ecdbc9cd09fd",
     "brand": "FPP",
     "name": "Low Iso Color",
-    "iso_speed": 1.6,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 1.6,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Low ISO Color Negative Film from Film Photography Project is a low-speed duplicating film for long exposure photography. Originally intended for making digital dupes in motion picture post production, this film is characterized by a unique color balance, which provides soft and shifted colors. Film is supplied in a non-DX-coded cassette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "low-speed duplicating film",
       "for long exposure photography",
       "iso 1.6 in c-41 process",
       "unique color balance"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fpp1080_low_iso_color_35mm_1606746936_1582648.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "2b9b477d-567f-4b21-baa3-57206e133205",
     "brand": "FPP",
     "name": "Sonic 25",
-    "iso_speed": 25.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 25.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Sonic 25 High Contrast Black and White Negative Film from Film Photography Project is an orthochromatic motion picture film for shooting in daylight or with tungsten lights. Respooled here for use in 35mm still cameras, this blue-sensitive film will produce fine grain images with high contrast and a slight glow. Film is supplied in a DX-coded cassette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "high contrast",
       "extremely fine grain",
       "iso 25/15° in standard process",
       "blue-sensitive"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fppsonic1082_sonic_25_high_contrast_1606746026_1582652.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "2e8c9c5f-4d67-4dd6-8826-2392326724a2",
     "brand": "FPP",
     "name": "Wolfman 35",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Wolfman 35 Black and White Negative Film from Film Photography Project is a panchromatic film with medium to low grain and a wide tonal range, which is reminiscent of 16mm black and white movie film. This versatile and fun film is designed for general use in a wide variety of shooting conditions and has a nominal sensitivity of ISO 100/21° when developed in standard black and white chemistry. Film is supplied in a non-DX-coded cassette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "medium to low grain",
       "iso 100/21° in standard process",
       "wide tonal range"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fpp1312_wolfman_35mm_panchromatic_35mm_1606750519_1595981.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "10c58a5a-3885-4166-be64-df2d6ca95b82",
     "brand": "FPP",
     "name": "Wolfman 120",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "This Wolfman 120 Black and White Negative Film from Film Photography Project is a panchromatic film with medium to low grain and a wide tonal range, reminiscent of 16mm black and white movie film. This versatile and fun film is designed for general use in a wide variety of shooting conditions and has a nominal sensitivity of ISO 100/21° when developed in standard black and white chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "medium to low grain",
       "iso 100/21° in standard process",
       "wide tonal range"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fpp1313_wolfman_120_panchromatic_b_w_1606751266_1595982.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "5562d00d-4c54-4aca-8384-c4fa249f916f",
     "brand": "FPP",
     "name": "Eastman Double-X",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "X2 Eastman Double-X from Film Photography Project is a medium-speed panchromatic negative film used in motion pictures. Comparable to Eastman Double-X 5222 film, acclaimed movies like The Lighthouse, Paper Moon, Casino Royale, and Raging Bull have relied on this beautiful black and white film. Suitable for outdoors and indoor photography, this film offers a subtle tone scale with greater depth of field without increased illumination. Film is supplied in a DX-coded cassette for standard black and white processing.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "motion picture film",
       "iso 200/24° in standard process",
       "subtle tone scale"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/film_photography_project_fpp1079_x2_35mm_b_w_iso_1606746026_1582647.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a15635db-820f-478b-a6ec-1e2e6b47f873",
     "brand": "Foma",
     "name": "Fomapan 100 Classic",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fomapan 100 Classic from Foma is a panchromatic black and white negative film with a nominal sensitivity of ISO 100/21°. Its wide exposure latitude permits rating the film at +1 EV to -2EV with no change needed when processing in standard chemistry, making it suitable for working in a wide variety of lighting conditions. It has a fine grain structure, good resolving power, and high sharpness.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain structure",
       "iso 100/21° in standard process",
       "high sharpness and resolving power",
       "wide exposure latitude",
       "+1 ev to -2ev"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Foma_420136_Fomapan_Classic_100_135_36_1540981349_381214.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "b327e9a8-d1af-4afb-834e-293339cf5cdd",
     "brand": "Foma",
     "name": "Fomapan 200 Creative",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fomapan 200 Creative from Foma is a panchromatic black and white negative film with a nominal sensitivity of ISO 200/24°. Its wide exposure latitude permits rating the film at +1 EV to -2EV with no change needed when processing in standard chemistry, making it suitable for working in a wide variety of lighting conditions. It has a fine grain structure, good resolving power, and high sharpness.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain structure",
       "iso 200/24° in standard process",
       "high sharpness and resolving power",
       "wide exposure latitude",
       "+1 ev to -2ev"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Foma_420212_Fomapan_Creative_200_120mm_1541000462_403483.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "347e1800-72f3-40a9-ba69-0b3b2cda27f0",
     "brand": "Foma",
     "name": "Fomapan 400 Action",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fomapan 400 Action from Foma is a panchromatic black and white negative film with a nominal sensitivity of ISO 400/27°. Its wide exposure latitude permits rating the film at +1 EV to -2EV with no change needed when processing in standard chemistry, making it suitable for working in a wide variety of lighting conditions. It has a fine grain structure, good resolving power, and high sharpness.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain structure",
       "iso 400/27° in standard process",
       "ideal for difficult lighting conditions",
       "wide exposure latitude",
       "+1 ev to -2ev"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Foma_420424_Fomapan_Action_400_135_24_1249917621_381225.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "664ddc33-c7f2-40db-9de4-74aef547b27b",
     "brand": "Foma",
     "name": "Fomapan R100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Fomapan R100 from Foma is a medium speed black and white transparency film for making slides. When processed in the R-100 process, a nominal speed rating of ISO 100/21° can be achieved. The film exhibits notable differentiations between grey tones in the highlight and shadow regions, and its panchromatic sensitivity provides accurate depiction of a full range of color tones into the grey scale when exposed under daylight conditions. An antihalo layer is integrated between the film base and emulsion to provide high image sharpness and resolving power, with fine grain and high contrast.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w transparency film",
       "very fine grain and sharpness",
       "iso 100/21° in standard process",
       "high resolving power and contrast",
       "expansive tonal range"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/foma_411813_fomapan_r100_135_36_dx_1363194566_927372.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "61d52c2d-e6aa-40ed-85e5-e2a087542f2c",
     "brand": "Foma",
     "name": "Fomapan Retro 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Foma Fomapan Retro 100 is a panchromatic black and white negative film delivered in limited edition 1930s-inspired packaging, recalling Foma Bohemia's 100-year heritage in traditional film production. Despite the vintage-themed packaging, the ISO 100-speed film exhibits contemporary qualities, including a fine grain structure, high sharpness and resolution, and a wide exposure latitude.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "high sharpness and fine grain",
       "iso 100/21° in standard process",
       "wide exposure latitude",
       "limited edition 1930s-themed packaging"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/foma_4201121_fomapan_retro_iso_100_1566220081_1490790.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "729b9a01-8f5e-4d8e-bff3-419185cef939",
     "brand": "Foma",
     "name": "Fomapan Retro 200",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Foma Fomapan Retro 200 is a panchromatic black and white negative film delivered in limited edition 1930s-inspired packaging, recalling Foma Bohemia's 100-year heritage in traditional film production. Despite the vintage-themed packaging, the ISO 200-speed film exhibits contemporary qualities, including a hexagonal core-shell emulsion that promotes a very fine grain structure and high sharpness, along with a wide exposure latitude that suits rating the film between EI 100-800.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very high sharpness and fine grain",
       "iso 200/24° in standard process",
       "wide exposure latitude",
       "hexagonal core-shell emulsion",
       "limited edition 1930s-themed packaging"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/foma_4202121_fomapan_retro_iso_200_1566220081_1490791.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "27f52a3e-a6d4-445b-a28c-b653510d2442",
     "brand": "Foma",
     "name": "Fomapan Retro 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Foma Fomapan Retro 400 is a panchromatic black and white negative film delivered in limited edition 1930s-inspired packaging, recalling Foma Bohemia's 100-year heritage in traditional film production. Despite the vintage-themed packaging, the ISO 400-speed film exhibits contemporary qualities, including a fine grain structure, good contour sharpness and resolution, and a wide exposure latitude, which permits rating the film between EI 200-1600, to suit working in difficult lighting conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "high sharpness and fine grain",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "limited edition 1930s-themed packaging"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/foma_4204121_fomapan_retro_iso_400_1566220081_1490792.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "543edee3-c44f-462f-bda9-ee8b8089c036",
     "brand": "Foma",
     "name": "Holga 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Holga 400 from Foma is a panchromatic black and white negative film with a nominal sensitivity of ISO 400/27°. Its wide exposure latitude, fine grain structure, and traditional contrast profile pair well with the surrealistic image quality produced by the Holga or other toy cameras.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "traditional grain and sharpness",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "well-suited to toy cameras"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Foma_191424_Holga_135_24_Black_and_1310375059_792417.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4e56ab48-ef51-4522-a2fc-5674a95b4ca3",
     "brand": "Foma",
     "name": "Retropan 320 Soft",
-    "iso_speed": 320.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 320.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Foma RETROPAN 320 soft is a panchromatic black and white negative film characterized by its fine grain structure along with good resolution and edge sharpness. Offering a wide tonal range and classic appearance, this film is particularly well-suited for conventional enlarging applications, and its softer, mild contrast values are ideal for still lives, architectural, landscape, and portrait photography. Its nominal sensitivity is ISO 320/26° when processed in standard black and white chemistry or the recommended Retro Special Developer, however its wide exposure latitude permits rating the film at one stop of over (EI 160) or two stops under (EI 1250) with good results.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain structure",
       "iso 320/26° in standard process",
       "wide exposure latitude",
       "good resolution and edge sharpness"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/foma_57456_retropan_320_soft_120_1535028692_1415324.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "991ccca6-d641-4d1b-a3fe-64d0284b70e6",
     "brand": "Ilford",
     "name": "Delta 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.26,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.26,
     "discontinued": 0,
     "description": "Ilford's Delta 100 Professional is a medium-speed black and white negative film featuring core-shell crystal technology in order to produce extremely sharp results with a fine, uniform grain structure. It has a nominal sensitivity of ISO 100/21° when developed in standard black and white chemistry, but its wide exposure latitude permits rating the film between EI 50 and EI 200 with maintained results. This versatile film is especially well-suited for fine art and pictorial use, as well as general applications requiring high edge sharpness and unobtrusive grain.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very high sharpness and fine grain",
       "iso 100/21° in standard process",
       "wide exposure latitude",
       "core-shell crystal technology"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1780602_Delta_100_Professional_135_24_Black_1249903955_108308.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "658d7fd5-9f5a-4ac3-90fd-a3849bd5831e",
     "brand": "Ilford",
     "name": "Delta 3200",
-    "iso_speed": 3200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.33,
+    "isoSpeed": 3200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.33,
     "discontinued": 0,
     "description": "Ilford's Delta 3200 Professional is a high-speed black and white negative film for producing prints using a traditional black and white process. The film exhibits a nominal sensitivity of ISO 3200/36°, making it ideal for use in difficult lighting conditions, indoor scenes, and for fast-moving subjects. Standard development in black and white chemistry yields an unobtrusive grain texture with rich tonality and the film also responds exceptionally well to under/over exposure and push/pull development.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "unobtrusive grain",
       "rich tonality",
@@ -659,147 +729,163 @@
       "high speed",
       "very wide exposure latitude",
       "ideal for difficult lighting conditions"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1887710_Delta_3200_Professional_135_36_B_W_1249914978_142802.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4d959c0a-ca63-4a1b-ba3c-452d64832490",
     "brand": "Ilford",
     "name": "Delta 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.41,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.41,
     "discontinued": 0,
     "description": "Ilford's Delta 400 Professional is a high-speed black and white negative film featuring core-shell crystal technology in order to produce high sharpness with a fine, uniform grain structure. It has a nominal sensitivity of ISO 400/27° when developed in standard black and white chemistry, making it well-suited to handheld photography and working in difficult lighting conditions. This versatile film also features a broad tonal range and a wide exposure latitude, which is capable of being rated between EI 200 to EI 3200 and being pushed or pulled during development in order to maintain consistent contrast.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 400/27° in standard process",
       "wide exposure latitude and tonal range",
       "core-shell crystal technology"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1748165_Delta_400_Professional_135_24_Black_1249903176_24621.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "6fb4e1de-23f4-4516-a9ab-678fce8f718d",
     "brand": "Ilford",
     "name": "FP4 Plus",
-    "iso_speed": 125.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.26,
+    "isoSpeed": 125.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.26,
     "discontinued": 0,
     "description": "FP4 Plus from Ilford is a traditional medium-speed black and white negative film characterized by a fine grain structure with high acutance and sharpness, making it well-suited to enlarging and scanning. It has a nominal sensitivity of ISO 125/22° in standard chemistry, and its very wide exposure latitude enables exposing up to two stops under or six stops over while retaining usable results. In addition to general photographic applications, FP4 Plus is also an ideal choice for copy and internegative work, as well as scientific, technical, and industrial photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain",
       "high acutance and sharpness",
       "iso 125/22° in standard process",
       "very wide exposure latitude",
       "ideal for copy and internegative work"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1700682_FP4_Plus_135_24_Black_1504698723_24658.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "3141645e-5007-4be6-9327-c9fb5e4ad6f6",
     "brand": "Ilford",
     "name": "HP5 Plus",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.31,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.31,
     "discontinued": 0,
     "description": "Ilford's HP5 Plus Black and White Negative Film is a traditional and versatile panchromatic film designed for general use in a wide variety of shooting conditions. Exhibiting notably wide exposure latitude, this film responds well to use in mixed and difficult lighting and provides medium contrast for greater overall control. It has a nominal sensitivity of ISO 400/27° when developed in standard black and white chemistry, and responds well to push processing. HP5 Plus is a flexible film type that is ideally suited for use in general photographic applications in an array of different lighting conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "responds well to push processing",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "medium contrast",
       "ideal for mixed lighting and general use"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1700646_HP5_Plus_135_24_Black_1504698723_24741.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "d670ef9d-b59e-44cc-be9a-33c28c078127",
     "brand": "Ilford",
     "name": "Ortho Plus",
-    "iso_speed": 80.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.25,
+    "isoSpeed": 80.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.25,
     "discontinued": 0,
     "description": "Ilford Ortho Plus is a medium speed black and white negative orthochromatic film that is especially well-suited for continuous tone copy or reproduction work, as well as for half-tone, technical, and forensic applications. It has a nominal sensitivity of ISO 80/20° when exposed under daylight conditions, or ISO 40/17° when exposed under tungsten lighting, and can be developed in standard black and white chemistry. Additionally, since the film is only sensitive to blue and green light, it can be handled under red safelight conditions and developed by inspection for precise processing control. Its high-resolution, fine grain structure and long tonal range also make it ideal for producing faithful reproductions of original artworks and documents, as well as for photomicroscopy.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "orthochromatic b&w negative film",
       "can be handled under red safelight",
       "iso 80/20° in daily conditions/standard process",
       "wide tonal range for accurate repro work",
       "ideal for tech & half-tone applications"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/ilford_1180958_ortho_plus_35mm_black_1574772404_1520652.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "28d17794-5df3-4465-9ce5-ab5013c92fbe",
     "brand": "Ilford",
     "name": "Pan F Plus",
-    "iso_speed": 50.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.33,
+    "isoSpeed": 50.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.33,
     "discontinued": 0,
     "description": "Ilford's Pan F Plus is a slow-speed panchromatic black and white negative film featuring a very fine grain structure, making it ideal for large-scale printing applications. Its slow speed also renders a broad tonal range, along with high edge contrast, resolution, and detail, making it well-suited for pictorial and fine art photography. Pan F Plus has a nominal sensitivity of ISO 50/18° when developed in standard chemistry, and can also be developed to higher contrast values for technical, copy, and scientific work.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain and resolution",
       "iso 50/18° in standard process",
       "wide tonal range and high edge contrast",
       "ideal for copy and technical work"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1565710228_IMG_1234821.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "d7bc5fc2-019a-4e91-b85d-6688d13927ec",
     "brand": "Ilford",
     "name": "SFX 200",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.43,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.43,
     "discontinued": 0,
     "description": "A unique black and white negative film with extend red sensitivity, SFX 200 from Ilford is a medium-speed film with peak red sensitivity to 720nm, which can further be extended to 740nm with the use of a deep red filter to produce infrared-like results. It has a nominal sensitivity of ISO 200/24° along with a wide exposure latitude and tonal range, and is well-suited to fine art and pictorial applications. When used without filtration, full panchromatic sensitivity is afforded, however when filtered with yellow, orange, and red filters-with deep red filtration producing the most pronounced effect-skies can be rendered a dramatic black and vegetation will be depicted as white.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "extended red sensitivity to 740nm",
       "iso 200/24° in standard process",
       "wide exposure latitude and tonal range",
       "infrared appearance with deep red filter"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1829189_SFX_200_Infrared_135_36_1337277794_118759.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "2587c3cb-cbc5-4884-bae1-6ccd1be70784",
     "brand": "Ilford",
     "name": "Xp2 Super",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Ilford's XP2 Super is a high-speed chromogenic black and white negative film that can be processed alongside conventional color negative films in C-41 chemistry. It has a nominal sensitivity of ISO 400/27°, however can be under- or overexposed in order to adjust contrast as well as the balance of grain and sharpness. When rated at ISO 400, the most neutral balance between a fine grain structure and high sharpness will be afforded. Its wide exposure latitude can also be used to better control highlight and shadow values, as well as an expansive range of middle tones. Additionally, XP2 Super is designed for printing on traditional black and white papers, with Multigrade contrast filters, as well as on RA-4 color papers with maintained print color neutrality.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w chromogenic negative film",
       "fine grain and sharpness",
       "iso 400/27° in c-41 process",
       "very wide exposure latitude",
       "can be printed on conventional b&w paper"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Ilford_1839584_XP_2_Super_135_24_B_W_1249915650_153913.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "abe3cf0a-f92b-4c9b-9589-2481fbef0930",
     "brand": "JCH",
     "name": "Streetpan 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Japan Camera Hunter StreetPan 400 is a high-speed panchromatic black and white negative film featuring a nominal sensitivity of ISO 400/27° and a fine grain structure. Using a unique two-layer emulsion, this film is ideal for working in low-light situations and also retains a low grain profile that makes it especially well-suited to scanning. Also distinct, this film has spectral sensitivity to 750nm, which helps to cut through atmospheric haze and fog for greater clarity and contrast. This extended red sensitivity also benefits working in lower light conditions, such as during dawn and dusk, and its wide exposure latitude allows you to rate the film between EI 200-500 for acceptable results. It has low base fog levels when processed at high temperatures, making it suitable for high volume processing, and the emulsion is coated on a 100Âµm-thick transparent polyester base. Additionally, base substrate layers offer permanent anti-static qualities and a gelatin coating has also been applied to the back layer to resist scratching.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "two-layer emulsion",
       "fine grain",
@@ -808,72 +894,80 @@
       "extended spectral sensitivity to 750nm",
       "transparent polyester base",
       "anti-scratch and anti-static coatings"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/japan_camera_hunter_163500_street_pan_film_400_1519821925_1394078.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "5e3e49f1-ac83-4dcf-8684-9ddf1b6e0bcc",
     "brand": "Kentmere",
     "name": "Pan 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.26,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.26,
     "discontinued": 0,
     "description": "Kentmere Pan 100 is a versatile medium-speed black and white negative film offering a nominal sensitivity of ISO 100/21°, making it suitable for use with a wide variety of subjects and lighting conditions. The film is characterized by a fine grain structure and high sharpness, as well as a broad tonal range and wide exposure latitude.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 100/21° in standard process",
       "wide exposure latitude",
       "broad tonal range"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kentmere_6012368_Kentmere_35mm_Black_and_1536933366_601038.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "f46763ef-405e-4fe3-96b5-002ea7f0358f",
     "brand": "Kentmere",
     "name": "Pan 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.3,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.3,
     "discontinued": 0,
     "description": "Kentmere Pan 400 is a flexible and high-speed black and white negative film offering a nominal sensitivity of ISO 400/27°, making it suitable for use in available light and action photography, as well as general use. The film is characterized by a fine grain structure and good sharpness, as well as a broad tonal range and wide exposure latitude. Film comes in a DX-coded cassette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and good sharpness",
       "iso 400/27° in standard process",
       "versatile exposure latitude",
       "broad tonal and contrast range"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kentmere_6012379_Kentmere_35mm_Black_and_1249910271_601023.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "80d361be-c2e6-4774-8fb1-cc719cf61ad0",
     "brand": "Kodak",
     "name": "Colorplus 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak ColorPlus 200 is a versatile medium-speed daylight-balanced color negative film, characterized by its fine grain structure, high sharpness, and rich color saturation. It has a nominal sensitivity of ISO 200/24° along with a wide exposure latitude for exposing up to two stops under or three stops over to enable working in a wide variety of lighting conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "fine grain and high sharpness",
       "iso 200/24° in c-41 process",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kodak_603147_color_print_film_200_36_1557138072_1476366.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "188cb7c5-7089-4012-9a43-83557373193b",
     "brand": "Kodak",
     "name": "Gc/Ultramax 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak's GC/UltraMax 400 is a high-speed daylight-balanced color negative film offering a wide exposure latitude for greater versatility, as well as a fine grain structure with consistent and accurate colors. Optimized skin tone reproduction makes this film suitable for portraiture while a vibrant overall color palette benefits general and outdoor photography. It has a nominal sensitivity of ISO 400/27° and is well-suited to both scanning and enlarging applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "fine grain",
       "wide exposure latitude",
@@ -881,56 +975,62 @@
       "rich saturation",
       "optimized skin tones",
       "ideal for scanning and enlarging"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_GC_135_24_Gold_Max_1246618034_27717.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a68f7d1a-865e-4059-9296-00c8fe1371d7",
     "brand": "Kodak",
     "name": "Gold 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak GOLD 200 is a medium-speed daylight-balanced color negative film offering a versatile combination of vivid color saturation, fine grain, and high image sharpness. It has a nominal sensitivity of ISO 200/24° along with a wide exposure latitude for exposing up to two stops under or three stops over to enable working in a wide variety of lighting conditions. Additionally, due to the fine grain structure, this film is well-suited for scanning or enlarging your photographs.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "fine grain and high sharpness",
       "iso 200/24° in c-41 process",
       "rich color saturation",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_GB_135_24_Gold_200_1314900009_27710.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "01f977fc-3b5b-4d0b-9220-2d161f2aa109",
     "brand": "Kodak",
     "name": "Pro Image 100",
-    "iso_speed": 100.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak Pro Image 100 is a medium-speed color negative film offering high color saturation along with realistic color balance and accurate skin tone rendering, making it well suited for portraiture and social applications. This film has a nominal sensitivity of ISO 100/21°, however, its wide exposure latitude makes it especially suitable for underexposure. Additionally, this unique film is intended for storage at room temperature and also has excellent latent image-keeping characteristics, allowing for longer time periods between exposure and development while maintaining acceptable results.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "accurate rendering and skin tones",
       "iso 100/21° in c-41 process",
       "high color saturation",
       "wide exposure latitude",
       "intended for room-temperature storage"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1600364744_IMG_1420286.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "449ce968-fd55-4c7c-9cb1-039f885e60ff",
     "brand": "Kodak",
     "name": "Ektachrome E100",
-    "iso_speed": 100.0,
-    "color_type": "slide",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "slide",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak Professional Ektachrome E100 is a daylight-balanced color transparency film characterized by its extremely fine grain structure, vibrant color rendering, and overall low contrast profile. The lower contrast values contribute to a wide dynamic range and a neutral tonal scale for greater color accuracy, and a low D-min helps to ensure brighter, whiter whites. It has a medium-speed nominal sensitivity of ISO 100/21° when developed in E-6 process and the smooth grain profile pairs with a micro-structure optimized T-GRAIN emulsion to make it especially well-suited to scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color transparency film",
       "extremely fine grain structure",
       "iso 100/21° in e-6 process",
@@ -938,19 +1038,21 @@
       "vibrant colors and low d-min",
       "t-grain emulsion",
       "ideal for scanning"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_1884576_E100G_135_36_Ektachrome_Professional_1538663766_274846.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "c99a9f62-c369-4a60-9cbd-400871a4bd96",
     "brand": "Kodak",
     "name": "Ektar 100",
-    "iso_speed": 100.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak Professional Ektar 100 is a daylight-balanced color negative film characterized by an ultra-vivid color palette, high saturation, and an extremely fine grain structure. Utilizing the cinematic VISION Film technology, this film's smooth grain profile pairs with a micro-structure optimized T-GRAIN emulsion to make it especially well-suited to scanning applications, and advanced development accelerators offer extended versatility when making enlargements. Ektar has a nominal sensitivity of ISO 100/21°, and advanced cubic emulsions and proprietary DIR couplers render it with high sharpness, fine detail, and a well-defined edge quality. The combination of rich colors, fine grain, and optimized sharpness benefit this film's use for nature, travel, and outdoor photography, as well as fashion, product, and other commercial applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "extremely fine grain structure",
       "iso 100/21° in c-41 process",
@@ -958,19 +1060,21 @@
       "high sharpness",
       "t-grain emulsion",
       "ideal for scanning"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1268816817_IMG_155271.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "bf4543ac-188a-4be6-a3b3-25813eff3f72",
     "brand": "Kodak",
     "name": "Portra 160",
-    "iso_speed": 160.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 160.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak's Professional Portra 160 is a daylight-balanced color negative film offering a smooth and natural color palette that is balanced with medium saturation and low contrast for accurate skin tones and consistent results. Utilizing the cinematic VISION Film technology, this film also exhibits a very fine grain structure with high sharpness and fine edge detail. A micro-structure optimized T-GRAIN emulsion makes it especially well-suited for scanning applications, and advanced development accelerators offer extended versatility when enlarging. This film has a nominal sensitivity of ISO 160/23° and is particularly well-suited to portrait, wedding, and commercial photography, as well as other general applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "very fine grain",
       "vision film technology",
@@ -981,19 +1085,21 @@
       "high sharpness and fine edge detail",
       "t-grain emulsion",
       "ideal for scanning"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_6031959_35mm_Professional_Portra_NC_1603371948_759457.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4d2a60ec-cefe-429b-8171-1f60e97322f7",
     "brand": "Kodak",
     "name": "Portra 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak's Professional Portra 400 is a high-speed daylight-balanced color negative film offering a smooth and natural color palette that is balanced with vivid saturation and low contrast for accurate skin tones and consistent results. Utilizing the cinematic VISION Film technology, this film also exhibits a fine grain structure with very high sharpness and edge detail. A micro-structure optimized T-GRAIN emulsion makes it especially well-suited for scanning applications, and advanced development accelerators offer extended versatility when enlarging. This film has a nominal sensitivity of ISO 400/27° and is particularly well-suited to portrait and wedding photography, as well as nature, travel, and outdoor shooting with moving subjects, or when the lighting cannot be controlled.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "very fine grain",
       "vision film technology",
@@ -1004,19 +1110,21 @@
       "high sharpness and fine edge detail",
       "t-grain emulsion",
       "ideal for scanning"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_6031678_35mm_Professional_Portra_400_1602778892_742308.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "d37c8551-45f6-4296-9212-78d8959b636d",
     "brand": "Kodak",
     "name": "Portra 800",
-    "iso_speed": 800.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 800.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak's Professional Portra 800 is a high-speed daylight-balanced color negative film optimized for use in difficult lighting conditions. It has a nominal sensitivity of ISO 800/30° along with a notable underexposure latitude for effectively pushing to ISO 1600 with maintained quality and extended highlight and shadow detail. Vivid color saturation and low overall contrast contribute to pleasing skin tones and neutral color accuracy, and a micro-structure optimized T-GRAIN emulsion renders a fine grain structure with high sharpness and edge acutance. Kodak's proprietary advanced development accelerators and antenna dye sensitization also offer enhanced scanning and enlarging performance. Portra 800 is very well-suited to photographing moving subjects and working in low-light conditions while maintaining true color reproduction.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "fine grain",
       "high sharpness & edge detail",
@@ -1028,19 +1136,21 @@
       "suitable for low-light conditions",
       "t-grain emulsion",
       "ideal for scanning"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_1451855_Portra_800_135_36_Professional_Color_1603371948_197191.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "2541b214-2fab-4b27-a40f-3c2ff489310e",
     "brand": "Kodak",
     "name": "T-Max 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.15,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.15,
     "discontinued": 0,
     "description": "Kodak's Professional T-Max 100 is a medium-speed panchromatic black and white negative film characterized by an extremely fine grain structure along with high sharpness and resolving power. By utilizing a T-GRAIN emulsion, the grain pattern resembles a patterned, tabular form that maintains effective film speed while reducing the appearance of grain during enlarging or scanning. This film has a nominal sensitivity of ISO 100/21° and also features a wide exposure latitude, broad tonal range, and responds well to push development and zone system development changes. In addition to processing as a negative in standard black and white chemistry, T-Max 100 is also suitable for reversal processing using the T-Max 100 Direct Positive Film Developing Outfit for creating copy and duplicate work.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain",
       "t-grain emulsion",
@@ -1048,288 +1158,320 @@
       "high sharpness and resolving power",
       "wide exposure latitude and tonal range",
       "can be processed in reversal chemistry"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_8292443_TMX_135_24_T_Max_100_1249903955_29122.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "8080909e-7893-42db-9fb0-db379a28d0cc",
     "brand": "Kodak",
     "name": "T-Max 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.24,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.24,
     "discontinued": 0,
     "description": "Kodak's Professional T-Max 400 is a high-speed panchromatic black and white negative film featuring a unique T-GRAIN emulsion to provide a very fine grain structure with a high degree of sharpness and edge detail. It has a nominal sensitivity of ISO 400/27° along with a wide exposure latitude for rating the film up to EI 1600 and push developing. Its versatility benefits working in difficult lighting conditions and with moving subjects, and its fine grain profile, broad tonal range, and high resolving power benefit scanning and enlarging applications. Additionally, the film is well-suited to scientific and biomedical work, especially when fluorescence in photography is required.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain",
       "t-grain emulsion",
       "iso 400/27° in standard process",
       "high sharpness and edge detail",
       "versatile speed & wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_8521114_TMY_135_24_Roll_T_Max_1309867479_29137.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "421cc264-68de-4e76-9f25-93bf77579838",
     "brand": "Kodak",
     "name": "T-Max P3200",
-    "iso_speed": 3200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 3200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kodak Professional T-Max P3200 is an ultra-high-speed panchromatic black and white negative film characterized by its unique T-GRAIN emulsion, relatively fine grain structure, and high sharpness. It has a nominal sensitivity of ISO 3200/36°, however is categorized as a multi-speed film with a wide exposure latitude from EI 400-25,000 when pushed or pulled. Its versatility and speed benefits shooting handheld in difficult, available lighting conditions and with fast-moving subjects, and its fine grain profile, broad tonal range, and high resolving power benefit scanning and enlarging applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain",
       "t-grain emulsion",
       "iso 3200/36° in standard process",
       "high sharpness and edge detail",
       "versatile speed & wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1603383305_IMG_1434758.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
     "brand": "Kodak",
     "name": "Tri-X 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": 1.54,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": 1.54,
     "discontinued": 0,
     "description": "Kodak's Professional Tri-X 400 Black and White Negative Film is a classic high-speed panchromatic film designed for a wide array of shooting conditions. Characterized by its fine grain quality, notable edge sharpness, and high resolving power, Tri-X 400 also exhibits a wide exposure latitude with consistent tonality. It has a nominal sensitivity of ISO 400/27° when developed in standard black and white chemistry, and responds well to push processing. As an all-around, highly versatile film, Tri-X 400 is a standard choice for photographing in difficult lighting conditions as well as when working with subjects requiring good depth of field or for faster shutter speeds.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 400/27° in standard process",
       "responds well to push processing",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Kodak_1590652_TX_135_24_Tri_X_Pan_1259927385_29168.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "5c740e72-a51e-4d3d-a780-0e7f43d7e4b4",
     "brand": "Kono",
     "name": "Alien 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ALiEN 200 is an experimental color negative film that has been pre-exposed with little green men and alien heads on each frame for a particularly extraterrestrial effect. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed aliens in each frame",
       "iso 200/24° in c-41 process",
       "hand-rolled; each roll is unique"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfali1_alien_iso_200_35mm_1563446205_1493290.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "ea59b068-d6e4-47cb-9b43-c53072e7a336",
     "brand": "Kono",
     "name": "Katz 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO KATZ 200 is an experimental color negative film that has been pre-exposed with paw prints walking across each frame for a unique animal-inspired effect. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed paw prints in each frame",
       "iso 200/24° in c-41 process",
       "hand-rolled; each roll is unique"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfkat1_katz_iso_200_35mm_1563446205_1493291.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "bd2ffa96-2d1d-4276-9e6d-ee4815e2a2fb",
     "brand": "Kono",
     "name": "Liebe 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO LIEBE 200 is an experimental color negative film that has been pre-exposed with red hearts scattered across each frame for a love-themed effect. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed red hearts in each frame",
       "iso 200/24° in c-41 process",
       "hand-rolled; each roll is unique"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kflie1_liebe_iso_200_35mm_1563446205_1493292.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "340984df-d156-40cb-8aec-7d0b89084ec5",
     "brand": "Kono",
     "name": "Luft 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO LUFT 200 is an experimental color negative film that has been pre-exposed with light blue hearts scattered across each frame for a particularly lovely effect. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed blue hearts in each frame",
       "iso 200/24° in c-41 process",
       "hand-rolled; each roll is unique"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfluf1_luft_iso_200_35mm_1563448876_1493293.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "6f47908b-dc9f-4ea8-bfbb-3e6708957313",
     "brand": "Kono",
     "name": "Monolit 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO MONOLIT 400 is a panchromatic black and white negative film designed in collaboration with Astrum Ltd. and based on classic films from Svema in the Ukraine. This high-speed ISO 400 film has a traditional emulsion type with distinctive grain, a wide tonal range, and deep blacks for a moody appearance.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "distinctive grain and wide tonal range",
       "iso 400/27° in standard process",
       "based on classic svema film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kflit1_monolit_400_black_1559211612_1482248.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "65d745d7-3682-44e6-a792-bf14b36745d6",
     "brand": "Kono",
     "name": "Monolit 64",
-    "iso_speed": 64.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 64.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO MONOLIT 64 is a panchromatic black and white negative film designed in collaboration with Astrum Ltd. and based on classic emulsion types. Its slow nominal speed of ISO 64 yields an extremely fine grained, medium contrast profile with distinctive tonality, making it well-suited for studio applications as well as bright outdoor conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain",
       "iso 64/19° in standard process",
       "medium contrast and unique tonality"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfmlt1_monolit_64_black_1559211612_1482249.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "218523cb-7478-4ed3-a896-0df8c0fae966",
     "brand": "Kono",
     "name": "Original Candy 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ORIGINAL CANDY 200 is an experimental color negative film producing fun, pinkish hues and candy colors. This film is created by hand, using The Reanimator device, and its unique effects lend a creative, pop-like appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces candy colors and tones",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfcan1_original_candy_color_negative_1559211039_1482245.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "685e6235-4f96-4f25-a63e-e59f66e119e3",
     "brand": "Kono",
     "name": "Original Galaxy 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ORIGINAL GALAXY 200 is an experimental color negative film characterized by its bright and bursting multicolored effect that varies depending on shooting conditions. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces bright multicolored effects",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfgalax1_original_galaxy_color_negative_1559211612_1482247.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "93a2d68a-b71a-4990-b49e-87f493b5d0aa",
     "brand": "Kono",
     "name": "Original Mirage 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ORIGINAL MIRAGE 200 is an experimental color negative film with two distinct appearances, depending on the shooting conditions. In warm, sunny environments, the film gives a subtle and bright quality, in lower light conditions, the saturation intensifies and cool tone become richer. This film is created by hand, using The Reanimator device, and its unique effects lend a creative, ethereal appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "warm",
       "sunny effects and deep saturation",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfmirag1_original_mirage_35mm_film_1603389015_1584219.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "3eda9286-5b4f-475e-8f97-a6beafb5f899",
     "brand": "Kono",
     "name": "Original Monsoon 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ORIGINAL MONSOON 200 is an experimental color negative film inspired by 'the freshness of a post-monsoon rain.' Characterized by deep, cool colors and tones, and created by hand using The Reanimator device, this film's unique effects lend a brooding and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces deep",
       "cool colors and tones",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfmon1_original_monsoon_color_negative_1559211612_1482250.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "1f630e68-8cda-4b84-834d-265d1871f808",
     "brand": "Kono",
     "name": "Original Moonstruck 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ORIGINAL MOONSTRUCK 200 is an experimental color negative film characterized by its unconventional and surprising muted multicolored effect that varies depending on shooting conditions. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces muted multicolored effects",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfmoon1_moonstruck_color_negative_film_1559211612_1482251.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "18229f2c-bcf7-4eec-a355-d21b122f7fec",
     "brand": "Kono",
     "name": "Original Sunstroke 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ORIGINAL SUNSTROKE 200 is an experimental color negative film characterized by its unconventional and surprising bright, warm color palette and light leak effects, reminiscent of a faulty camera. Created by hand using The Reanimator device, this film's unique effects lend a surprising and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "bright",
       "warm colors & light leak effects",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfsun1_original_sunstroke_color_negative_1559212564_1482252.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "515cbb7d-fd74-43c6-87a8-cb5782800e2d",
     "brand": "Kono",
     "name": "Rotwild No. 2",
-    "iso_speed": 100.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO ROTWILD No. 2 is a redscale film; unique color negative film that has been reverse-rolled for exposing through the base of the film, rather than directly to the emulsion, in order to produce dramatic red, yellow, and orange toned photographs. By exposing the film through the base, the conventional top blue layer is not fully exposed and the bottom red layer filters the blue light from fully reaching the green and blue layers, resulting in a reddish appearance. The film has a variable sensitivity rating from ISO 100-400/21-27°, and the amount of red coloring can be controlled by over-exposure; with more overexposure pushing the coloring to a yellower palette.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "reverse-rolled color negative/redscale film",
       "strong red",
       "yellow",
@@ -1337,157 +1479,175 @@
       "iso 100-400/21-27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfrot2_rotwild_no2_iso_200_1609410069_1598320.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "53413046-7c85-4be6-bf3b-5df1d2aea93a",
     "brand": "Kono",
     "name": "Ufo 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "KONO UFO 200 is an experimental color negative film that has been pre-exposed with unidentifiable flying objects, spaceships, and flying saucers on each frame for a mysterious outer space effect. Created by hand using The Reanimator device, this film's unique effects lend a distinct and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed ufos in each frame",
       "iso 200/24° in c-41 process",
       "hand-rolled; each roll is unique"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/kono_kfufo1_ufo_iso_200_35mm_1563446777_1493294.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "f56abef3-33ce-4ef3-bc8a-5aae475e4ae4",
     "brand": "Kosmo Foto",
     "name": "Mono",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Kosmo Foto Mono is a 100-ISO panchromatic black-and-white film, perfect for all 35mm & 120 cameras. The film is an existing emulsion made by a European film producer, and features striking new packaging sporting the Kosmo Foto kosmonaut. Mono can be used on sunny days, overcast conditions or indoors with studio lighting, flash or natural light. The film is a traditional black-and-white chemistry that can be developed with formulations such as Perceptol, Tetenal and Rodinal. It can be pull-processed to ISO 50 or push-processed to ISO 400 with corresponding changes in development time.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "great for both indoors and outdoors",
       "iso 100/21° in standard process",
       "responds well to both pull-processing and push-processing"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1602682368_IMG_1429754.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "9b8659ff-ab9e-4e08-908e-e159efb4161c",
     "brand": "Lomography",
     "name": "100",
-    "iso_speed": 100.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Lomography 100 Color Negative Film is a medium-speed daylight-balanced film offering a vivid color palette and rich saturation. Its nominal sensitivity of ISO 100/21° contributes to a fine grain structure and high sharpness, which is ideal for printing and scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "rich",
       "vibrant color saturation",
       "iso 100/21° in c-41 process",
       "fine grain and high sharpness"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Lomography_683_120_Lomographic_ISO_100_1293040824_747866.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "303e0ceb-95d3-427e-9725-890737c033c6",
     "brand": "Lomography",
     "name": "Berlin Kino 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Lomography Berlin Kino 400 is a panchromatic black and white negative film inspired by and designed to emulate the aesthetics of the New German Cinema movement. It's a high speed, ISO 400 film with high silver content to produce a rich tonal scale with impressive contrast and a wide exposure latitude to suit exposing at EI 3200 and push processing. Additionally, borrowing from its cinema heritage, this film is also suitable for reversal processing in order to produce black and white positive transparencies.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "rich and broad tonal range",
       "iso 400/27° in standard process",
       "fine grain and high sharpness"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/lomography_f436bwcine_b_w_400_35mm_berlin_1576092181_1517816.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "0061d612-a6de-44b9-b334-b7e3385c4829",
     "brand": "Lomography",
     "name": "Earl Grey 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "A classically-inspired black and white negative film, Lomography's Earl Grey 100 is a medium-speed film with a nominal sensitivity of ISO 100/21°, fine grain, and high sharpness. It is characterized by is wide tonal range and ability to render deep blacks and stark whites, with a multitude of gray tones between.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "rich and broad tonal range",
       "iso 100/21° in standard process",
       "fine grain and sharpness"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1350394348_IMG_275131.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "d19259e0-ff8d-4a1f-9d2f-bf1b37130692",
     "brand": "Lomography",
     "name": "Lady Grey 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Lomography's Lady Grey 400 is a high-speed black and white negative film featuring a smooth grain structure, high sharpness, and nominal sensitivity of ISO 400/27° to benefit working in a variety of conditions and with moving subjects. It is further characterized by a broad tonal range, which produces deep blacks, bright whites, and nuanced gray middle tones.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "rich and broad tonal range",
       "iso 400/27° in standard process",
       "smooth grain and high sharpness"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/multiple_images/images500x500/1343738031_IMG_264914.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "77c23890-635a-4cc3-849c-3d6b2ebd58b1",
     "brand": "Lomography",
     "name": "Lomochrome Purple Xr 100-400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "LomoChrome Purple XR 100-400 from Lomography is a surreal and unique film delivering colors that are reminiscent of infrared film. This creative color film intentionally renders false colors, where blue becomes green, green becomes purple, yellow becomes pink, and reds remain neutral for especially unique effects when photographing people. The film's nominal sensitivity is ISO 400, but it responds well to overexposure by up to two stops, which can be used to control color changes with greens taking on a bright purple hue when shot at EI 100. Additionally, this 2019 version of LomoChrome Purple XR 100-400 also delivers finer grain and higher sharpness for greater versatility.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "surreal purple-hued color negative film",
       "can be overexposed by 2 stops",
       "iso 400/27° in c-41 process",
       "exposure directly affects color response",
       "high sharpness and fine grain"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/lomography_f436lc19_lomochrome_purple_xr_100_400_1574073935_1517817.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "dd1d68d3-d11f-4225-80f2-d367afb2feb0",
     "brand": "Lomography",
     "name": "Potsdam Kino 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Lomography Potsdam Kino 100 is a panchromatic black and white negative film inspired by and designed to emulate the aesthetics of the New German Cinema movement. It's a medium speed, ISO 100 film with high silver content to produce a rich tonal scale with impressive contrast, fine grain, and high sharpness. Additionally, borrowing from its cinema heritage, this film is also suitable for reversal processing in order to produce black and white positive transparencies.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "rich and broad tonal range",
       "iso 100/21° in standard process",
       "fine grain and high sharpness"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/lomography_f136bwcine_potsdam_kino_b_w_35mm_1577380899_1517813.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "348e624f-39de-409b-bcaf-8cf24c6e0dec",
     "brand": "Psychedelic Blues",
     "name": "400 #2",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Psychedelic Blues 400 #2 is an experimental color negative film that has been pre-exposed to different colored light sources in order to produce a distinct light-leak look. Due to the pre-exposure, the film produces intense multi-colored effects that are strongest toward the edges of the frame and fade toward the middle. The film also has an overall fogged appearance for a unique nostalgic look. Additionally, in the middle of the roll, around frames 12-13, a 'prism burst' effect is also present. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "creative multi-colored light leak look",
       "iso 400/27° in c-41 process",
@@ -1495,351 +1655,389 @@
       "prism burst effect near center of roll",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/psychedelic_196924_psychedelic_blue_400_iso_1525798271_1394369.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "f26fec2a-6196-43cc-aa9e-77306d96afc2",
     "brand": "Psychedelic Blues",
     "name": "400 #3",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Psychedelic Blues 400 #3 is an experimental color negative film that has been pre-exposed to different colored light sources in order to produce a distinct light-leak look. Due to the pre-exposure, the film produces intense multi-colored effects that are strongest toward the edges of the frame and fade toward the middle. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "creative multi-colored light leak look",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/psychedelic_196934_blues_400_3_color_1563204949_1488483.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "28d03b27-a666-4aa4-80c2-0db515388458",
     "brand": "Psychedelic Blues",
     "name": "400 #4",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Psychedelic Blues 400 #4 is an experimental color negative film that has been pre-exposed to holographic paper to produce multiple rainbow spectra of color throughout the entire roll. This random effect causes bursts of color to come from all directions and fade in and out between frames in order to produce a distinct light-leak look. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "creative multi-colored light leak look",
       "iso 400/27° in c-41 process",
       "pre-exposed holographic rainbow effects",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/psychedelic_196944_blues_400_4_color_1563204949_1488484.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "f5156bfd-f8bd-4017-a258-9f0dd7ee729e",
     "brand": "Psychedelic Blues",
     "name": "400 #5",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Psychedelic Blues 400 #5 is an experimental color negative film that has been pre-exposed to different colored light sources in order to produce a distinct light-leak look. The colored effects are very strong toward the edges of the film, and fade into the center in order to cause a distinct panoramic effect. Some color effects will also be present throughout the rest of the image on random frames, but the strongest effects will consistently be at the edges. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "creative multi-colored light leak look",
       "iso 400/27° in c-41 process",
       "strong color effects on edges of frame",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/psychedelic_196954_blues_400_5_color_1563204949_1488485.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "d496b144-00f6-4e78-9617-df5213ac2579",
     "brand": "Psychedelic Blues",
     "name": "400 #6",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Psychedelic Blues 400 #6 is an experimental color negative film that has been pre-exposed to different colored light sources in order to produce a distinct light-leak look. The effects include both multicolored circles and rectangles that change color and position in the frame from roll to roll, as well as change in size and cover the entire frame or only small areas of the frame. This creative and colorful film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "creative multi-colored light leak look",
       "iso 400/27° in c-41 process",
       "multi-colored circles and rectangles",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/psychedelic_196964_blues_400_6_geo_1608559516_1582596.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "51844f74-dad6-4595-b91b-cb7a4fb4ae95",
     "brand": "Revolog",
     "name": "460Nm 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog 460nm 200 is an experimental color negative film characterized by a complete color shift across the frame to produce a unique and creative appearance. The color change ranges from yellow/green to blue/violet in tint, and becomes more apparent in dark areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces distinct color shift",
       "iso 200/24° in c-41 process",
       "ranges from green/yellow to violet/blue",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_901435_revolog_460nm_200_iso_1507026166_1362783.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "7cebe04e-cbef-4069-ab26-eae4bc0295b7",
     "brand": "Revolog",
     "name": "600Nm 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog 600nm 200 is an experimental color negative film characterized by a complete color shift across the frame to produce a unique and creative appearance. The color change ranges from reddish to bluish-green in tint, and becomes more apparent in dark areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces distinct color shift",
       "iso 200/24° in c-41 process",
       "ranges from reddish to bluish-green",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900535_revolog_600nm_200_iso_1506966618_1362784.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "8db53079-96e3-40ea-be9f-7b89416c0302",
     "brand": "Revolog",
     "name": "Kolor 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Kolor 200 is an experimental color negative film distinguished by a color wash that covers the entire frame. Each frame will exhibit unique color effect, with gradients from red to blue, orange to green, pink to turquoise, and so on, and underexposure will increase the amount of coloration. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "unique color wash across frame",
       "iso 200/24° in c-41 process",
       "exposure adjusts effect's intensity",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900635_revolog_kolor_200_iso_1506967518_1362785.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "1bb3cb1f-0521-468c-b9bc-aa32c3a0b99e",
     "brand": "Revolog",
     "name": "Kosmos 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Kosmos 200 is an experimental color negative film characterized by bright blue stardust-like effects that appear in the shadows of each frame, giving a cosmos-inspired feeling to your subjects. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "blue stardust-like effects",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/revolog_901535_kosmos_200_color_negative_1567010793_1488480.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "2fbe1143-cea4-4903-80f9-a55b9e3379cc",
     "brand": "Revolog",
     "name": "Lazer 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Lazer 200 is an experimental color negative film distinguished by bright green and blue lines that run through the image frame to produce a unique and creative look. The lines extend beyond the typical image frame and into the film sprockets, making this film well-suited for use with cameras that can expose beyond the traditional 24 x 36mm area as well as panoramic applications. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "bright green and blue lines across frame",
       "iso 200/24° in c-41 process",
       "effects continues through film sprockets",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900335_revolog_lazer_200_iso_1506966384_1362782.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "21ace24e-fa60-4c8e-bef2-92caa9a74646",
     "brand": "Revolog",
     "name": "Nebula 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Nebula 200 is out of space and will scale down the whole universe into your photographs. Blue and green stardust will make little galaxies appear on your images. Play with exposure! The blue and green nebulas are more visible in darker parts than in brighter areas of the photo. Take pictures of your friends and make them look as if they were lost in space or showering with stardust. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "blue and green galaxies over images",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://assets.bigcartel.com/product_images/271869875/Nebula.png?auto=format&fit=max&h=1200&w=1200",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "b509adb1-0c52-47f6-b300-6231aa51e14c",
     "brand": "Revolog",
     "name": "Plexus 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Plexus 200 is an experimental color negative film characterized by bluish organic structure that covers the entire frame to produce a unique and creative appearance. The distinct structure resembles a neural network and is more apparent in dark and underexposed areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "organic bluish net-like structure",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900935_revolog_plexus_200_iso_1507025194_1362788.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "3a9f0ea1-e72e-4165-8248-b8ad363b4e49",
     "brand": "Revolog",
     "name": "Rasp 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Rasp 200 is an experimental color negative film characterized by colored lines that run across each frame to produce a unique and creative appearance. The lines vary in color, run parallel to the long-edge of the 35mm frame, and become more apparent in dark areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "colored lines run sideways across frames",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900135_revolog_rasp_200_iso_1506964892_1362780.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "87058dc2-b228-46e0-a519-0d73fbab01f8",
     "brand": "Revolog",
     "name": "Snovlox 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Snovlox 100 is a black and white negative film with effects similar to the Revolog Volvox film, but with white dot imaging that resembles snowflakes. The film has a nominal sensitivity of ISO 100/21° and should be processed standardly.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "white color effects that imitate snowflakes",
       "iso 100/21° in standard process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/106964010-76c93400-670f-11eb-9ebc-e64bcc7f3ebc.png",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "3efabd75-e6a7-42c7-918a-466b194294ce",
     "brand": "Revolog",
     "name": "Streak 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Streak 200 is an experimental color negative film characterized by colored fiber-like lines that cover the entire frame to produce a unique and creative appearance. The lines resemble viewing your image through a scratched window, produce an overall gritty appearance, and are more apparent in dark and underexposed areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "fiber-like scratched effect",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900835_revolog_streak_200_iso_1507023967_1362787.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "884f23f8-aff3-4067-93a9-81cc9074b54f",
     "brand": "Revolog",
     "name": "Tesla 1 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Tesla 1 200 is an experimental color negative film characterized by bright lightning-like streaks that appear in each frame to produce a shockingly unique and creative appearance. The blue/white flashes are random in each frame for an element of surprise. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "blue/white lightning-like flashes",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/revolog_901735_tesla_1_200_color_1567012008_1488481.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "1ead55e1-22b9-45ba-b4b5-569d434587ea",
     "brand": "Revolog",
     "name": "Tesla 2 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Tesla 2 200 is an experimental color negative film characterized by bright lightning-like streaks that appear in each frame to produce a shockingly unique and creative appearance. The bright red flashes are random in each frame for an element of surprise. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "red lightning-like flashes",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/revolog_901835_tesla_2_200_color_1567012008_1488482.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "cde7917f-17aa-41cf-89f1-383060a4b21d",
     "brand": "Revolog",
     "name": "Texture 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Texture 200 is an experimental color negative film characterized by a bubble-like texture that covers the entire frame to produce a unique and creative appearance. The rounded shapes are faint in bright areas of the image and become more apparent in dark and underexposed areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces bubble-like structure effect",
       "iso 200/24° in c-41 process",
       "round shapes in shadow areas",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900735_revolog_texture_200_iso_1507023365_1362786.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "13f737fe-f77b-4fda-9018-5cbff03c8804",
     "brand": "Revolog",
     "name": "Volvox 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Revolog Volvox 200 is an experimental color negative film distinguished by bright green dots that cover the image frame to produce a unique and creative look. The dots vary in size and shape and become more apparent in dark areas of the frame. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "bright green dots across frame",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/freestyle_photographic_900235_revolog_volvox_200_iso_1506965817_1362781.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4fde338c-14fb-47ae-adb4-31e0a9467bf3",
     "brand": "Rollei",
     "name": "Copex Rapid",
-    "iso_speed": 50.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 50.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa Copex Rapid is a high-resolution panchromatic black and white microfilm that exhibits very fine grain and accurate reproduction characteristics. It has a variable exposure index of ISO 50/18° to ISO 64/19°, depending on process and application, and can be developed either as a negative or a positive. Spur Modular UR (parts A and B) is the recommended developer for attaining optimal results from this film, and helps to retain high sharpness, fine grain, a wide exposure latitude, discernible tonal values, and maintained film speed from development.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "high-resolution",
       "high-speed microfilm",
@@ -1847,19 +2045,21 @@
       "very fine grain and high sharpness",
       "recommended developer: spur modular ur",
       "can use b&w reversal process"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_agfa_81136_agfa_copex_rapid_35mm_1366652363_893392.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "87ab777a-88dc-4049-8553-e2fb2d666e67",
     "brand": "Rollei",
     "name": "Infrared 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa's Infrared 400 is a unique infrared-sensitized panchromatic black and white negative film with a nominal sensitivity of ISO 400/27° without filtration. It is sensitive to IR wavelengths up to 820nm and can be used to produce unique halation effects with filtration and by varying the exposure length. It is suitable for working in both daylight and tungsten conditions and is characterized by a fine grain structure, notable sharpness, and high resolving power. Additionally, a good contrast profile offers clear separation between shadow and highlight regions. The film's polyester base has been tested to an LE-500 (life expectancy 500 years) archival rating and also features anti-curling and anti-static coatings, as well as a special coating to promote smooth film transportation within the camera. Additionally, this clear base is particularly well-suited to scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "ir-sensitive panchromatic b&w negative film",
       "infrared sensitivity up to 820nm",
       "iso 400/27° without filtration",
@@ -1870,19 +2070,21 @@
       "ideal for scanning applications",
       "archival le-500-rated polyester base",
       "anti-static and anti-curl coatings"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_agfa_81040123_infrared_400_black_and_1436800045_1139495.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "e71d3410-483b-4cfb-bd07-fbc040b82bbe",
     "brand": "Rollei",
     "name": "Ortho 25",
-    "iso_speed": 25.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 25.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa's Ortho 25 is an orthochromatic black and white negative film optimized for technical, scientific, and half-tone work, as well as creative and pictorial applications. Characterized by extremely high sharpness and resolving power, this unique film also features an impressively fine grain structure and is also well-suited to reversal processing for black and white transparencies. Ortho 25 has a nominal sensitivity of ISO 25/15° and a high-sensitivity reserve of two stops for greater flexibility when shooting. Its spectral sensitivity ranges from 380-610nm and is suitable for photographing in either daylight or tungsten-lit conditions. The film's polyester base has been tested to an LE-500 (life expectancy 500 years) archival rating and also features anti-curling and anti-static coatings, as well as a special coating to promote smooth film transportation within the camera. Additionally, this clear base is particularly well-suited to scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "orthochromatic b&w negative film",
       "very high sharpness and fine grain",
       "iso 25/15° in standard process",
@@ -1891,73 +2093,81 @@
       "spectral sensitivity: 380-610nm",
       "archival le-500-rated polyester base",
       "suitable for b&w reversal processing"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_3731011_ortho_25_black_and_1440085112_1175110.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4b233274-17c0-41e5-83e4-f43ae38f7df8",
     "brand": "Rollei",
     "name": "Rpx 25",
-    "iso_speed": 25.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 25.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa's RPX 25 is a low-speed panchromatic black and white negative film with a nominal sensitivity of ISO 25/15° in standard process and can effectively be pushed one stop with maintained results. The low speed also contributes to a very fine grain structure with very high sharpness. It features a traditional, thin emulsion and a transparent base, making it ideal for enlarging and scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 25/15° in standard process",
       "highly transparent base",
       "can be pushed one stop"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_agfa_810236_rollei_rpx_25_35x36_1392977197_1020627.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "282667a4-eebe-4274-b91e-fb6711c4412d",
     "brand": "Rollei",
     "name": "Rpx 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa's RPX 100 is a medium speed black and white negative film for producing prints using a traditional black and white printing process. The film exhibits a nominal sensitivity of ISO 100/21° and standard development in black and white chemistry yields a fine grain texture with high sharpness and a wide tonal range. The film also features a broad exposure latitude, making it well-suited to push and pull development. This film is well-suited to use in general indoor and outdoor conditions and is panchromatic sensitized from 380-660nm at 2850K.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 100/21° in standard process",
       "broad tonal range and contrast",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_agfa_811011_rollei_rpx_100_35x36_1404756556_1062231.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "fb6f499a-f639-4e17-9acb-00e154da8509",
     "brand": "Rollei",
     "name": "Rpx 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa's RPX 400 is a high speed black and white film for producing prints using a traditional black and white printing process. The film exhibits a nominal sensitivity of ISO 400/27° and standard development in black and white chemistry yields a fine grain texture with notable sharpness and a wide tonal range. The film also features a broad exposure latitude, making it well-suited to push and pull development. This film is well-suited to use in general indoor and outdoor conditions and is panchromatic sensitized from 380-660nm at 2850K.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and sharpness",
       "iso 400/27° in standard process",
       "broad tonal range and contrast",
       "wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_agfa_804011_rollei_rpx_400_35x36_1404756556_1062233.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a856543d-7a94-4d46-b382-a3ea2dfae20d",
     "brand": "Rollei",
     "name": "Retro 80S",
-    "iso_speed": 80.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 80.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei's Retro 80S is a slow-speed panchromatic black and white negative film with extended near-infrared sensitivity to 775nm. This additional red sensitivity helps to cut through haze or fog and also smooth skin tones and blemishes, making it ideal for portraiture. It has a nominal sensitivity of ISO 80/20° and is characterized by a fine grain structure and broad tonal range. It is coated onto a transparent polyester base, with anti-static coatings, that makes it well-suited to scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain structure",
       "broad tonal range",
@@ -1965,19 +2175,21 @@
       "extended ir sensitivity to 775nm",
       "clear polyester base",
       "ideal for scanning"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_810812_retro_80s_black_and_1446731575_1175111.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4c584610-fabc-4432-b8ea-10270dc2cd87",
     "brand": "Rollei",
     "name": "Retro 400S",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Retro 400S from Rollei is a panchromatic black and white negative film featuring an extended infrared sensitivity for producing unique halation effects, which can be controlled by exposure. Its nominal speed of ISO 400/27° offers extensive versatility and latitude, which is further complemented by high sharpness, contrast, and acutance. The film's polyester base has been tested to an LE-500 (life expectancy 500 years) archival rating and, additionally, this clear base is particularly well-suited to scanning applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "high sharpness",
       "good contrast",
@@ -1985,19 +2197,21 @@
       "extended infrared sensitivity",
       "ideal for scanning applications",
       "archival le-500-rated polyester base"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/rollei_8124006_retro_400s_black_and_1446731575_1175112.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "bbf96ca7-7351-4f52-ad04-b3412c9f5262",
     "brand": "Rollei",
     "name": "Superpan 200",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Rollei/Agfa's Superpan 200 is a medium-speed panchromatic black and white negative film based on Agfa's AVI PAN aerial film, and exhibits a nominal sensitivity of ISO 200/24°. It has extended sensitivity near the infrared range, up to 750nm, and well-controlled contrast in order to cut through haze, fog, and other atmospheric conditions. Its very fine grain structure also contributes to high overall sharpness and this film is particularly well-suited to technical, industrial, and aerial photography applications. Additionally, its wide exposure latitude enables rating the film at EI 125 with consistent results and controlled tonal values.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain and high sharpness",
       "iso 200/24° in standard process",
@@ -2005,54 +2219,60 @@
       "ideal for technical and aerial users",
       "wide exposure latitude",
       "controlled fog and haze reproduction"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/Rollei_AGFA_42440121_35mm_Superpan_200_Black_1347630550_849691.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "5c43f5c9-1fdd-4463-b91f-1254f3f7f56e",
     "brand": "Shanghai Film",
     "name": "Gp3 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Shanghai Film GP3 100 is a medium-speed panchromatic black and white negative film characterized by a controlled grain structure, making it well-suited for both enlarging and scanning. This film has a nominal sensitivity of ISO 100/21° and its traditional silver-rich emulsion offers rich tonality with deep black and bright white values.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "controlled grain structure",
       "iso 100/21° in standard process",
       "traditional silver-rich emulsion"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/shanghai_film_gp3_100_120_gp3_100_iso_120_1537524509_1434722.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "42709336-1b1d-472e-95b1-6ae3bd6ed03d",
     "brand": "Street Candy Film",
     "name": "Atm 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Street Candy ATM 400 is a panchromatic black and white negative film characterized by a uniquely high contrast profile, yet still featuring a wide dynamic range, smooth tonality, and rich detail. It is a re-purposed surveillance film and features a smooth grain profile with high sharpness and a nominal sensitivity of ISO 400 when shot in daylight conditions or ISO 320 under incandescent lighting. It is also suitable for pushing up to one stop with an increase in apparent contrast.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "re-purposed surveillance film",
       "iso 400/27° in standard process",
       "fine grain and smooth tonality",
       "high contrast and wide exposure latitude"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/street_candy_film_atm400_street_candy_atm_400_1580307780_1537197.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "4e76e29c-fe88-4b0f-8130-24e750cdadff",
     "brand": "Yodica",
     "name": "Andromeda 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Andromeda 400 is an experimental color negative film offering bright and intense pink, fuchsia, and red hues across the entire frame. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "bright pink",
       "fuchsia",
@@ -2060,721 +2280,781 @@
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_andromeda_35mm_film_iso_1575548478_1514755.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a5ff9042-ab9d-4767-9e80-bb1883719c63",
     "brand": "Yodica",
     "name": "Antares 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Antares 400 is an experimental color negative film featuring a warm red tint at the top of the frame with a gradient transitioning from purple to a deep blue at the bottom of the frame. These colorful effects become more pronounced and intense with some underexposure. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "red to blue gradient across frame",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_antares_35mm_film_iso_1575548478_1514756.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "e017ea6b-4bdc-4d41-967b-5f5348b17e6e",
     "brand": "Yodica",
     "name": "Atlas 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Atlas 400 is an experimental color negative film offering a multi-color burst in each frame, which encompasses a rainbow of bright and playful colors. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "multi-colored burst across each frame",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_atlas_35mm_film_iso_1575549462_1514757.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "1f220716-81f2-41a4-9c34-f5910c793ff6",
     "brand": "Yodica",
     "name": "Callisto 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Callisto 400 is an experimental color negative film featuring a ruby red tint at the top of the frame with a gradient transitioning from blue to a verdant green at the bottom of the frame. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "ruby red to green gradient across frame",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_callisto_35mm_film_iso_1575549462_1514758.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "cbb7a19a-6f4f-4f2c-9f66-cd46004799e2",
     "brand": "Yodica",
     "name": "Pegasus 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Pegasus 400 is an experimental color negative film offering a bright rainbow of colors that run horizontally across each frame, with the colors become more pronounced and intense with some underexposure. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "horizontal rainbow across frame",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_pegasus_35mm_film_iso_1575549462_1514759.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "faec958a-13a0-4dc6-9f9f-7190a68e8cbf",
     "brand": "Yodica",
     "name": "Polaris 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Polaris 400 is an experimental color negative film offering a deep, minty blue coloring across the entire frame with reddish vignetting along the edges and in the corners. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "deep blue tint with reddish hued edges",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_polaris_35mm_film_iso_1575549462_1514760.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "42c34822-1041-4e03-a281-180556989b96",
     "brand": "Yodica",
     "name": "Sirio 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Sirio 400 is an experimental color negative film featuring bright, punchy green hues at the top of the frame with a gradient transitioning from deep blue to a rich purple at the bottom of the frame. These colorful effects become more pronounced and intense with some underexposure. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "green to purple gradient across frame",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_sirio_35mm_film_iso_1575549462_1514761.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "b5af5020-9d0e-4e7c-bc9e-36756ec689de",
     "brand": "Yodica",
     "name": "Vega 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Yodica Vega 400 is an experimental color negative film featuring a cool blue tint at the top of the frame with a gradient transitioning from purple to a warm orange at the bottom of the frame—similar to a sunset. These colorful effects become more pronounced and intense with some underexposure. This pre-exposed effect offers a creative and unique look along with an element of chance with each roll. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "blue to orange gradient across frame",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/yodica_vega_35mm_film_iso_1575549462_1514762.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "90c37212-12e9-4897-b24b-83c3be9289ea",
     "brand": "Dubblefilm",
     "name": "Apollo 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Apollo 200 is an experimental color negative film offering a distinct look characterized by deep, moody shadows and ethereal, hazy highlights that pop for an overall cinematic feel. This unique and unpredictable effect is dependent on the shooting conditions, with surprising results to be expected. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "deep shadows and highlights that pop",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/dubble_film_dfrapo1_apollo_200_color_negative_1559045291_1481923.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "d633c947-0cd8-47f1-91a7-613be48834e7",
     "brand": "Dubblefilm",
     "name": "Apollo 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Apollo 400 is an experimental film with deep shadows and highlights that pop. This unique and unpredictable effect is dependent on the shooting conditions, with surprising results to be expected. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "deep shadows and highlights that pop",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/107083462-aa659600-67c3-11eb-8cf1-90246d0db917.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "9be4bbeb-8a9b-445e-aebe-e85e8a64e2e7",
     "brand": "Dubblefilm",
     "name": "Bubblegum 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Bubblegum 200 is an experimental color negative film characterized by its overwhelming pinkish hues and overall candy color profile. Created by hand using The Reanimator device, this film's distinct effects lend a unique and creative appearance to 'sweeten' your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces bright pink hues & candy colors",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/dubble_film_dfrbub1_bubblegum_200_color_negative_1559046088_1481924.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "85c29f67-129a-4bbc-bd0a-f8b30022d684",
     "brand": "Dubblefilm",
     "name": "Bubblegum 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Bubblegum 400 is an experimental color negative film characterized by its subtle tones and pastel colours. In very bright conditions the effect can be weak which is part of its charm. The 400 speed Bubblegum film uses the incredible Kodak Ultramax as the base layer. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "subtle tones and pastel colors",
       "iso 400/27° in c-41 process",
       "kodak ultramax as base layer of film",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/107084044-82c2fd80-67c4-11eb-9eaf-4570b3c7c041.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "0a0cdaa2-b02b-4f55-bf35-cede23f75a5e",
     "brand": "Dubblefilm",
     "name": "Jelly 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Jelly 200 is an experimental color negative film characterized by its overwhelming, fun, and multicolored effect that varies depending on shooting conditions. Created by hand using The Reanimator device, this film's unique effects lend a surprising and creative appearance to your photographs. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "produces bright multi-colored effects",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/dubble_film_dfrjel1_jelly_200_color_negative_1559046088_1481925.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "9e3e8a9b-545b-4a20-9bc2-55cbe1d3c8aa",
     "brand": "Dubblefilm",
     "name": "Jelly 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Jelly 400 is inspired by the deep colors and freshness of the ocean. This experimental film uses a Kodak Ultramax base layer and features an added mix of color tones that produce a unique image. Colors appear as soft gradients with pockets of un-tinted areas. Sometimes they are red, other times they are orange or blue, and sometimes all the colors mix in one frame. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "deep and rich colors",
       "iso 400/27° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/107085716-dcc4c280-67c6-11eb-8cf5-cc1737435463.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "032997e6-718e-4413-8410-fd9dd656f825",
     "brand": "Dubblefilm",
     "name": "Pacific 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Pacific 200 is an experimental color negative film offering distinctly deep, muted tones and colors inspired by the ocean. The film has been pre-exposed in order to produce this unique and unpredictable effect and results are heavily dependent on specific shooting conditions. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed for deep",
       "muted colors",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/dubble_film_dfrpac1_pacific_200_color_negative_1559046088_1481926.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "c4dd3a4b-f6db-494b-9f79-a94fbd33e161",
     "brand": "Dubblefilm",
     "name": "Pacific 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Pacific 400 is an experimental color negative film with added tone producing a very unique look. Expect deep orange shadows and metallic blue tones throughout, as always results will very depending on shooting and scanning conditions. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "deep orange shadows and metallic blue tones",
       "iso 400/27° in c-41 process",
       "kodak ultramax as base layer of film",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/107087043-db949500-67c8-11eb-8cff-10a689398ad9.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a0c3c1c9-a8e0-4dab-b950-9f8f775d6ace",
     "brand": "Dubblefilm",
     "name": "Solar 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Solar 200 is an experimental color negative film that has been pre-exposed in order to produce a distinctly warm, hazy, and bright aesthetic. This process also results in surprising colors and light leak effects, with overall results being heavily dependent on specific shooting conditions. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "pre-exposed for a warm hazy quality",
       "iso 200/24° in c-41 process",
       "surprising colors and light leak effects",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/dubble_film_dfrsol1_solar_200_color_negative_1559046088_1481927.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "6f8242b3-efd8-4abb-9bed-414f94c10c88",
     "brand": "Dubblefilm",
     "name": "Solar 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Solar 400 is an experimental color negative film with added light leaks. Often seen as a camera fault, light leaks can produce fantastic colour highlights to your photos. You never know when or where the burns will be, expect serendipity that is to say embrace the analogue vibe! Solar 400 uses the incredible Kodak Ultramax as the base layer. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "kodak ultramax as base layer of film",
       "iso 400/27° in c-41 process",
       "surprising colors and light leak effects",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/107087804-03382d00-67ca-11eb-9c68-f0d6aa59c9c8.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "501deeee-31b6-4b77-aef8-a255e7283642",
     "brand": "Dubblefilm",
     "name": "Stereo 200",
-    "iso_speed": 200.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Stereo 200 is an experimental color negative film offering a distinct tint effect, which fades from red to blue across the entire roll. Inspired by 3D glasses, this film's shifting and fading tint effect gives a unique and unpredictable effect to images that also heavily depends on the shooting conditions. The film has a nominal sensitivity of ISO 200/24° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "red to blue fading tint",
       "iso 200/24° in c-41 process",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://static.bhphoto.com/images/images500x500/dubble_film_dfrste1_stereo_200_color_negative_1559046088_1481928.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "871a609b-5b51-4383-b908-3a782fbd8f46",
     "brand": "Dubblefilm",
     "name": "Stereo 400",
-    "iso_speed": 400.0,
-    "color_type": "color",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "color",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "dubblefilm Stereo 400 is an experimental color negative film which starts with a full frame red tint and fades to blue for the final part. The initial part of the film is very intense and becomes more subtle throughout with an amazing transition part in the middle. Stereo 400 uses the incredible Kodak Ultramax as the base layer. The film has a nominal sensitivity of ISO 400/27° and should be processed in C-41 chemistry.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "daylight-balanced color negative film",
       "red to blue fading tint",
       "iso 400/27° in c-41 process",
       "kodak ultramax as base layer of film",
       "experimental",
       "creative application film"
-    ]
+    ],
+    "staticImageURL": "https://user-images.githubusercontent.com/69367907/107088512-0ed82380-67cb-11eb-87f3-05d8c73d4ade.jpg",
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a1ee15a9-4e56-4a20-8504-22af22146f9e",
     "brand": "Adox",
     "name": "CHS 100 II",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Adox CHS 100 II is a high-speed black and white negative film with excellent sharpness and fine grain. It offers good contrast and a wide exposure latitude, making it suitable for a variety of shooting conditions. The film is characterized by its classic black and white aesthetic with rich tonal gradation.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and high sharpness",
       "iso 100/21° in standard process",
       "wide exposure latitude",
       "good contrast and rich tonal gradation"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "748b95b0-c98c-40dc-92b6-d4d1af8ffdbd",
     "brand": "Adox",
     "name": "Silvermax",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Adox Silvermax is a high-silver content black and white negative film designed for exceptional tonal range and archival quality. With its extended red sensitivity and fine grain structure, it delivers outstanding image quality with rich blacks and detailed highlights. The film is particularly well-suited for fine art photography and printing.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "high silver content",
       "iso 100/21° in standard process",
       "extended red sensitivity",
       "fine grain and excellent tonal range",
       "archival quality"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "161d7bdb-bc77-4897-9f5c-1cbf7e0b6aca",
     "brand": "Lucky",
     "name": "SHD 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Lucky SHD 100 is a medium-speed panchromatic black and white negative film manufactured in China. It offers fine grain, good sharpness, and a traditional black and white aesthetic. The film provides good contrast and is suitable for general photography applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and good sharpness",
       "iso 100/21° in standard process",
       "traditional b&w aesthetic",
       "good contrast"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "251495d6-cb57-46b2-bcb6-bc901c517760",
     "brand": "Lucky",
     "name": "SHD 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Lucky SHD 400 is a high-speed panchromatic black and white negative film manufactured in China. It offers good performance in low light conditions while maintaining fine grain and good sharpness. The film provides a wide exposure latitude and is suitable for general photography and available light situations.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain for high-speed film",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "suitable for low light conditions"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "456f4d10-5716-46b1-b1fe-75ea6811eeeb",
     "brand": "Silberra",
     "name": "Pan 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Silberra Pan 100 is a traditional panchromatic black and white negative film with a classic emulsion design. It offers fine grain, good sharpness, and excellent tonal range. The film is manufactured in Russia and provides a distinctive look with deep blacks and smooth gradations.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "traditional emulsion design",
       "iso 100/21° in standard process",
       "fine grain and good sharpness",
       "excellent tonal range"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "8c36c11c-005a-4aa2-890a-044cb1a9039a",
     "brand": "Silberra",
     "name": "Pan 160",
-    "iso_speed": 160.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 160.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Silberra Pan 160 is a medium-speed panchromatic black and white negative film with a unique speed rating between standard ISO 100 and 200 films. It offers fine grain, high sharpness, and a distinctive tonal character. The film provides good contrast and is suitable for various lighting conditions.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "unique iso 160/23° speed rating",
       "fine grain and high sharpness",
       "distinctive tonal character",
       "good contrast"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "358b737b-8ee1-4230-a470-d5f6690edc05",
     "brand": "Silberra",
     "name": "Pan 200",
-    "iso_speed": 200.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 200.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Silberra Pan 200 is a medium-speed panchromatic black and white negative film that offers excellent versatility for various shooting conditions. It features fine grain, good sharpness, and a wide exposure latitude. The film provides balanced contrast and is suitable for both indoor and outdoor photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and good sharpness",
       "iso 200/24° in standard process",
       "wide exposure latitude",
       "balanced contrast"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "ee053564-cd4a-4e4c-a90a-c758974f0ba8",
     "brand": "Ultrafine",
     "name": "Xtreme 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Ultrafine Xtreme 100 is a medium-speed panchromatic black and white negative film offering excellent value for money. It features fine grain, good sharpness, and a traditional black and white aesthetic. The film provides good contrast and is suitable for general photography applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and good sharpness",
       "iso 100/21° in standard process",
       "traditional b&w aesthetic",
       "excellent value"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "34455e95-89f7-4e4b-bcba-eba12fc0f978",
     "brand": "Ultrafine",
     "name": "Xtreme 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Ultrafine Xtreme 400 is a high-speed panchromatic black and white negative film that offers excellent performance at an affordable price. It features fine grain for its speed, good sharpness, and a wide exposure latitude. The film is suitable for available light photography and general use.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain for high-speed film",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "excellent value for money"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "1bd6d356-298a-4dab-a461-5338ff7d50b4",
     "brand": "Legacy Pro",
     "name": "100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Legacy Pro 100 is a professional-grade panchromatic black and white negative film offering excellent image quality and consistent results. It features very fine grain, high sharpness, and a wide tonal range. The film is designed for professional and fine art photography applications.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain and high sharpness",
       "iso 100/21° in standard process",
       "wide tonal range",
       "professional quality"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "b2c1bbcc-bec8-4c0f-9f73-ff551e91bcf6",
     "brand": "Legacy Pro",
     "name": "400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Legacy Pro 400 is a professional-grade high-speed panchromatic black and white negative film that delivers excellent results in challenging lighting conditions. It offers fine grain for its speed, high sharpness, and a wide exposure latitude. The film is ideal for photojournalism, sports, and available light photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain for high-speed film",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "professional quality"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "26c0fc97-0c06-475a-a430-ebba2eb00e21",
     "brand": "Ferrania",
     "name": "P30",
-    "iso_speed": 80.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 80.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Ferrania P30 is a unique panchromatic black and white negative film that has been revived by the Italian manufacturer Film Ferrania. It offers a distinctive look with high contrast, fine grain, and excellent sharpness. The film has a nominal sensitivity of ISO 80 and is known for its characteristic tonal rendering and vintage aesthetic.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and excellent sharpness",
       "iso 80/20° in standard process",
       "high contrast and distinctive look",
       "vintage aesthetic",
       "recently revived Italian film"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "16c3b330-4e57-4451-9307-7d62eec01cb7",
     "brand": "Washi",
     "name": "S",
-    "iso_speed": 50.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 50.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Washi S is a unique black and white negative film made from traditional Japanese paper stock. It offers a distinctive, artistic look with soft contrast and a paper-like texture. The film has a nominal sensitivity of ISO 50 and provides a unique aesthetic that is unlike traditional silver halide films.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "unique paper-based b&w film",
       "distinctive artistic look",
       "iso 50/18° in standard process",
       "soft contrast and paper-like texture",
       "made from traditional japanese paper"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "772bb555-0968-4cbc-83d0-4dca926e773d",
     "brand": "Efke",
     "name": "25",
-    "iso_speed": 25.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 25.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 1,
     "description": "Efke 25 was a slow-speed panchromatic black and white negative film manufactured in Croatia. It offered extremely fine grain, exceptional sharpness, and excellent tonal range. The film was known for its high quality and was popular among fine art photographers before being discontinued.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "extremely fine grain",
       "iso 25/15° in standard process",
       "exceptional sharpness",
       "excellent tonal range",
       "discontinued"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "83f5b4d2-7dee-4902-a3be-e7a836b1b060",
     "brand": "Efke",
     "name": "50",
-    "iso_speed": 50.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 50.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 1,
     "description": "Efke 50 was a slow-speed panchromatic black and white negative film manufactured in Croatia. It offered very fine grain, high sharpness, and excellent tonal range. The film was known for its professional quality and distinctive look before being discontinued.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "very fine grain and high sharpness",
       "iso 50/18° in standard process",
       "excellent tonal range",
       "professional quality",
       "discontinued"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "02c856cd-0bfb-4e1c-a1ce-a2b80d0ea56b",
     "brand": "Efke",
     "name": "100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 1,
     "description": "Efke 100 was a medium-speed panchromatic black and white negative film manufactured in Croatia. It offered fine grain, good sharpness, and a wide tonal range. The film was well-regarded for its consistent quality and traditional black and white aesthetic before being discontinued.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and good sharpness",
       "iso 100/21° in standard process",
       "wide tonal range",
       "traditional b&w aesthetic",
       "discontinued"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "ca47fc9d-6f1e-405f-bd2c-02272da20299",
     "brand": "Oriental",
     "name": "Seagull 100",
-    "iso_speed": 100.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 100.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Oriental Seagull 100 is a medium-speed panchromatic black and white negative film manufactured in China. It offers fine grain, good sharpness, and a traditional black and white look. The film provides good contrast and is suitable for general photography applications at an affordable price.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "fine grain and good sharpness",
       "iso 100/21° in standard process",
       "traditional b&w look",
       "affordable option"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "ecc6d16f-6d2b-4267-b490-e5e91b312df4",
     "brand": "Oriental",
     "name": "Seagull 400",
-    "iso_speed": 400.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 400.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Oriental Seagull 400 is a high-speed panchromatic black and white negative film manufactured in China. It offers good performance in low light conditions while maintaining reasonable grain structure and sharpness. The film provides a wide exposure latitude and is suitable for available light photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "reasonable grain for high-speed film",
       "iso 400/27° in standard process",
       "wide exposure latitude",
       "suitable for low light conditions"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "7076591e-6bea-47b4-88aa-dd77a67667f6",
     "brand": "Eastman",
     "name": "Double-X 5222",
-    "iso_speed": 250.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 250.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Eastman Double-X 5222 is a high-speed black and white motion picture negative film that can be used in still cameras. It offers a classic cinematic look with fine grain, good sharpness, and excellent latitude. The film has been used in countless Hollywood productions and provides a distinctive aesthetic when used for still photography.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w motion picture film",
       "fine grain and good sharpness",
       "iso 250/25° in standard process",
       "classic cinematic look",
       "excellent latitude",
       "motion picture stock suitable for stills"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   },
   {
     "id": "a986b3a5-a7ce-47d9-9a85-b4bbf53ce0aa",
     "brand": "Adox",
     "name": "CHS 25",
-    "iso_speed": 25.0,
-    "color_type": "bw",
-    "grain_structure": null,
-    "reciprocity_failure": null,
+    "isoSpeed": 25.0,
+    "colorType": "bw",
+    "grainStructure": null,
+    "reciprocityFailure": null,
     "discontinued": 0,
     "description": "Adox CHS 25 is a slow-speed black and white negative film with extremely fine grain and exceptional sharpness. It offers excellent tonal range and high contrast, making it ideal for fine art photography, technical applications, and situations where maximum image quality is required.",
-    "manufacturer_notes": [
+    "manufacturerNotes": [
       "panchromatic b&w negative film",
       "extremely fine grain",
       "iso 25/15° in standard process",
       "exceptional sharpness",
       "high contrast",
       "ideal for fine art photography"
-    ]
+    ],
+    "dateAdded": "2025-06-18T09:12:37.128Z"
   }
 ]

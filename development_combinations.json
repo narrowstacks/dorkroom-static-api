@@ -2,29 +2,29 @@
   {
     "id": "56776f0e-563e-4428-94a5-2110c9579612",
     "name": "Tri-X 400 @ 400 in HC-110 1:31",
-    "film_stock_id": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
-    "temperature_f": 68,
-    "time_minutes": 11.0,
-    "agitation_schedule": "30s initial, then 10s every 60s",
-    "push_pull": 0,
+    "filmStockId": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
+    "temperatureF": 68,
+    "timeMinutes": 11.0,
+    "agitationSchedule": "30s initial, then 10s every 60s",
+    "pushPull": 0,
     "notes": "Dilution B, agitate 30s every 60s",
-    "developer_id": "83a344e1-239f-4899-b747-06390f42b7d1",
-    "dilution_id": 2,
-    "custom_dilution": null,
-    "shooting_iso": 400.0
+    "developerId": "83a344e1-239f-4899-b747-06390f42b7d1",
+    "dilutionId": 2,
+    "customDilution": null,
+    "shootingIso": 400.0
   },
   {
     "id": "28ac09d3-a732-4906-b994-d0b457a9f00c",
     "name": "Tri-X 400 @ 400 in D-76/ID-11 1:1",
-    "film_stock_id": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
-    "temperature_f": 68,
-    "time_minutes": 9.0,
-    "agitation_schedule": "30s initial, then 10s every 60s",
-    "push_pull": 0,
+    "filmStockId": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
+    "temperatureF": 68,
+    "timeMinutes": 9.0,
+    "agitationSchedule": "30s initial, then 10s every 60s",
+    "pushPull": 0,
     "notes": "Agitate 30s every 60s",
-    "developer_id": "4b5fd524-b258-40cf-bec3-9d25c880d250",
-    "dilution_id": 1,
-    "custom_dilution": null,
-    "shooting_iso": 400.0
+    "developerId": "4b5fd524-b258-40cf-bec3-9d25c880d250",
+    "dilutionId": 1,
+    "customDilution": null,
+    "shootingIso": 400.0
   }
 ]

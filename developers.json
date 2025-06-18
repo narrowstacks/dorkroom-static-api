@@ -4,14 +4,14 @@
     "name": "HC-110",
     "manufacturer": "Kodak",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": 2190,
-    "stock_life_months": 6,
+    "filmOrPaper": "film",
+    "workingLifeHours": 2190,
+    "stockLifeMonths": 6,
     "discontinued": 0,
     "notes": "Common dilutions: Dilution A (1:15), Dilution B (1:31), Dilution C (1:19), Dilution D (1:39), Dilution E (1:47), Dilution F (1:79), Dilution H (1:63)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/j24.pdf"
     ],
     "dilutions": [
@@ -57,14 +57,14 @@
     "name": "D-76",
     "manufacturer": "Kodak",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": null,
-    "stock_life_months": 6,
+    "filmOrPaper": "film",
+    "workingLifeHours": null,
+    "stockLifeMonths": 6,
     "discontinued": 0,
     "notes": "Common dilutions: 1:1 (1:1), 1:2 (1:2), 1:3 (1:3)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://business.kodakmoments.com/sites/default/files/files/resources/j78.pdf"
     ],
     "dilutions": [
@@ -90,14 +90,14 @@
     "name": "DD-X",
     "manufacturer": "Ilford",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": 24,
-    "stock_life_months": 24,
+    "filmOrPaper": "film",
+    "workingLifeHours": 24,
+    "stockLifeMonths": 24,
     "discontinued": 0,
     "notes": "Common dilutions: Standard (1:4)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.ilfordphoto.com/wp/wp-content/uploads/2019/08/ILFOTEC-DDX-AUG19.pdf"
     ],
     "dilutions": [
@@ -123,14 +123,14 @@
     "name": "Rodinal/Adonal",
     "manufacturer": "Agfa",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": null,
-    "stock_life_months": null,
+    "filmOrPaper": "film",
+    "workingLifeHours": null,
+    "stockLifeMonths": null,
     "discontinued": 0,
     "notes": "Common dilutions: Standard (1+25), Economy (1+50), Stand (1+100)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.digitaltruth.com/products/adox_tech/Rodinal.pdf"
     ],
     "dilutions": [
@@ -156,14 +156,14 @@
     "name": "Multigrade Developer",
     "manufacturer": "Ilford",
     "type": "concentrate",
-    "film_or_paper": "paper",
-    "working_life_hours": null,
-    "stock_life_months": null,
+    "filmOrPaper": "paper",
+    "workingLifeHours": null,
+    "stockLifeMonths": null,
     "discontinued": 0,
     "notes": "Common dilutions: Standard (1+9), Economy (1+14)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.ilfordphoto.com/amfile/file/download/file/1828/product/730/"
     ],
     "dilutions": [
@@ -184,14 +184,14 @@
     "name": "PQ Universal",
     "manufacturer": "Ilford",
     "type": "concentrate",
-    "film_or_paper": "paper",
-    "working_life_hours": null,
-    "stock_life_months": null,
+    "filmOrPaper": "paper",
+    "workingLifeHours": null,
+    "stockLifeMonths": null,
     "discontinued": 0,
     "notes": "Common dilutions: Standard (1+9), Economy (1+19)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.ilfordphoto.com/amfile/file/download/file/1828/product/730/"
     ],
     "dilutions": [
@@ -212,14 +212,14 @@
     "name": "ID-11",
     "manufacturer": "Ilford",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": null,
-    "stock_life_months": 6,
+    "filmOrPaper": "film",
+    "workingLifeHours": null,
+    "stockLifeMonths": 6,
     "discontinued": 0,
     "notes": "Common dilutions: 1:1 (1:1), 1:2 (1:2), 1:3 (1:3)",
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.ilfordphoto.com/amfile/file/download/file/1829/product/2151/"
     ],
     "dilutions": [
@@ -245,14 +245,14 @@
     "name": "Ilfotec HC",
     "manufacturer": "Ilford",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": 24,
-    "stock_life_months": 6,
+    "filmOrPaper": "film",
+    "workingLifeHours": 24,
+    "stockLifeMonths": 6,
     "discontinued": 0,
     "notes": null,
-    "mixing_instructions": null,
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": null,
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf"
     ],
     "dilutions": [
@@ -298,14 +298,14 @@
     "name": "Ilfotec LC29",
     "manufacturer": "Ilford",
     "type": "concentrate",
-    "film_or_paper": "film",
-    "working_life_hours": 24,
-    "stock_life_months": 4,
+    "filmOrPaper": "film",
+    "workingLifeHours": 24,
+    "stockLifeMonths": 4,
     "discontinued": 0,
     "notes": "The Ilford Ilfotec LC29 is a high-performance liquid concentrate developer formulated for black-and-white film processing. Designed as a low-volume solution, it is ideal for photographers who want high-quality negatives while maintaining efficiency and ease of use. This developer is suited for a range of processing methods, including spiral tanks, trays, and rotary processors and it produces fine-grain negatives with excellent sharpness, making it a reliable choice for both casual film users and professionals.",
-    "mixing_instructions": "Determine first either the tank size being used or the number of films to be processed and measure out the\nappropriate quantity of concentrate. Always use the smallest measuring cylinder available; it is easier to\nmeasure 10ml accurately in a 50ml cylinder than in a 500ml cylinder.\nAdd the concentrate to the mixing vessel. A large measuring jug is a good mixing vessel as it provides a\ncheck on the total quantity of solution mixed. Rinse out the measuring cylinder used for the concentrate\ninto the mixing vessel. Finally add hot and cold water to make up the final volume at the desired temperature\nand stir thoroughly.\nAs most water drawn from pressure mains is highly aerated, we advise that users draw off the water they\nneed and leave it to stand for a few minutes before using it to make up developers.",
-    "safety_notes": null,
-    "datasheet_url": [
+    "mixingInstructions": "Determine first either the tank size being used or the number of films to be processed and measure out the\nappropriate quantity of concentrate. Always use the smallest measuring cylinder available; it is easier to\nmeasure 10ml accurately in a 50ml cylinder than in a 500ml cylinder.\nAdd the concentrate to the mixing vessel. A large measuring jug is a good mixing vessel as it provides a\ncheck on the total quantity of solution mixed. Rinse out the measuring cylinder used for the concentrate\ninto the mixing vessel. Finally add hot and cold water to make up the final volume at the desired temperature\nand stir thoroughly.\nAs most water drawn from pressure mains is highly aerated, we advise that users draw off the water they\nneed and leave it to stand for a few minutes before using it to make up developers.",
+    "safetyNotes": null,
+    "datasheetUrl": [
       "https://www.ilfordphoto.com/amfile/file/download/file/1951/product/547/"
     ],
     "dilutions": [

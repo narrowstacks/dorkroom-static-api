@@ -107,14 +107,14 @@ def fuzzy_search_films(films: List[Dict[str, Any]], query: str, limit: int = 10)
     
     for film in films:
         # Filter out color and slide films - they use standardized processes (C-41, E-6)
-        color_type = film.get('color_type', '').lower()
-        if color_type in ['color', 'slide']:
+        colorType = film.get('colorType', '').lower()
+        if colorType in ['color', 'slide']:
             continue
         # Create primary searchable text (name and brand - most important)
         primary_text = f"{film['brand']} {film['name']}".lower()
         
         # Create secondary searchable text (other attributes)
-        secondary_text = f"{film['iso_speed']} {film['color_type']}".lower()
+        secondary_text = f"{film['isoSpeed']} {film['colorType']}".lower()
         if film.get('description'):
             secondary_text += f" {film['description']}".lower()
         
@@ -174,7 +174,7 @@ def fuzzy_search_developers(developers: List[Dict[str, Any]], query: str, limit:
         primary_text = f"{dev['name']} {dev['manufacturer']}".lower()
         
         # Create secondary searchable text (other attributes)
-        secondary_text = f"{dev['type']} {dev['film_or_paper']}".lower()
+        secondary_text = f"{dev['type']} {dev['filmOrPaper']}".lower()
         if dev.get('notes'):
             secondary_text += f" {dev['notes']}".lower()
         
@@ -314,8 +314,8 @@ def select_film_stock(film_stocks: List[Dict[str, Any]], allow_back: bool = True
             query_lower = search_query.lower()
             for film in film_stocks:
                 # Filter out color and slide films
-                color_type = film.get('color_type', '').lower()
-                if color_type in ['color', 'slide']:
+                colorType = film.get('colorType', '').lower()
+                if colorType in ['color', 'slide']:
                     continue
                 film_text = f"{film['brand']} {film['name']}".lower()
                 if query_lower in film_text:
@@ -331,7 +331,7 @@ def select_film_stock(film_stocks: List[Dict[str, Any]], allow_back: bool = True
             film = result.item
             status = f"{Fore.RED}(Discontinued)" if film.get('discontinued', 0) else ""
             match_info = f"({result.score}% match)" if SEARCH_AVAILABLE else ""
-            print(f"{Fore.WHITE}{i:2d}. {film['brand']} {film['name']} - ISO {film['iso_speed']} {status} {match_info}")
+            print(f"{Fore.WHITE}{i:2d}. {film['brand']} {film['name']} - ISO {film['isoSpeed']} {status} {match_info}")
         
         # Let user select from results
         try:
@@ -353,13 +353,13 @@ def select_film_stock(film_stocks: List[Dict[str, Any]], allow_back: bool = True
 def _browse_film_stocks(film_stocks: List[Dict[str, Any]], allow_back: bool = True) -> Any:
     """Browse film stocks in list format (fallback mode)"""
     # Filter out color and slide films
-    bw_films = [f for f in film_stocks if f.get('color_type', '').lower() not in ['color', 'slide']]
+    bw_films = [f for f in film_stocks if f.get('colorType', '').lower() not in ['color', 'slide']]
     
     while True:
         print(f"\n{Fore.CYAN}Available black & white film stocks:")
         for i, stock in enumerate(bw_films[:20], 1):  # Show first 20
             status = f"{Fore.RED}(Discontinued)" if stock.get('discontinued', 0) else ""
-            print(f"{Fore.WHITE}{i:2d}. {stock['brand']} {stock['name']} (ISO {stock['iso_speed']}) {status}")
+            print(f"{Fore.WHITE}{i:2d}. {stock['brand']} {stock['name']} (ISO {stock['isoSpeed']}) {status}")
         
         if len(bw_films) > 20:
             print(f"{Fore.WHITE}... and {len(bw_films) - 20} more")
@@ -534,13 +534,13 @@ def display_current_progress(combination_data: Dict[str, Any], current_step: int
     # All fields in order
     all_fields = [
         ("name", "Combination Name"),
-        ("film_stock_id", "Film Stock"),
-        ("developer_id", "Developer"),
-        ("dilution_id", "Dilution"),
-        ("shooting_iso", "Shooting ISO"),
-        ("temperature_f", "Temperature (°F)"),
-        ("time_minutes", "Time (minutes)"),
-        ("agitation_schedule", "Agitation Schedule"),
+        ("filmStockId", "Film Stock"),
+        ("developerId", "Developer"),
+        ("dilutionId", "Dilution"),
+        ("shootingIso", "Shooting ISO"),
+        ("temperatureF", "Temperature (°F)"),
+        ("timeMinutes", "Time (minutes)"),
+        ("agitationSchedule", "Agitation Schedule"),
         ("notes", "Notes")
     ]
     
@@ -549,13 +549,13 @@ def display_current_progress(combination_data: Dict[str, Any], current_step: int
         
         if value is not None or (field_key == "name" and i <= current_step):
             # Field has been filled or is the name field that's been processed
-            if field_key in ["film_stock_id", "developer_id"]:
+            if field_key in ["filmStockId", "developerId"]:
                 display_value = "Selected"
             elif field_key == "name" and (value is None or value == ""):
                 display_value = "[Automatic]"
-            elif field_key == "dilution_id" and value is None and combination_data.get("custom_dilution"):
-                display_value = f"Custom: {combination_data['custom_dilution']}"
-            elif field_key == "shooting_iso":
+            elif field_key == "dilutionId" and value is None and combination_data.get("customDilution"):
+                display_value = f"Custom: {combination_data['customDilution']}"
+            elif field_key == "shootingIso":
                 if value == "film_stock_default":
                     display_value = "Film Stock Default"
                 else:
@@ -584,7 +584,7 @@ def get_shooting_iso(film_stocks: List[Dict[str, Any]], film_stock_id: str, allo
     if not film_stock:
         return "film_stock_default"
     
-    film_iso = film_stock['iso_speed']
+    film_iso = film_stock['isoSpeed']
     
     while True:
         try:
@@ -627,27 +627,27 @@ def generate_automatic_name(combination_data: Dict[str, Any], film_stocks: List[
     """Generate an automatic combination name in the format: [Film Stock Name] @ [Shooting ISO] in [Developer Name] [Developer Dilution]"""
     
     # Get film stock info
-    film_stock = next((f for f in film_stocks if f['id'] == combination_data['film_stock_id']), None)
+    film_stock = next((f for f in film_stocks if f['id'] == combination_data['filmStockId']), None)
     film_stock_name = f"{film_stock['brand']} {film_stock['name']}" if film_stock else "Unknown Film"
     
     # Get shooting ISO
-    shooting_iso = combination_data.get('shooting_iso')
+    shooting_iso = combination_data.get('shootingIso')
     if shooting_iso == "film_stock_default" and film_stock:
-        shooting_iso = film_stock['iso_speed']
+        shooting_iso = film_stock['isoSpeed']
     iso_text = str(int(shooting_iso)) if isinstance(shooting_iso, (int, float)) else str(shooting_iso)
     
     # Get developer info
-    developer = next((d for d in developers if d['id'] == combination_data['developer_id']), None)
+    developer = next((d for d in developers if d['id'] == combination_data['developerId']), None)
     developer_name = developer['name'] if developer else "Unknown Developer"
     
     # Get dilution info
     dilution_text = ""
-    if combination_data.get('dilution_id') and developer:
-        dilution = next((d for d in developer.get('dilutions', []) if d['id'] == combination_data['dilution_id']), None)
+    if combination_data.get('dilutionId') and developer:
+        dilution = next((d for d in developer.get('dilutions', []) if d['id'] == combination_data['dilutionId']), None)
         if dilution:
             dilution_text = dilution['dilution']
-    elif combination_data.get('custom_dilution'):
-        dilution_text = combination_data['custom_dilution']
+    elif combination_data.get('customDilution'):
+        dilution_text = combination_data['customDilution']
     else:
         dilution_text = "Unknown Dilution"
     
@@ -660,12 +660,12 @@ def collect_combination_data(film_stocks: List[Dict[str, Any]], developers: List
     # Field collection order and info
     fields = [
         ("name", "Combination name", False, lambda: get_user_input("Combination name (press Enter for automatic): ", required=False)),
-        ("film_stock_id", "Film stock", True, lambda: select_film_stock(film_stocks)),
+        ("filmStockId", "Film stock", True, lambda: select_film_stock(film_stocks)),
         ("developer_dilution", "Developer and dilution", True, lambda: select_developer_and_dilution(developers)),
-        ("shooting_iso", "Shooting ISO", True, lambda: get_shooting_iso(film_stocks, combination_data.get('film_stock_id', ''))),
-        ("temperature_f", "Temperature", True, lambda: get_user_input("Temperature in Fahrenheit", input_type='int', default_value=68)),
-        ("time_minutes", "Development time", True, lambda: get_user_input("Development time in minutes: ", input_type='float')),
-        ("agitation_schedule", "Agitation schedule", True, lambda: get_user_input("Agitation schedule", default_value='30s initial, then 10s every 60s')),
+        ("shootingIso", "Shooting ISO", True, lambda: get_shooting_iso(film_stocks, combination_data.get('filmStockId', ''))),
+        ("temperatureF", "Temperature", True, lambda: get_user_input("Temperature in Fahrenheit", input_type='int', default_value=68)),
+        ("timeMinutes", "Development time", True, lambda: get_user_input("Development time in minutes: ", input_type='float')),
+        ("agitationSchedule", "Agitation schedule", True, lambda: get_user_input("Agitation schedule", default_value='30s initial, then 10s every 60s')),
         ("notes", "Notes", False, lambda: get_user_input("Additional notes (or press Enter for none): ", required=False))
     ]
     
@@ -695,10 +695,10 @@ def collect_combination_data(film_stocks: List[Dict[str, Any]], developers: List
                     current_field -= 1
                     continue
                 elif result and len(result) >= 2:
-                    combination_data["developer_id"] = result[0]
-                    combination_data["dilution_id"] = result[1]
+                    combination_data["developerId"] = result[0]
+                    combination_data["dilutionId"] = result[1]
                     if len(result) > 2:
-                        combination_data["custom_dilution"] = result[2]
+                        combination_data["customDilution"] = result[2]
                     current_field += 1
                     continue
             else:
@@ -718,19 +718,19 @@ def collect_combination_data(film_stocks: List[Dict[str, Any]], developers: List
         current_field += 1
     
     # Calculate and store push/pull stops based on ISO
-    film_stock = next((f for f in film_stocks if f['id'] == combination_data['film_stock_id']), None)
+    film_stock = next((f for f in film_stocks if f['id'] == combination_data['filmStockId']), None)
     if film_stock:
-        film_iso = film_stock['iso_speed']
-        shooting_iso = combination_data.get('shooting_iso')
+        film_iso = film_stock['isoSpeed']
+        shooting_iso = combination_data.get('shootingIso')
         
         if shooting_iso == "film_stock_default":
             shooting_iso = film_iso
-            combination_data['shooting_iso'] = film_iso
+            combination_data['shootingIso'] = film_iso
         
         # Calculate push/pull stops
-        combination_data['push_pull'] = calculate_push_pull_stops(film_iso, shooting_iso)
+        combination_data['pushPull'] = calculate_push_pull_stops(film_iso, shooting_iso)
     else:
-        combination_data['push_pull'] = 0
+        combination_data['pushPull'] = 0
     
     # Generate automatic name if none was provided
     if not combination_data.get('name'):
@@ -744,19 +744,19 @@ def display_combination(combination: Dict[str, Any], film_stocks: List[Dict[str,
     show_header()
     
     # Get film stock and developer names for display
-    film_stock = next((f for f in film_stocks if f['id'] == combination['film_stock_id']), None)
-    developer = next((d for d in developers if d['id'] == combination['developer_id']), None)
+    film_stock = next((f for f in film_stocks if f['id'] == combination['filmStockId']), None)
+    developer = next((d for d in developers if d['id'] == combination['developerId']), None)
     
     dilution_info = "Custom"
-    if combination.get('dilution_id') and developer:
-        dilution = next((d for d in developer.get('dilutions', []) if d['id'] == combination['dilution_id']), None)
+    if combination.get('dilutionId') and developer:
+        dilution = next((d for d in developer.get('dilutions', []) if d['id'] == combination['dilutionId']), None)
         if dilution:
             dilution_info = f"{dilution['name']}: {dilution['dilution']}"
-    elif combination.get('custom_dilution'):
-        dilution_info = f"Custom: {combination['custom_dilution']}"
+    elif combination.get('customDilution'):
+        dilution_info = f"Custom: {combination['customDilution']}"
     
     # Format push/pull display
-    push_pull = combination.get('push_pull', 0)
+    push_pull = combination.get('pushPull', 0)
     if push_pull > 0:
         push_pull_text = f"+{push_pull} stop{'s' if push_pull != 1 else ''} (push)"
     elif push_pull < 0:
@@ -765,8 +765,8 @@ def display_combination(combination: Dict[str, Any], film_stocks: List[Dict[str,
         push_pull_text = "Normal development"
     
     # Format ISO display
-    film_iso = film_stock['iso_speed'] if film_stock else 'Unknown'
-    shooting_iso = combination.get('shooting_iso', film_iso)
+    film_iso = film_stock['isoSpeed'] if film_stock else 'Unknown'
+    shooting_iso = combination.get('shootingIso', film_iso)
     if shooting_iso == film_iso:
         iso_text = f"ISO {shooting_iso} (film stock default)"
     else:
@@ -782,9 +782,9 @@ def display_combination(combination: Dict[str, Any], film_stocks: List[Dict[str,
     print(f"Push/Pull: {push_pull_text}")
     print(f"Developer: {developer['name'] + ' (' + developer['manufacturer'] + ')' if developer else 'Unknown'}")
     print(f"Dilution: {dilution_info}")
-    print(f"Temperature: {combination['temperature_f']}°F")
-    print(f"Time: {combination['time_minutes']} minutes")
-    print(f"Agitation: {combination['agitation_schedule']}")
+    print(f"Temperature: {combination['temperatureF']}°F")
+    print(f"Time: {combination['timeMinutes']} minutes")
+    print(f"Agitation: {combination['agitationSchedule']}")
     print(f"Notes: {combination['notes'] or 'None'}")
     print("="*50)
 

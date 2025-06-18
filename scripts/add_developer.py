@@ -248,14 +248,14 @@ def display_current_progress(developer_data: Dict[str, Any], current_step: int, 
         ("name", "Developer Name"),
         ("manufacturer", "Manufacturer"),
         ("type", "Type"),
-        ("film_or_paper", "Film/Paper"),
-        ("working_life_hours", "Working Life (hours)"),
-        ("stock_life_months", "Stock Life (months)"),
+        ("filmOrPaper", "Film/Paper"),
+        ("workingLifeHours", "Working Life (hours)"),
+        ("stockLifeMonths", "Stock Life (months)"),
         ("discontinued", "Discontinued"),
         ("notes", "Notes"),
-        ("mixing_instructions", "Mixing Instructions"),
-        ("safety_notes", "Safety Notes"),
-        ("datasheet_url", "Datasheet URLs"),
+        ("mixingInstructions", "Mixing Instructions"),
+        ("safetyNotes", "Safety Notes"),
+        ("datasheetUrl", "Datasheet URLs"),
         ("dilutions", "Dilutions")
     ]
     
@@ -268,7 +268,7 @@ def display_current_progress(developer_data: Dict[str, Any], current_step: int, 
                 display_value = "Yes" if value else "No"
             elif field_key == "dilutions" and isinstance(value, list):
                 display_value = f"{len(value)} dilution(s)" if value else "None"
-            elif field_key == "datasheet_url" and isinstance(value, list):
+            elif field_key == "datasheetUrl" and isinstance(value, list):
                 display_value = f"{len(value)} URL(s)" if value else "None"
             elif value == "":
                 display_value = "None"
@@ -296,14 +296,14 @@ def collect_developer_data(developers: List[Dict[str, Any]], new_uuid: str) -> O
         ("name", "Developer name", True, lambda: get_user_input("Developer name: ")),
         ("manufacturer", "Manufacturer", True, lambda: get_user_input("Manufacturer: ")),
         ("type", "Type", True, lambda: select_type()),
-        ("film_or_paper", "Film or paper", True, lambda: select_film_or_paper()),
-        ("working_life_hours", "Working life (hours)", False, lambda: get_user_input("Working life in hours (or press Enter for none): ", required=False, input_type='int')),
-        ("stock_life_months", "Stock life (months)", False, lambda: get_user_input("Stock life in months (or press Enter for none): ", required=False, input_type='int')),
+        ("filmOrPaper", "Film or paper", True, lambda: select_film_or_paper()),
+        ("workingLifeHours", "Working life (hours)", False, lambda: get_user_input("Working life in hours (or press Enter for none): ", required=False, input_type='int')),
+        ("stockLifeMonths", "Stock life (months)", False, lambda: get_user_input("Stock life in months (or press Enter for none): ", required=False, input_type='int')),
         ("discontinued", "Discontinued", True, lambda: 1 if get_user_input("Is discontinued? (yes/no): ", input_type='bool') else 0),
         ("notes", "Notes", False, lambda: get_user_input("Notes (or press Enter for none): ", required=False)),
-        ("mixing_instructions", "Mixing instructions", False, lambda: get_user_input("Mixing instructions (or press Enter for none): ", required=False)),
-        ("safety_notes", "Safety notes", False, lambda: get_user_input("Safety notes (or press Enter for none): ", required=False)),
-        ("datasheet_url", "Datasheet URLs", False, lambda: get_user_input("Datasheet URLs (comma-separated, or press Enter for none): ", required=False, input_type='list')),
+        ("mixingInstructions", "Mixing instructions", False, lambda: get_user_input("Mixing instructions (or press Enter for none): ", required=False)),
+        ("safetyNotes", "Safety notes", False, lambda: get_user_input("Safety notes (or press Enter for none): ", required=False)),
+        ("datasheetUrl", "Datasheet URLs", False, lambda: get_user_input("Datasheet URLs (comma-separated, or press Enter for none): ", required=False, input_type='list')),
         ("dilutions", "Dilutions", True, lambda: get_dilutions(developers))
     ]
     
@@ -328,7 +328,7 @@ def collect_developer_data(developers: List[Dict[str, Any]], new_uuid: str) -> O
                 result = get_user_input("Developer name: ", allow_back=False)
             elif field_key == "type":
                 result = select_type(allow_back=False)
-            elif field_key == "film_or_paper":
+            elif field_key == "filmOrPaper":
                 result = select_film_or_paper(allow_back=False)
             else:
                 result = input_func()
@@ -363,14 +363,14 @@ def display_developer(developer: Dict[str, Any]) -> None:
     print(f"Name: {developer['name']}")
     print(f"Manufacturer: {developer['manufacturer']}")
     print(f"Type: {developer['type']}")
-    print(f"Film or Paper: {developer['film_or_paper']}")
-    print(f"Working Life (hours): {developer['working_life_hours']}")
-    print(f"Stock Life (months): {developer['stock_life_months']}")
+    print(f"Film or Paper: {developer['filmOrPaper']}")
+    print(f"Working Life (hours): {developer['workingLifeHours']}")
+    print(f"Stock Life (months): {developer['stockLifeMonths']}")
     print(f"Discontinued: {'Yes' if developer['discontinued'] else 'No'}")
     print(f"Notes: {developer['notes']}")
-    print(f"Mixing Instructions: {developer['mixing_instructions']}")
-    print(f"Safety Notes: {developer['safety_notes']}")
-    print(f"Datasheet URLs: {', '.join(developer['datasheet_url']) if developer['datasheet_url'] else 'None'}")
+    print(f"Mixing Instructions: {developer['mixingInstructions']}")
+    print(f"Safety Notes: {developer['safetyNotes']}")
+    print(f"Datasheet URLs: {', '.join(developer['datasheetUrl']) if developer['datasheetUrl'] else 'None'}")
     
     if developer['dilutions']:
         print("Dilutions:")

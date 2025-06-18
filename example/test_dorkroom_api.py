@@ -72,9 +72,9 @@ class DorkroomAPIWrapper:
     def fuzzy_search_films(self, query: str, limit: int = 10, color_type: Optional[str] = None) -> List[SearchResult]:
         """Fuzzy search films with compatibility wrapper"""
         films = self.client.fuzzy_search_films(query, limit)
-        # Filter by color_type if specified
+        # Filter by colorType if specified
         if color_type:
-            films = [f for f in films if f.color_type == color_type]
+            films = [f for f in films if f.colorType == color_type]
         # Wrap in SearchResult for compatibility
         return [SearchResult(score=100.0, item=film) for film in films]
     
@@ -108,28 +108,28 @@ class DorkroomAPIWrapper:
     
     def display_combination_info(self, combo: Combination):
         """Display combination information"""
-        film = self.get_film_by_id(combo.film_stock_id)
-        dev = self.get_developer_by_id(combo.developer_id)
+        film = self.get_film_by_id(combo.filmStockId)
+        dev = self.get_developer_by_id(combo.developerId)
         
-        film_name = f"{film.brand} {film.name}" if film else f"Film ID: {combo.film_stock_id}"
-        dev_name = f"{dev.manufacturer} {dev.name}" if dev else f"Developer ID: {combo.developer_id}"
+        film_name = f"{film.brand} {film.name}" if film else f"Film ID: {combo.filmStockId}"
+        dev_name = f"{dev.manufacturer} {dev.name}" if dev else f"Developer ID: {combo.developerId}"
         
         lines = [
             f"⚗️  {combo.name}",
             f"   ID: {combo.id}",
             f"   Film: {film_name}",
             f"   Developer: {dev_name}",
-            f"   Temperature: {combo.temperature_f}°F",
-            f"   Time: {combo.time_minutes} minutes",
-            f"   Shooting ISO: {int(combo.shooting_iso)}",
+            f"   Temperature: {combo.temperatureF}°F",
+            f"   Time: {combo.timeMinutes} minutes",
+            f"   Shooting ISO: {int(combo.shootingIso)}",
         ]
         
-        if combo.push_pull != 0:
-            push_pull_str = f"+{combo.push_pull}" if combo.push_pull > 0 else str(combo.push_pull)
+        if combo.pushPull != 0:
+            push_pull_str = f"+{combo.pushPull}" if combo.pushPull > 0 else str(combo.pushPull)
             lines.append(f"   Push/Pull: {push_pull_str} stops")
         
-        if combo.agitation_schedule:
-            lines.append(f"   Agitation: {combo.agitation_schedule}")
+        if combo.agitationSchedule:
+            lines.append(f"   Agitation: {combo.agitationSchedule}")
         
         if combo.notes:
             lines.append(f"   Notes: {combo.notes}")
@@ -180,7 +180,7 @@ def run_sample_queries(api: DorkroomAPIWrapper):
     
     # Sample 2: Search for black and white films only
     print(f"\n2. 🔍 Searching for black and white films containing 'HP':")
-    bw_films = api.search_films("HP", color_type="bw")
+    bw_films = api.search_films("HP", colorType="bw")
     for film in bw_films[:2]:  # Show first 2 results
         api.display_film_info(film)
         print()
@@ -260,9 +260,9 @@ def run_sample_queries(api: DorkroomAPIWrapper):
     print(f"\n5. 📊 Database Statistics:")
     total_films = len(api.film_stocks)
     active_films = len([f for f in api.film_stocks if f.discontinued == 0])
-    bw_films = len([f for f in api.film_stocks if f.color_type == 'bw'])
-    color_films = len([f for f in api.film_stocks if f.color_type == 'color'])
-    slide_films = len([f for f in api.film_stocks if f.color_type == 'slide'])
+    bw_films = len([f for f in api.film_stocks if f.colorType == 'bw'])
+    color_films = len([f for f in api.film_stocks if f.colorType == 'color'])
+    slide_films = len([f for f in api.film_stocks if f.colorType == 'slide'])
     
     print(f"   📷 Film Stocks: {total_films} total ({active_films} active)")
     print(f"      • Black & White: {bw_films}")
@@ -300,17 +300,17 @@ def start_interactive_mode(api: DorkroomAPIWrapper):
     formats = api.formats
     
     # Helper functions for interactive use
-    def search_films(query, color_type=None):
+    def search_films(query, colorType=None):
         """Shortcut for api.search_films()"""
-        return api.search_films(query, color_type)
+        return api.search_films(query, colorType)
     
     def search_developers(query):
         """Shortcut for api.search_developers()"""
         return api.search_developers(query)
         
-    def fuzzy_search_films(query, limit=10, color_type=None):
+    def fuzzy_search_films(query, limit=10, colorType=None):
         """Shortcut for api.fuzzy_search_films()"""
-        return api.fuzzy_search_films(query, limit, color_type)
+        return api.fuzzy_search_films(query, limit, colorType)
     
     def fuzzy_search_developers(query, limit=10):
         """Shortcut for api.fuzzy_search_developers()"""
@@ -355,9 +355,9 @@ def start_interactive_mode(api: DorkroomAPIWrapper):
         print("  • combinations - List of development combinations")
         print("  • formats - List of film formats")
         print("\n🔍 Search Functions:")
-        print("  • search_films('query', color_type='bw') - Basic search films")
+        print("  • search_films('query', colorType='bw') - Basic search films")
         print("  • search_developers('query') - Basic search developers")
-        print("  • fuzzy_search_films('query', limit=10, color_type=None) - Fuzzy search films")
+        print("  • fuzzy_search_films('query', limit=10, colorType=None) - Fuzzy search films")
         print("  • fuzzy_search_developers('query', limit=10) - Fuzzy search developers")
         print("  • show_search_results(results) - Display fuzzy search results")
         print("\n📖 Display Functions:")
@@ -373,7 +373,7 @@ def start_interactive_mode(api: DorkroomAPIWrapper):
         print("  • show_search_results(results)")
         print("  • show_film(results[0].item)  # Show details of first result")
         print("  • dev_results = fuzzy_search_developers('d76')")
-        print("  • bw_films = fuzzy_search_films('tri-x', color_type='bw')")
+        print("  • bw_films = fuzzy_search_films('tri-x', colorType='bw')")
         print("  • help_commands() - Show this help again")
         print("\n🚪 Exit: Type 'exit()' or press Ctrl+D")
     

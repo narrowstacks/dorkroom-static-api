@@ -34,23 +34,23 @@ class GitHubIssueHelper:
         name = film_data.get('name', '')
         title = f"[FILM] Add: {brand} {name}".strip()
         
-        # Map color_type to GitHub form values
+        # Map colorType to GitHub form values
         color_type_map = {
             'bw': 'Black & White (bw)',
             'color': 'Color Negative (color)',
             'slide': 'Color Slide/Transparency (slide)'
         }
-        color_type = color_type_map.get(film_data.get('color_type', ''), film_data.get('color_type', ''))
+        colorType = color_type_map.get(film_data.get('colorType', ''), film_data.get('colorType', ''))
         
         # Map discontinued status
         discontinued = "Discontinued" if film_data.get('discontinued') else "Currently in production"
         
         # Format manufacturer notes
-        manufacturer_notes = film_data.get('manufacturer_notes', [])
-        if isinstance(manufacturer_notes, list):
-            notes_text = '\n'.join(manufacturer_notes) if manufacturer_notes else ""
+        manufacturerNotes = film_data.get('manufacturerNotes', [])
+        if isinstance(manufacturerNotes, list):
+            notes_text = '\n'.join(manufacturerNotes) if manufacturerNotes else ""
         else:
-            notes_text = str(manufacturer_notes) if manufacturer_notes else ""
+            notes_text = str(manufacturerNotes) if manufacturerNotes else ""
         
         # Create body using GitHub issue form format
         body_parts = [
@@ -64,19 +64,19 @@ class GitHubIssueHelper:
             "",
             "### ISO Speed",
             "",
-            str(film_data.get('iso_speed', '')),
+            str(film_data.get('isoSpeed', '')),
             "",
             "### Film Type",
             "",
-            color_type,
+            colorType,
             "",
             "### Grain Structure",
             "",
-            film_data.get('grain_structure', '') or "",
+            film_data.get('grainStructure', '') or "",
             "",
             "### Reciprocity Failure Characteristics",
             "",
-            film_data.get('reciprocity_failure', '') or "",
+            film_data.get('reciprocityFailure', '') or "",
             "",
             "### Current Production Status",
             "",
@@ -89,6 +89,10 @@ class GitHubIssueHelper:
             "### Manufacturer Notes",
             "",
             notes_text,
+            "",
+            "### Static Image URL",
+            "",
+            film_data.get('staticImageURL', '') or "",
             "",
             "### Sources",
             "",
@@ -115,11 +119,11 @@ class GitHubIssueHelper:
         manufacturer = developer_data.get('manufacturer', '')
         title = f"[DEVELOPER] Add: {manufacturer} {name}".strip()
         
-        # Map film_or_paper values
-        film_or_paper = developer_data.get('film_or_paper', 'film')
-        if film_or_paper == 'film':
+        # Map filmOrPaper values
+        filmOrPaper = developer_data.get('filmOrPaper', 'film')
+        if filmOrPaper == 'film':
             intended_use = 'film'
-        elif film_or_paper == 'paper':
+        elif filmOrPaper == 'paper':
             intended_use = 'paper'
         else:
             intended_use = 'both'
@@ -137,7 +141,7 @@ class GitHubIssueHelper:
             dilution_text = '\n'.join(dilution_lines)
         
         # Format datasheet URLs
-        datasheet_urls = developer_data.get('datasheet_url', [])  # Note: developer script uses 'datasheet_url'
+        datasheet_urls = developer_data.get('datasheetUrl', [])  # Note: developer script uses 'datasheet_url'
         if isinstance(datasheet_urls, list):
             urls_text = '\n'.join(datasheet_urls) if datasheet_urls else ""
         else:
@@ -163,11 +167,11 @@ class GitHubIssueHelper:
             "",
             "### Working Life (hours)",
             "",
-            str(developer_data.get('working_life_hours', '') or ''),
+            str(developer_data.get('workingLifeHours', '') or ''),
             "",
             "### Stock Life (months)",
             "",
-            str(developer_data.get('stock_life_months', '') or ''),
+            str(developer_data.get('stockLifeMonths', '') or ''),
             "",
             "### Current Production Status",
             "",
@@ -179,11 +183,11 @@ class GitHubIssueHelper:
             "",
             "### Mixing Instructions",
             "",
-            developer_data.get('mixing_instructions', '') or "",
+            developer_data.get('mixingInstructions', '') or "",
             "",
             "### Safety Notes",
             "",
-            developer_data.get('safety_notes', '') or "",
+            developer_data.get('safetyNotes', '') or "",
             "",
             "### Datasheet URLs",
             "",
@@ -217,21 +221,21 @@ class GitHubIssueHelper:
         """Create GitHub issue data for a development combination"""
         
         # Find film and developer details
-        film_stock_id = combination_data.get('film_stock_id')
-        developer_id = combination_data.get('developer_id')
+        filmStockId = combination_data.get('filmStockId')
+        developerId = combination_data.get('developerId')
         
-        film = next((f for f in film_stocks if f.get('id') == film_stock_id), {})
-        developer = next((d for d in developers if d.get('id') == developer_id), {})
+        film = next((f for f in film_stocks if f.get('id') == filmStockId), {})
+        developer = next((d for d in developers if d.get('id') == developerId), {})
         
         # Create title
         film_name = f"{film.get('brand', '')} {film.get('name', '')}".strip()
         dev_name = f"{developer.get('manufacturer', '')} {developer.get('name', '')}".strip()
-        title = f"[COMBO] Add: {film_name} in {dev_name} {dilution_name}".strip()
-        
-        # Get dilution info
-        dilution_id = combination_data.get('dilution_id')
-        dilution = next((d for d in developer.get('dilutions', []) if d.get('id') == dilution_id), {})
+        # Get dilution info first
+        dilutionId = combination_data.get('dilutionId')
+        dilution = next((d for d in developer.get('dilutions', []) if d.get('id') == dilutionId), {})
         dilution_name = dilution.get('name', '') or dilution.get('dilution', '')
+        
+        title = f"[COMBO] Add: {film_name} in {dev_name} {dilution_name}".strip()
         
         # Create body using GitHub issue form format
         body_parts = [
@@ -261,23 +265,23 @@ class GitHubIssueHelper:
             "",
             "### Temperature (°F)",
             "",
-            str(combination_data.get('temperature_f', '')),
+            str(combination_data.get('temperatureF', '')),
             "",
             "### Time (minutes)",
             "",
-            str(combination_data.get('time_minutes', '')),
+            str(combination_data.get('timeMinutes', '')),
             "",
             "### Shooting ISO",
             "",
-            str(combination_data.get('shooting_iso', '')),
+            str(combination_data.get('shootingIso', '')),
             "",
             "### Push/Pull Stops",
             "",
-            str(combination_data.get('push_pull', 0)),
+            str(combination_data.get('pushPull', 0)),
             "",
             "### Agitation Schedule",
             "",
-            combination_data.get('agitation_schedule', '') or "",
+            combination_data.get('agitationSchedule', '') or "",
             "",
             "### Notes",
             "",
