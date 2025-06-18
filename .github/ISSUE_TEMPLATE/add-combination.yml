@@ -19,7 +19,7 @@ body:
         - Verify that both the film and developer exist in our database
 
   - type: input
-    id: combination_name
+    id: combinationName
     attributes:
       label: Combination Name
       description: Descriptive name for this combination
@@ -28,7 +28,7 @@ body:
       required: true
 
   - type: input
-    id: film_brand
+    id: filmBrand
     attributes:
       label: Film Brand
       description: Brand of the film stock
@@ -37,7 +37,7 @@ body:
       required: true
 
   - type: input
-    id: film_name
+    id: filmName
     attributes:
       label: Film Name
       description: Name of the film stock
@@ -46,7 +46,7 @@ body:
       required: true
 
   - type: input
-    id: developer_manufacturer
+    id: developerManufacturer
     attributes:
       label: Developer Manufacturer
       description: Manufacturer of the developer
@@ -55,7 +55,7 @@ body:
       required: true
 
   - type: input
-    id: developer_name
+    id: developerName
     attributes:
       label: Developer Name
       description: Name of the developer
@@ -73,7 +73,7 @@ body:
       required: true
 
   - type: input
-    id: temperature_f
+    id: temperatureF
     attributes:
       label: Temperature (°F)
       description: Development temperature in Fahrenheit (numbers only)
@@ -82,7 +82,7 @@ body:
       required: true
 
   - type: input
-    id: time_minutes
+    id: timeMinutes
     attributes:
       label: Time (minutes)
       description: Development time in minutes (decimals allowed)
@@ -91,7 +91,7 @@ body:
       required: true
 
   - type: input
-    id: shooting_iso
+    id: shootingIso
     attributes:
       label: Shooting ISO
       description: The ISO the film was shot at (numbers only, decimals allowed)
@@ -100,7 +100,7 @@ body:
       required: true
 
   - type: input
-    id: push_pull_stops
+    id: pushPull
     attributes:
       label: Push/Pull Stops
       description: Number of stops pushed (+) or pulled (-), use 0 for normal
@@ -109,7 +109,7 @@ body:
       required: true
 
   - type: textarea
-    id: agitation_schedule
+    id: agitationSchedule
     attributes:
       label: Agitation Schedule
       description: Describe the agitation pattern

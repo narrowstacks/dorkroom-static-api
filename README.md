@@ -51,7 +51,7 @@ For more information and guidelines on contributing, [see the contributing adden
 
 This repository contains four main JSON files that provide structured data for analog photography applications:
 
-> **Important:** The database uses UUID-based identifiers. All references between files (e.g., film_stock_id, developer_id) use UUIDs. Make sure you generate a unique UUID before submitting any new data.
+> **Important:** The database uses UUID-based identifiers. All references between files (e.g., filmStockId, developerId) use UUIDs. Make sure you generate a unique UUID before submitting any new data.
 
 ### `film_stocks.json`
 
@@ -64,13 +64,13 @@ Contains detailed information about film stocks from various manufacturers.
   "id": "3141645e-5007-4be6-9327-c9fb5e4ad6f6",
   "brand": "Ilford",
   "name": "HP5 Plus",
-  "iso_speed": 400.0,
-  "color_type": "bw",
-  "grain_structure": null,
-  "reciprocity_failure": 1.31,
+  "isoSpeed": 400.0,
+  "colorType": "bw",
+  "grainStructure": null,
+  "reciprocityFailure": 1.31,
   "discontinued": 0,
   "description": "Ilford's HP5 Plus Black and White Negative Film is a traditional and versatile panchromatic film designed for general use in a wide variety of shooting conditions. Exhibiting notably wide exposure latitude, this film responds well to use in mixed and difficult lighting and provides medium contrast for greater overall control. It has a nominal sensitivity of ISO 400/27° when developed in standard black and white chemistry, and responds well to push processing. HP5 Plus is a flexible film type that is ideally suited for use in general photographic applications in an array of different lighting conditions.",
-  "manufacturer_notes": [
+  "manufacturerNotes": [
     "panchromatic b&w negative film",
     "responds well to push processing",
     "iso 400/27° in standard process",
@@ -86,13 +86,15 @@ Contains detailed information about film stocks from various manufacturers.
 - `id`: Unique UUID identifier for the film stock
 - `brand`: Manufacturer/brand name
 - `name`: Film stock name
-- `iso_speed`: Film's ISO/ASA rating
-- `color_type`: Film type (`"bw"`, `"color"`, `"slide"`)
-- `grain_structure`: Grain characteristics (optional)
-- `reciprocity_failure`: Reciprocity failure information (optional)
+- `isoSpeed`: Film's ISO/ASA rating
+- `colorType`: Film type (`"bw"`, `"color"`, `"slide"`)
+- `grainStructure`: Grain characteristics (optional)
+- `reciprocityFailure`: Reciprocity failure information (optional)
 - `discontinued`: Boolean flag (0 = active, 1 = discontinued)
 - `description`: Detailed description of the film
-- `manufacturer_notes`: Array of key characteristics from manufacturer
+- `manufacturerNotes`: Array of key characteristics from manufacturer
+- `staticImageURL`: URL to product image of the film stock (optional)
+- `dateAdded`: ISO timestamp when the film was added to the database
 
 ### `developers.json`
 
@@ -106,14 +108,14 @@ Contains information about film and paper developers, including dilution options
   "name": "HC-110",
   "manufacturer": "Kodak",
   "type": "concentrate",
-  "film_or_paper": "film",
-  "working_life_hours": 2190,
-  "stock_life_months": 6,
+  "filmOrPaper": "film",
+  "workingLifeHours": 2190,
+  "stockLifeMonths": 6,
   "discontinued": 0,
   "notes": "Common dilutions: Dilution A (1:15), Dilution B (1:31), Dilution C (1:19), Dilution D (1:39), Dilution E (1:47), Dilution F (1:79), Dilution H (1:63)",
-  "mixing_instructions": null,
-  "safety_notes": null,
-  "datasheet_url": [
+  "mixingInstructions": null,
+  "safetyNotes": null,
+  "datasheetUrl": [
     "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/j24.pdf"
   ],
   "dilutions": [
@@ -137,14 +139,14 @@ Contains information about film and paper developers, including dilution options
 - `name`: Developer name
 - `manufacturer`: Manufacturer name
 - `type`: Developer type (e.g., "concentrate", "powder")
-- `film_or_paper`: Intended use (`"film"`, `"paper"`)
-- `working_life_hours`: Working solution lifespan in hours (optional)
-- `stock_life_months`: Stock solution lifespan in months (optional)
+- `filmOrPaper`: Intended use (`"film"`, `"paper"`)
+- `workingLifeHours`: Working solution lifespan in hours (optional)
+- `stockLifeMonths`: Stock solution lifespan in months (optional)
 - `discontinued`: Boolean flag (0 = active, 1 = discontinued)
 - `notes`: General notes about the developer
-- `mixing_instructions`: How to mix the developer (optional)
-- `safety_notes`: Safety information (optional)
-- `datasheet_url`: Array of URLs to manufacturer datasheets (optional)
+- `mixingInstructions`: How to mix the developer (optional)
+- `safetyNotes`: Safety information (optional)
+- `datasheetUrl`: Array of URLs to manufacturer datasheets (optional)
 - `dilutions`: Array of available dilutions with their ratios
 
 ### `development_combinations.json`
@@ -157,16 +159,16 @@ Contains specific film and developer combinations with development times and pro
 {
   "id": "56776f0e-563e-4428-94a5-2110c9579612",
   "name": "Tri-X 400 @ 400 in HC-110 1:31",
-  "film_stock_id": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
-  "temperature_f": 68,
-  "time_minutes": 11.0,
-  "agitation_schedule": "30s initial, then 10s every 60s",
-  "push_pull": 0,
+  "filmStockId": "097cf2f5-c5f6-45c0-bfb7-28055b829c66",
+  "temperatureF": 68,
+  "timeMinutes": 11.0,
+  "agitationSchedule": "30s initial, then 10s every 60s",
+  "pushPull": 0,
   "notes": "Dilution B, agitate 30s every 60s",
-  "developer_id": "83a344e1-239f-4899-b747-06390f42b7d1",
-  "dilution_id": 2,
-  "custom_dilution": null,
-  "shooting_iso": 400.0
+  "developerId": "83a344e1-239f-4899-b747-06390f42b7d1",
+  "dilutionId": 2,
+  "customDilution": null,
+  "shootingIso": 400.0
 }
 ```
 
@@ -174,15 +176,15 @@ Contains specific film and developer combinations with development times and pro
 
 - `id`: Unique UUID identifier for the combination
 - `name`: Descriptive name of the combination
-- `film_stock_id`: UUID reference to film stock in `film_stocks.json`
-- `developer_id`: UUID reference to developer in `developers.json`
-- `dilution_id`: Reference to specific dilution in developer's dilutions array
-- `custom_dilution`: Custom dilution ratio if not using predefined dilution (optional)
-- `temperature_f`: Development temperature in Fahrenheit
-- `time_minutes`: Development time in minutes
-- `agitation_schedule`: Agitation pattern description
-- `push_pull`: Push/pull stops (0 = normal, positive = push, negative = pull)
-- `shooting_iso`: ISO rating the film was shot at
+- `filmStockId`: UUID reference to film stock in `film_stocks.json`
+- `developerId`: UUID reference to developer in `developers.json`
+- `dilutionId`: Reference to specific dilution in developer's dilutions array
+- `customDilution`: Custom dilution ratio if not using predefined dilution (optional)
+- `temperatureF`: Development temperature in Fahrenheit
+- `timeMinutes`: Development time in minutes
+- `agitationSchedule`: Agitation pattern description
+- `pushPull`: Push/pull stops (0 = normal, positive = push, negative = pull)
+- `shootingIso`: ISO rating the film was shot at
 - `notes`: Additional development notes
 
 ### `formats.json`
@@ -338,7 +340,7 @@ api.load_all_data()
 
 # Search for films
 trix_films = api.search_films("Tri-X")
-bw_films = api.search_films("HP", color_type="bw")
+bw_films = api.search_films("HP", colorType="bw")
 
 # Search for developers
 hc110_devs = api.search_developers("HC-110")
@@ -400,7 +402,7 @@ combinations    # List of development combinations
 
 # Search functions
 search_films('kodak')                    # Search films by name/brand
-search_films('tri-x', color_type='bw')   # Search with color filter
+search_films('tri-x', colorType='bw')   # Search with color filter
 search_developers('hc-110')              # Search developers
 
 # Display functions

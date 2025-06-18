@@ -36,7 +36,7 @@ body:
       required: true
 
   - type: input
-    id: iso_speed
+    id: isoSpeed
     attributes:
       label: ISO Speed
       description: The film's ISO/ASA rating (numbers only, decimals allowed)
@@ -45,7 +45,7 @@ body:
       required: true
 
   - type: dropdown
-    id: color_type
+    id: colorType
     attributes:
       label: Film Type
       description: Select the type of film
@@ -57,7 +57,7 @@ body:
       required: true
 
   - type: input
-    id: grain_structure
+    id: grainStructure
     attributes:
       label: Grain Structure
       description: Description of the grain characteristics (optional)
@@ -66,7 +66,7 @@ body:
       required: false
 
   - type: textarea
-    id: reciprocity_failure
+    id: reciprocityFailure
     attributes:
       label: Reciprocity Failure Characteristics
       description: Information about reciprocity failure behavior (optional)
@@ -95,7 +95,7 @@ body:
       required: false
 
   - type: textarea
-    id: manufacturer_notes
+    id: manufacturerNotes
     attributes:
       label: Manufacturer Notes
       description: Key characteristics from manufacturer (one per line, optional)
@@ -104,6 +104,15 @@ body:
         fine grain and sharpness
         iso 400/27° in standard process
         responds well to push processing
+    validations:
+      required: false
+
+  - type: input
+    id: staticImageURL
+    attributes:
+      label: Static Image URL
+      description: URL to a product image of the film stock (optional)
+      placeholder: e.g., https://example.com/path/to/film-image.jpg
     validations:
       required: false
 

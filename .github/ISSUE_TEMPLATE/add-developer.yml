@@ -49,7 +49,7 @@ body:
       required: true
 
   - type: dropdown
-    id: film_or_paper
+    id: filmOrPaper
     attributes:
       label: Intended Use
       description: Is this developer for film or paper?
@@ -61,7 +61,7 @@ body:
       required: true
 
   - type: input
-    id: working_life_hours
+    id: workingLifeHours
     attributes:
       label: Working Life (hours)
       description: How long the working solution lasts in hours (optional, numbers only)
@@ -70,7 +70,7 @@ body:
       required: false
 
   - type: input
-    id: stock_life_months
+    id: stockLifeMonths
     attributes:
       label: Stock Life (months)
       description: How long the stock solution lasts in months (optional, numbers only)
@@ -99,7 +99,7 @@ body:
       required: false
 
   - type: textarea
-    id: mixing_instructions
+    id: mixingInstructions
     attributes:
       label: Mixing Instructions
       description: How to mix the developer (optional)
@@ -108,7 +108,7 @@ body:
       required: false
 
   - type: textarea
-    id: safety_notes
+    id: safetyNotes
     attributes:
       label: Safety Notes
       description: Important safety information (optional)
@@ -117,7 +117,7 @@ body:
       required: false
 
   - type: textarea
-    id: datasheet_urls
+    id: datasheetUrl
     attributes:
       label: Datasheet URLs
       description: Links to manufacturer datasheets (one per line, optional)

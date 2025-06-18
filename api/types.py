@@ -17,24 +17,28 @@ class Film:
         id: Unique identifier for the film
         name: Display name of the film
         brand: Manufacturer/brand name
-        iso_speed: ISO speed rating
-        color_type: Type of film (color, b&w, etc.)
+        isoSpeed: ISO speed rating
+        colorType: Type of film (color, b&w, etc.)
         description: Optional detailed description
         discontinued: Whether film is discontinued (0=no, 1=yes)
-        manufacturer_notes: List of notes from manufacturer
-        grain_structure: Description of grain characteristics
-        reciprocity_failure: Information about reciprocity failure
+        manufacturerNotes: List of notes from manufacturer
+        grainStructure: Description of grain characteristics
+        reciprocityFailure: Information about reciprocity failure
+        staticImageURL: URL to product image of the film
+        dateAdded: ISO timestamp when the film was added to the database
     """
     id: str
     name: str
     brand: str
-    iso_speed: float
-    color_type: str
+    isoSpeed: float
+    colorType: str
     description: Optional[str] = None
     discontinued: int = 0
-    manufacturer_notes: List[str] = field(default_factory=list)
-    grain_structure: Optional[str] = None
-    reciprocity_failure: Optional[str] = None
+    manufacturerNotes: List[str] = field(default_factory=list)
+    grainStructure: Optional[str] = None
+    reciprocityFailure: Optional[str] = None
+    staticImageURL: Optional[str] = None
+    dateAdded: Optional[str] = None
 
 
 @dataclass
@@ -46,29 +50,29 @@ class Developer:
         name: Display name of the developer
         manufacturer: Manufacturer/brand name
         type: Type of developer (e.g., "Black & White Film")
-        film_or_paper: Whether for film or paper development
+        filmOrPaper: Whether for film or paper development
         dilutions: List of available dilution ratios
-        working_life_hours: Working solution lifetime in hours
-        stock_life_months: Stock solution lifetime in months
+        workingLifeHours: Working solution lifetime in hours
+        stockLifeMonths: Stock solution lifetime in months
         notes: Additional notes about the developer
         discontinued: Whether developer is discontinued (0=no, 1=yes)
-        mixing_instructions: How to prepare the developer
-        safety_notes: Safety information and warnings
-        datasheet_url: URLs to manufacturer datasheets
+        mixingInstructions: How to prepare the developer
+        safetyNotes: Safety information and warnings
+        datasheetUrl: URLs to manufacturer datasheets
     """
     id: str
     name: str
     manufacturer: str
     type: str
-    film_or_paper: str
+    filmOrPaper: str
     dilutions: List[Dict[str, Any]] = field(default_factory=list)
-    working_life_hours: Optional[int] = None
-    stock_life_months: Optional[int] = None
+    workingLifeHours: Optional[int] = None
+    stockLifeMonths: Optional[int] = None
     notes: Optional[str] = None
     discontinued: int = 0
-    mixing_instructions: Optional[str] = None
-    safety_notes: Optional[str] = None
-    datasheet_url: Optional[List[str]] = None
+    mixingInstructions: Optional[str] = None
+    safetyNotes: Optional[str] = None
+    datasheetUrl: Optional[List[str]] = None
 
 
 @dataclass
@@ -78,26 +82,26 @@ class Combination:
     Attributes:
         id: Unique identifier for the combination
         name: Display name describing the combination
-        film_stock_id: ID of the film used
-        developer_id: ID of the developer used
-        temperature_f: Development temperature in Fahrenheit
-        time_minutes: Development time in minutes
-        shooting_iso: ISO at which the film was shot
-        push_pull: Push/pull processing offset (0=normal, +1=push 1 stop, etc.)
-        agitation_schedule: Description of agitation pattern
+        filmStockId: ID of the film used
+        developerId: ID of the developer used
+        temperatureF: Development temperature in Fahrenheit
+        timeMinutes: Development time in minutes
+        shootingIso: ISO at which the film was shot
+        pushPull: Push/pull processing offset (0=normal, +1=push 1 stop, etc.)
+        agitationSchedule: Description of agitation pattern
         notes: Additional development notes
-        dilution_id: ID of specific dilution used
-        custom_dilution: Custom dilution ratio if not standard
+        dilutionId: ID of specific dilution used
+        customDilution: Custom dilution ratio if not standard
     """
     id: str
     name: str
-    film_stock_id: str
-    developer_id: str
-    temperature_f: float
-    time_minutes: float
-    shooting_iso: float
-    push_pull: int = 0
-    agitation_schedule: Optional[str] = None
+    filmStockId: str
+    developerId: str
+    temperatureF: float
+    timeMinutes: float
+    shootingIso: float
+    pushPull: int = 0
+    agitationSchedule: Optional[str] = None
     notes: Optional[str] = None
-    dilution_id: Optional[int] = None
-    custom_dilution: Optional[str] = None 
+    dilutionId: Optional[int] = None
+    customDilution: Optional[str] = None 

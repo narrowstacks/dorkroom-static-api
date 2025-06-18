@@ -56,7 +56,7 @@ jobs:
                   with open('film_stocks.json', 'r') as f:
                       films = json.load(f)
                   
-                  required_fields = ['id', 'brand', 'name', 'iso_speed', 'color_type', 'discontinued']
+                  required_fields = ['id', 'brand', 'name', 'isoSpeed', 'colorType', 'discontinued']
                   valid_color_types = ['bw', 'color', 'slide']
                   
                   for i, film in enumerate(films):
@@ -67,13 +67,13 @@ jobs:
                               return False
                       
                       # Validate color type
-                      if film.get('color_type') not in valid_color_types:
-                          print(f"❌ Film {i}: Invalid color_type '{film.get('color_type')}'")
+                      if film.get('colorType') not in valid_color_types:
+                          print(f"❌ Film {i}: Invalid colorType '{film.get('colorType')}'")
                           return False
                       
                       # Check ISO speed is numeric
-                      if not isinstance(film.get('iso_speed'), (int, float)):
-                          print(f"❌ Film {i}: iso_speed must be numeric")
+                      if not isinstance(film.get('isoSpeed'), (int, float)):
+                          print(f"❌ Film {i}: isoSpeed must be numeric")
                           return False
                       
                       # Check discontinued is 0 or 1
@@ -94,7 +94,7 @@ jobs:
                   with open('developers.json', 'r') as f:
                       developers = json.load(f)
                   
-                  required_fields = ['id', 'name', 'manufacturer', 'type', 'film_or_paper', 'discontinued']
+                  required_fields = ['id', 'name', 'manufacturer', 'type', 'filmOrPaper', 'discontinued']
                   valid_types = ['concentrate', 'powder', 'liquid', 'one-shot']
                   valid_use = ['film', 'paper', 'both']
                   
@@ -110,9 +110,9 @@ jobs:
                           print(f"❌ Developer {i}: Invalid type '{dev.get('type')}'")
                           return False
                       
-                      # Validate film_or_paper
-                      if dev.get('film_or_paper') not in valid_use:
-                          print(f"❌ Developer {i}: Invalid film_or_paper '{dev.get('film_or_paper')}'" )
+                      # Validate filmOrPaper
+                      if dev.get('filmOrPaper') not in valid_use:
+                          print(f"❌ Developer {i}: Invalid filmOrPaper '{dev.get('filmOrPaper')}'" )
                           return False
                       
                       # Check discontinued is 0 or 1
@@ -149,7 +149,7 @@ jobs:
                   film_ids = {film['id'] for film in films}
                   developer_ids = {dev['id'] for dev in developers}
                   
-                  required_fields = ['id', 'name', 'film_stock_id', 'developer_id', 'temperature_f', 'time_minutes', 'shooting_iso', 'push_pull', 'agitation_schedule']
+                  required_fields = ['id', 'name', 'filmStockId', 'developerId', 'temperatureF', 'timeMinutes', 'shootingIso', 'pushPull', 'agitationSchedule']
                   
                   for i, combo in enumerate(combinations):
                       # Check required fields
@@ -159,17 +159,17 @@ jobs:
                               return False
                       
                       # Check film stock exists
-                      if combo.get('film_stock_id') not in film_ids:
-                          print(f"❌ Combination {i}: Invalid film_stock_id '{combo.get('film_stock_id')}'")
+                      if combo.get('filmStockId') not in film_ids:
+                          print(f"❌ Combination {i}: Invalid filmStockId '{combo.get('filmStockId')}'")
                           return False
                       
                       # Check developer exists
-                      if combo.get('developer_id') not in developer_ids:
-                          print(f"❌ Combination {i}: Invalid developer_id '{combo.get('developer_id')}'")
+                      if combo.get('developerId') not in developer_ids:
+                          print(f"❌ Combination {i}: Invalid developerId '{combo.get('developerId')}'")
                           return False
                       
                       # Check numeric fields
-                      numeric_fields = ['temperature_f', 'time_minutes', 'shooting_iso', 'push_pull']
+                      numeric_fields = ['temperatureF', 'timeMinutes', 'shootingIso', 'pushPull']
                       for field in numeric_fields:
                           if not isinstance(combo.get(field), (int, float)):
                               print(f"❌ Combination {i}: {field} must be numeric")

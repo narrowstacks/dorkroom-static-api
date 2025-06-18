@@ -23,16 +23,16 @@ class CLIFormatter:
             List[str]: List of formatted lines for display
         """
         lines = [
-            f"📷 {f.brand} {f.name} (ISO {int(f.iso_speed)})",
+            f"📷 {f.brand} {f.name} (ISO {int(f.isoSpeed)})",
             f"   ID: {f.id}",
-            f"   Color: {f.color_type}",
+            f"   Color: {f.colorType}",
             f"   Discontinued: {'Yes' if f.discontinued != 0 else 'No'}",
         ]
         if f.description:
             desc = f.description if len(f.description) <= 200 else f.description[:200] + "..."
             lines.append(f"   Desc: {desc}")
-        if f.manufacturer_notes:
-            lines.append(f"   Notes: {', '.join(f.manufacturer_notes)}")
+        if f.manufacturerNotes:
+            lines.append(f"   Notes: {', '.join(f.manufacturerNotes)}")
         return lines
 
     @staticmethod
@@ -48,16 +48,16 @@ class CLIFormatter:
         lines = [
             f"🧪 {d.manufacturer} {d.name}",
             f"   ID: {d.id}",
-            f"   Type: {d.type} for {d.film_or_paper}",
+            f"   Type: {d.type} for {d.filmOrPaper}",
             f"   Discontinued: {'Yes' if d.discontinued != 0 else 'No'}",
         ]
-        if d.working_life_hours is not None:
-            hrs = d.working_life_hours
+        if d.workingLifeHours is not None:
+            hrs = d.workingLifeHours
             days, rem = divmod(hrs, 24)
             wl = f"{days}d {rem}h" if days else f"{rem}h"
             lines.append(f"   Working life: {wl}")
-        if d.stock_life_months:
-            lines.append(f"   Stock life: {d.stock_life_months} months")
+        if d.stockLifeMonths:
+            lines.append(f"   Stock life: {d.stockLifeMonths} months")
         if d.dilutions:
             lines.append(f"   Dilutions: {len(d.dilutions)} available")
         return lines

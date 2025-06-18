@@ -5,3 +5,4 @@
 *.pyc
 venv
 api/__pycache__
+*.backup

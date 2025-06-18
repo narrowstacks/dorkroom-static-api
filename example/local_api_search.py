@@ -99,7 +99,7 @@ class DarkroomAPI:
             primary_text = f"{film['brand']} {film['name']}".lower()
             
             # Create secondary searchable text (other attributes)
-            secondary_text = f"{film['iso_speed']} {film['color_type']}".lower()
+            secondary_text = f"{film['isoSpeed']} {film['colorType']}".lower()
             if film.get('description'):
                 secondary_text += f" {film['description']}".lower()
             
@@ -156,7 +156,7 @@ class DarkroomAPI:
             primary_text = f"{dev['name']} {dev['manufacturer']}".lower()
             
             # Create secondary searchable text (other attributes)
-            secondary_text = f"{dev['type']} {dev['film_or_paper']}".lower()
+            secondary_text = f"{dev['type']} {dev['filmOrPaper']}".lower()
             if dev.get('notes'):
                 secondary_text += f" {dev['notes']}".lower()
             
@@ -210,14 +210,14 @@ class DarkroomAPI:
             enhanced_text = primary_text
             
             # Add film info if available
-            if combo.get('film_stock_id'):
-                film = self.get_film_by_id(combo['film_stock_id'])
+            if combo.get('filmStockId'):
+                film = self.get_film_by_id(combo['filmStockId'])
                 if film:
                     enhanced_text += f" {film['brand']} {film['name']}".lower()
             
             # Add developer info if available
-            if combo.get('developer_id'):
-                developer = self.get_developer_by_id(combo['developer_id'])
+            if combo.get('developerId'):
+                developer = self.get_developer_by_id(combo['developerId'])
                 if developer:
                     enhanced_text += f" {developer['name']}".lower()
             
@@ -309,16 +309,16 @@ class DarkroomAPI:
         custom_combo = {
             "id": new_id,
             "name": name,
-            "film_stock_id": film_stock_id,
-            "temperature_f": temperature_f,
-            "time_minutes": time_minutes,
-            "agitation_schedule": agitation_schedule,
-            "push_pull": push_pull,
+            "filmStockId": film_stock_id,
+            "temperatureF": temperature_f,
+            "timeMinutes": time_minutes,
+            "agitationSchedule": agitation_schedule,
+            "pushPull": push_pull,
             "notes": notes,
-            "developer_id": developer_id,
-            "dilution_id": dilution_id,
-            "custom_dilution": None,
-            "created_date": datetime.now().isoformat()
+            "developerId": developer_id,
+            "dilutionId": dilution_id,
+            "customDilution": None,
+            "createdDate": datetime.now().isoformat()
         }
         
         self.custom_combinations.append(custom_combo)
@@ -338,8 +338,8 @@ class DarkroomDisplay:
         print(f"{Fore.CYAN}{'='*60}")
         
         basic_info = [
-            ["ISO Speed", film['iso_speed']],
-            ["Type", film['color_type'].upper()],
+            ["ISO Speed", film['isoSpeed']],
+            ["Type", film['colorType'].upper()],
             ["ID", film['id']],
             ["Status", "Discontinued" if film.get('discontinued', 0) else "Available"]
         ]
@@ -350,9 +350,9 @@ class DarkroomDisplay:
             print(f"\n{Fore.YELLOW}Description:")
             print(f"{Fore.WHITE}{film['description']}")
         
-        if show_details and film.get('manufacturer_notes'):
+        if show_details and film.get('manufacturerNotes'):
             print(f"\n{Fore.YELLOW}Key Features:")
-            for note in film['manufacturer_notes']:
+            for note in film['manufacturerNotes']:
                 print(f"{Fore.WHITE}• {note}")
     
     @staticmethod
@@ -364,7 +364,7 @@ class DarkroomDisplay:
         
         basic_info = [
             ["Type", developer['type'].title()],
-            ["For", developer['film_or_paper'].title()],
+            ["For", developer['filmOrPaper'].title()],
             ["ID", developer['id']],
             ["Status", "Discontinued" if developer.get('discontinued', 0) else "Available"]
         ]
@@ -393,16 +393,16 @@ class DarkroomDisplay:
         print(f"{Fore.GREEN}{'='*60}")
         
         # Get film and developer details
-        film = api.get_film_by_id(combo['film_stock_id'])
-        developer = api.get_developer_by_id(combo['developer_id'])
+        film = api.get_film_by_id(combo['filmStockId'])
+        developer = api.get_developer_by_id(combo['developerId'])
         
-        film_name = f"{film['brand']} {film['name']}" if film else f"Film ID {combo['film_stock_id']}"
-        dev_name = developer['name'] if developer else f"Developer ID {combo['developer_id']}"
+        film_name = f"{film['brand']} {film['name']}" if film else f"Film ID {combo['filmStockId']}"
+        dev_name = developer['name'] if developer else f"Developer ID {combo['developerId']}"
         
         # Find dilution name
         dilution_name = "Unknown"
-        if developer and combo.get('dilution_id'):
-            dilution = next((d for d in developer['dilutions'] if d['id'] == combo['dilution_id']), None)
+        if developer and combo.get('dilutionId'):
+            dilution = next((d for d in developer['dilutions'] if d['id'] == combo['dilutionId']), None)
             if dilution:
                 dilution_name = f"{dilution['name']} ({dilution['dilution']})"
         
@@ -410,14 +410,14 @@ class DarkroomDisplay:
             ["Film", film_name],
             ["Developer", dev_name],
             ["Dilution", dilution_name],
-            ["Temperature", f"{combo['temperature_f']}°F"],
-            ["Time", f"{combo['time_minutes']} minutes"],
-            ["Agitation", combo['agitation_schedule']],
-            ["Push/Pull", f"{combo['push_pull']:+d} stop" if combo['push_pull'] != 0 else "Normal"],
+            ["Temperature", f"{combo['temperatureF']}°F"],
+            ["Time", f"{combo['timeMinutes']} minutes"],
+            ["Agitation", combo['agitationSchedule']],
+            ["Push/Pull", f"{combo['pushPull']:+d} stop" if combo['pushPull'] != 0 else "Normal"],
         ]
         
-        if combo_type == "custom" and combo.get('created_date'):
-            combo_info.append(["Created", combo['created_date'][:10]])
+        if combo_type == "custom" and combo.get('createdDate'):
+            combo_info.append(["Created", combo['createdDate'][:10]])
         
         print(f"{Fore.WHITE}{tabulate(combo_info, tablefmt='grid')}")
         
@@ -442,7 +442,7 @@ class DarkroomDisplay:
             for i, result in enumerate(results["films"], 1):
                 film = result.item
                 status = "(Discontinued)" if film.get('discontinued', 0) else ""
-                print(f"{Fore.WHITE}{i:2}. {film['brand']} {film['name']} - ISO {film['iso_speed']} ({film['color_type']}) {status}")
+                print(f"{Fore.WHITE}{i:2}. {film['brand']} {film['name']} - ISO {film['isoSpeed']} ({film['colorType']}) {status}")
                 print(f"    {Fore.BLUE}Match: {result.score}% | ID: {film['id']}")
         
         # Display Developers
@@ -461,7 +461,7 @@ class DarkroomDisplay:
                 combo = result.item
                 combo_type_label = "(Custom)" if result.type == "custom" else ""
                 print(f"{Fore.WHITE}{i:2}. {combo['name']} {combo_type_label}")
-                print(f"    {Fore.BLUE}Match: {result.score}% | {combo['time_minutes']}min @ {combo['temperature_f']}°F")
+                print(f"    {Fore.BLUE}Match: {result.score}% | {combo['timeMinutes']}min @ {combo['temperatureF']}°F")
 
 
 class InteractiveInterface:
@@ -642,7 +642,7 @@ class InteractiveInterface:
             print(f"{Fore.CYAN}Available Films (showing first {limit}):")
             for i, film in enumerate(self.api.films[:limit], 1):
                 status = " (Discontinued)" if film.get('discontinued', 0) else ""
-                print(f"{i:3}. [{film['id']:3}] {film['brand']} {film['name']} - ISO {film['iso_speed']}{status}")
+                print(f"{i:3}. [{film['id']:3}] {film['brand']} {film['name']} - ISO {film['isoSpeed']}{status}")
         
         elif choice == 2:
             print(f"{Fore.MAGENTA}Available Developers (showing first {limit}):")
@@ -659,7 +659,7 @@ class InteractiveInterface:
             if self.api.custom_combinations:
                 print(f"{Fore.GREEN}Custom Combinations ({len(self.api.custom_combinations)}):")
                 for i, combo in enumerate(self.api.custom_combinations, 1):
-                    print(f"{i:3}. [{combo['id']:2}] {combo['name']} (Created: {combo.get('created_date', 'Unknown')[:10]})")
+                    print(f"{i:3}. [{combo['id']:2}] {combo['name']} (Created: {combo.get('createdDate', 'Unknown')[:10]})")
             else:
                 print(f"{Fore.YELLOW}No custom combinations found")
         
@@ -681,7 +681,7 @@ class InteractiveInterface:
         # Show available films
         print(f"\n{Fore.CYAN}Recent Films (for full list, use 'List Items'):")
         for film in self.api.films[:10]:
-            print(f"  [{film['id']:3}] {film['brand']} {film['name']} - ISO {film['iso_speed']}")
+            print(f"  [{film['id']:3}] {film['brand']} {film['name']} - ISO {film['isoSpeed']}")
         
         film_id = self.get_user_input("Film ID", int)
         if film_id is None:
@@ -927,7 +927,7 @@ def main():
             print(f"{Fore.CYAN}Available Films (showing first {args.limit}):")
             for i, film in enumerate(api.films[:args.limit], 1):
                 status = " (Discontinued)" if film.get('discontinued', 0) else ""
-                print(f"{i:3}. [{film['id']:3}] {film['brand']} {film['name']} - ISO {film['iso_speed']}{status}")
+                print(f"{i:3}. [{film['id']:3}] {film['brand']} {film['name']} - ISO {film['isoSpeed']}{status}")
         
         elif args.type == "developers":
             print(f"{Fore.MAGENTA}Available Developers (showing first {args.limit}):")

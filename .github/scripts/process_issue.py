@@ -5,6 +5,7 @@ Converts approved GitHub issues into JSON data and creates pull requests
 """
 
 import argparse
+from datetime import datetime
 import json
 import os
 import re
@@ -121,13 +122,15 @@ def process_film_stock_issue(issue_data: Dict[str, str]) -> Dict[str, Any]:
         "id": generate_uuid(),
         "brand": issue_data.get("brandmanufacturer", "").strip(),
         "name": issue_data.get("film_name", "").strip(),
-        "iso_speed": float(issue_data.get("iso_speed", "0")) if issue_data.get("iso_speed", "").replace(".", "").isdigit() else 0.0,
-        "color_type": convert_color_type(issue_data.get("film_type", "")),
-        "grain_structure": clean_no_response(issue_data.get("grain_structure", "")),
-        "reciprocity_failure": clean_no_response(issue_data.get("reciprocity_failure_characteristics", "")),
+        "isoSpeed": float(issue_data.get("iso_speed", "0")) if issue_data.get("iso_speed", "").replace(".", "").isdigit() else 0.0,
+        "colorType": convert_color_type(issue_data.get("film_type", "")),
+        "grainStructure": clean_no_response(issue_data.get("grain_structure", "")),
+        "reciprocityFailure": clean_no_response(issue_data.get("reciprocity_failure_characteristics", "")),
         "discontinued": 1 if "discontinued" in issue_data.get("current_production_status", "").lower() else 0,
         "description": clean_no_response(issue_data.get("description", "")),
-        "manufacturer_notes": parse_manufacturer_notes(issue_data.get("manufacturer_notes", ""))
+        "manufacturerNotes": parse_manufacturer_notes(issue_data.get("manufacturer_notes", "")),
+        "staticImageURL": clean_no_response(issue_data.get("static_image_url", "")),
+        "dateAdded": datetime.now().isoformat() + "Z"
     }
     
     return film_stock
@@ -141,14 +144,14 @@ def process_developer_issue(issue_data: Dict[str, str]) -> Dict[str, Any]:
         "name": issue_data.get("developer_name", "").strip(),
         "manufacturer": issue_data.get("manufacturer", "").strip(),
         "type": issue_data.get("developer_type", "").strip(),
-        "film_or_paper": issue_data.get("intended_use", "").strip(),
-        "working_life_hours": parse_numeric_field(issue_data.get("working_life_hours", "")),
-        "stock_life_months": parse_numeric_field(issue_data.get("stock_life_months", "")),
+        "filmOrPaper": issue_data.get("intended_use", "").strip(),
+        "workingLifeHours": parse_numeric_field(issue_data.get("working_life_hours", "")),
+        "stockLifeMonths": parse_numeric_field(issue_data.get("stock_life_months", "")),
         "discontinued": 1 if "discontinued" in issue_data.get("current_production_status", "").lower() else 0,
         "notes": clean_no_response(issue_data.get("notes", "")),
-        "mixing_instructions": clean_no_response(issue_data.get("mixing_instructions", "")),
-        "safety_notes": clean_no_response(issue_data.get("safety_notes", "")),
-        "datasheet_url": parse_urls(issue_data.get("datasheet_urls", "")),
+        "mixingInstructions": clean_no_response(issue_data.get("mixing_instructions", "")),
+        "safetyNotes": clean_no_response(issue_data.get("safety_notes", "")),
+        "datasheetUrl": parse_urls(issue_data.get("datasheet_urls", "")),
         "dilutions": parse_dilutions(issue_data.get("common_dilutions", ""))
     }
     
@@ -161,9 +164,9 @@ def process_combination_issue(issue_data: Dict[str, str], film_stocks: List[Dict
     # Find matching film stock
     film_brand = issue_data.get("film_brand", "").strip()
     film_name = issue_data.get("film_name", "").strip()
-    film_stock_id = find_film_stock_id(film_stocks, film_brand, film_name)
+    filmStockId = find_film_stock_id(film_stocks, film_brand, film_name)
     
-    if not film_stock_id:
+    if not filmStockId:
         print(f"Warning: Could not find film stock: {film_brand} {film_name}")
         return None
     
@@ -183,15 +186,15 @@ def process_combination_issue(issue_data: Dict[str, str], film_stocks: List[Dict
     combination = {
         "id": generate_uuid(),
         "name": issue_data.get("combination_name", "").strip(),
-        "film_stock_id": film_stock_id,
-        "developer_id": developer_id,
-        "dilution_id": dilution_id,
-        "custom_dilution": None if dilution_id else issue_data.get("dilution_name", "").strip(),
-        "temperature_f": int(float(issue_data.get("temperature_f", "68"))),
-        "time_minutes": float(issue_data.get("time_minutes", "0")),
-        "shooting_iso": float(issue_data.get("shooting_iso", "0")),
-        "push_pull": push_pull,
-        "agitation_schedule": issue_data.get("agitation_schedule", "").strip(),
+        "filmStockId": filmStockId,
+        "developerId": developer_id,
+        "dilutionId": dilution_id,
+        "customDilution": None if dilution_id else issue_data.get("dilution_name", "").strip(),
+        "temperatureF": int(float(issue_data.get("temperature_f", "68"))),
+        "timeMinutes": float(issue_data.get("time_minutes", "0")),
+        "shootingIso": float(issue_data.get("shooting_iso", "0")),
+        "pushPull": push_pull,
+        "agitationSchedule": issue_data.get("agitation_schedule", "").strip(),
         "notes": clean_no_response(issue_data.get("notes", ""))
     }
     
@@ -251,18 +254,18 @@ def parse_dilutions(dilutions_text: str) -> List[Dict[str, Any]]:
         return []
     
     dilutions = []
-    dilution_id = 1
+    dilutionId = 1
     
     for line in dilutions_text.split('\n'):
         line = line.strip()
         if ':' in line:
             name, ratio = line.split(':', 1)
             dilutions.append({
-                "id": dilution_id,
+                "id": dilutionId,
                 "name": name.strip(),
                 "dilution": ratio.strip()
             })
-            dilution_id += 1
+            dilutionId += 1
     
     return dilutions
 
@@ -328,11 +331,11 @@ def check_for_duplicates(new_item: Dict[str, Any], existing_items: List[Dict[str
     
     elif item_type == "combination":
         for item in existing_items:
-            if (item.get("film_stock_id") == new_item.get("film_stock_id") and
-                item.get("developer_id") == new_item.get("developer_id") and
-                item.get("dilution_id") == new_item.get("dilution_id") and
-                item.get("shooting_iso") == new_item.get("shooting_iso") and
-                item.get("push_pull") == new_item.get("push_pull")):
+            if (item.get("filmStockId") == new_item.get("filmStockId") and
+                item.get("developerId") == new_item.get("developerId") and
+                item.get("dilutionId") == new_item.get("dilutionId") and
+                item.get("shootingIso") == new_item.get("shootingIso") and
+                item.get("pushPull") == new_item.get("pushPull")):
                 return True
     
     return False
