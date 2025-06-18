@@ -635,6 +635,12 @@ Feel free to open an issue regarding:
 - Missing information
 - General project direction
 
+## Acknowledgments
+
+- [The Film API](https://filmapi.vercel.app/) for the original source of comprehensive film data that the film stock data originated from.
+- [The Harvey Milk Photo Center](https://www.harveymilkphotocenter.org/), for employing me and being where I obtain all my knowledge!
+- The analog photography community for their knowledge and contributions
+
 ---
 
 **Note:** This is a community-driven project with automated workflows to make contributions easy and safe. All contributions are appreciated and help make analog photography more accessible to everyone!
